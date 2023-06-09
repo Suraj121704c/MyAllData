@@ -1,0 +1,49 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "title": "React",
+      "status": true
+    },
+    {
+      "id": 2,
+      "title": "Redux",
+      "status": true
+    },
+    {
+      "id": 3,
+      "title": "Css",
+      "status": true
+    },
+    {
+      "id": 4,
+      "title": "MongoDb",
+      "status": false
+    },
+    {
+      "id": 5,
+      "title": "TypeScript",
+      "status": false
+    },
+    {
+      "title": "sing",
+      "staus": false,
+      "id": 6
+    },
+    {
+      "title": "lingf",
+      "staus": false,
+      "id": 7
+    },
+    {
+      "title": "singinig",
+      "staus": false,
+      "id": 8
+    },
+    {
+      "title": "sing",
+      "staus": false,
+      "id": 9
+    }
+  ]
+}

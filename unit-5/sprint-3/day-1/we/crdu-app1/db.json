@@ -1,0 +1,220 @@
+{
+  "products": [
+    {
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSmrSFq-JeZwEjNfz_SK25hYauNR8GQAsyMaew_eMftH8jw6U08kRzObfaF8uGSV7fKqQ&usqp=CAU",
+      "title": "shoes",
+      "price": 3000,
+      "brand": "nike",
+      "discount": 30,
+      "gender": "male",
+      "id": 1
+    },
+    {
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpYC56ot3mrWYZMYVk5MLlT_NN7m9Y2RR3zulFbyU4SQHk-56qr2UsOzDKCzthWUi91Qs&usqp=CAU",
+      "title": "sports shoe",
+      "price": "8",
+      "brand": "shopechlies",
+      "discount": 100,
+      "gender": "male",
+      "id": 2
+    },
+    {
+      "image": "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/51qMYJEfdVL._UY500_.jpg",
+      "title": "sports-shoe",
+      "price": 899,
+      "brand": "baba",
+      "discount": 20,
+      "gender": "male",
+      "id": 3
+    },
+    {
+      "image": "https://images.meesho.com/images/products/119544768/7pyu4_512.jpg",
+      "title": "sports-shoe",
+      "price": 799,
+      "brand": "zara",
+      "discount": 20,
+      "gender": "female",
+      "id": 4
+    },
+    {
+      "image": "data:image/jpeg;base64,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",
+      "title": "sports-shoe",
+      "price": 999,
+      "brand": "nike",
+      "discount": 25,
+      "gender": "male",
+      "id": 5
+    },
+    {
+      "image": "https://images.meesho.com/images/products/104557073/6alv5_512.jpg",
+      "title": "style-shoe",
+      "price": 599,
+      "brand": "ossume",
+      "discount": 19,
+      "gender": "male",
+      "id": 6
+    },
+    {
+      "image": "https://cdn.britannica.com/04/123704-050-023DC490/Pair-leather-shoes.jpg",
+      "title": "style-shoe",
+      "price": 1999,
+      "brand": "surashoes",
+      "discount": 2,
+      "gender": "male",
+      "id": 7
+    },
+    {
+      "image": "https://image.mooresclothing.ca/is/image/Moores/40DF_04_FLORSHEIM_DRESS_SHOES_COGNAC_MAIN?imPolicy=pgp-mob",
+      "title": "wedding-shoe",
+      "price": 299,
+      "brand": "none",
+      "discount": 5,
+      "gender": "male",
+      "id": 8
+    },
+    {
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQceJ5pu5jxkNCa75dDrqSaVj8p6EoLJuZVvA&usqp=CAU",
+      "title": "wedding-shoe",
+      "price": 1999,
+      "brand": "surashoes",
+      "discount": 20,
+      "gender": "male",
+      "id": 9
+    },
+    {
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyvJ5MxjOf_EHhtnBKPyi02nUAlGTOFvaJIeqQxaiWEhrAYrtpnIswOZnjoBrAPrYgUsM&usqp=CAU",
+      "title": "wedding-shoes",
+      "price": 1999,
+      "brand": "zara",
+      "discount": 5,
+      "gender": "male",
+      "id": 10
+    },
+    {
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-x629wM37rgddv4Z1EufcGQMvTTMQMbnYCtPfxYJsicVtHYxmvpW2rpOshqpmhPPTbm0&usqp=CAU",
+      "title": "wedding shoes",
+      "price": 2999,
+      "brand": "surashoes",
+      "discount": 5,
+      "gender": "male",
+      "id": 11
+    },
+    {
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStyiheZVb0NJdYGAjRFooEL6LEj2mWGXdMrQ&usqp=CAU",
+      "title": "home-shoes",
+      "price": 399,
+      "brand": "lakhani",
+      "discount": 5,
+      "gender": "male",
+      "id": 12
+    },
+    {
+      "image": "https://admin.walkwayshoes.com/product/31-5119/540/31-5119M11.jpg",
+      "title": "school-shoes",
+      "price": 399,
+      "brand": "lakhanin",
+      "discount": 5,
+      "gender": "female",
+      "id": 13
+    },
+    {
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4YwcY7LGKWLxY7ki-IdC3L9FBaHiU3Xd0wNUDmF1vDqUs5AG5RXdB8tS9VTxINV8PVkI&usqp=CAU",
+      "title": "wedding-shoes",
+      "price": 999,
+      "brand": "zara",
+      "discount": 5,
+      "gender": "female",
+      "id": 14
+    },
+    {
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSygXTOCM10F3xiUK4sL8YfZ2GwuRXjwKMHZw&usqp=CAU",
+      "title": "wedding-shoes",
+      "price": 999,
+      "brand": "nike",
+      "discount": 5,
+      "gender": "female",
+      "id": 15
+    },
+    {
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHW-mKV3pa-2cLqEvXjgAZatPIbtO1Y9VFnA&usqp=CAU",
+      "title": "sports-shoe",
+      "price": 499,
+      "brand": "surashoes",
+      "discount": 5,
+      "gender": "female",
+      "id": 16
+    },
+    {
+      "image": "https://kxadmin.metroshoes.com/product/31-143/550/31-143M16.jpg",
+      "title": "office-shoes",
+      "price": 999,
+      "brand": "surashoes",
+      "discount": 5,
+      "gender": "female",
+      "id": 17
+    },
+    {
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7aOSYuH0lV_UFeqow8UKu2JbrZlRVKXqiaA&usqp=CAU",
+      "title": "sports-shoe",
+      "price": 699,
+      "brand": "nike",
+      "discount": 5,
+      "gender": "female",
+      "id": 18
+    },
+    {
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRHNOq4gyiNXBDXrOxcuUY2I954QwlRxBEhA&usqp=CAU",
+      "title": "school-shoe",
+      "price": 499,
+      "brand": "surashoes",
+      "discount": 15,
+      "gender": "kids",
+      "id": 19
+    },
+    {
+      "image": "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/71Gw+zUmpcL._UX500_.jpg",
+      "title": "sports-shoe",
+      "price": 899,
+      "brand": "nike",
+      "discount": 19,
+      "gender": "kids",
+      "id": 20
+    },
+    {
+      "image": "https://5.imimg.com/data5/SELLER/Default/2022/1/FJ/SU/KR/113595580/trase-running-shoes-for-women-girls-lace-up-lightweight-shoes-for-sports-running-walking-gym-all-day-casual-wear-250x250.jpg",
+      "title": "sports-shoe",
+      "price": 899,
+      "brand": "nike",
+      "discount": 19,
+      "gender": "kids",
+      "id": 21
+    },
+    {
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpdYXw_YnViDJJN9ghtvTiYTzIV0gVfzoR8g&usqp=CAU",
+      "title": "wedding-shoes",
+      "price": 1999,
+      "brand": "zara",
+      "discount": 25,
+      "gender": "kids",
+      "id": 22
+    },
+    {
+      "image": "https://footwearnews.com/wp-content/uploads/2020/06/native-shoes-sneakers.jpg",
+      "title": "home-shoes",
+      "price": 999,
+      "brand": "surashoes",
+      "discount": 5,
+      "gender": "kids",
+      "id": 23
+    },
+    {
+      "image": "https://cdn.shopify.com/s/files/1/0055/5525/7462/products/B-BO-0150029_5.jpg?v=1635706711&width=1280",
+      "title": "sports-shoes",
+      "price": 899,
+      "brand": "nike",
+      "discount": 20,
+      "gender": "kids",
+      "id": 24
+    }
+  ]
+}

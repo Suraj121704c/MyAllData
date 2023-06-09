@@ -1,0 +1,12 @@
+{
+    "item" : "Potatoes",
+    "Qty" : "2KG",
+    "Price" : "30/KG"
+}
+
+{
+    "item" : "Laptop",
+    "qty" : "1 Unit",
+    "price" : "80,000/-",
+    "ram" : "16GB"
+}

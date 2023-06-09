@@ -1,0 +1,54 @@
+{
+  "houses": [
+    {
+      "name": "house2",
+      "ownerName": "Krishna",
+      "address": "Patna",
+      "areaCode": "100000",
+      "rent": "1100",
+      "isBachelorAllowed": true,
+      "isMarriedAllowed": true,
+      "id": 2
+    },
+    {
+      "name": "house3",
+      "ownerName": "Bicky",
+      "address": "Bangal",
+      "areaCode": "300000",
+      "rent": "900",
+      "isBachelorAllowed": true,
+      "isMarriedAllowed": false,
+      "id": 3
+    },
+    {
+      "name": "house4",
+      "ownerName": "Sonam",
+      "address": "Bhilai",
+      "areaCode": "700000",
+      "rent": "1500",
+      "isBachelorAllowed": false,
+      "isMarriedAllowed": true,
+      "id": 4
+    },
+    {
+      "name": "house5",
+      "ownerName": "Deevanshu",
+      "address": "Jaipur",
+      "areaCode": "600000",
+      "rent": "1500",
+      "isBachelorAllowed": false,
+      "isMarriedAllowed": true,
+      "id": 5
+    },
+    {
+      "name": "house6",
+      "ownerName": "Ankit",
+      "address": "Delhi",
+      "areaCode": "500000",
+      "rent": "3000",
+      "isBachelorAllowed": true,
+      "isMarriedAllowed": false,
+      "id": 6
+    }
+  ]
+}

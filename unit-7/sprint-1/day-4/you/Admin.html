@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/admin.css" />
+    <title>Admin</title>
+  </head>
+  <!-- 	{
+	  "name": "Mark Johnson",
+	  "image": "https://example.com/doctor-image.jpg",
+	  "specialization": "Pediatrician",
+	  "experience": 5,
+	  "location": "Chicago",
+	  "date": "2023-04-06T09:30:00.000Z",
+		"slots": 1,
+	  "fee": 100
+	} -->
+  <body>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="Admin.html">Admin</a>
+      <a href="Doctors.html">Doctors</a>
+    </nav>
+
+    <div id="admin-dashboard">
+      <h2>Admin Dashboard</h2>
+
+      <div id="add-doctor-form">
+        <h3>AddDoctor</h3>
+
+        <form id="doctor-form">
+          <br />
+          <input type="text" id="name" placeholder="name..." />
+
+          <br />
+          <br />
+
+          <input type="text" id="image" placeholder="image..." />
+
+          <br />
+          <br />
+
+          <select id="specialization">
+            <option value="">select_specialization</option>
+            <option value="Pediatrician">Pediatrician</option>
+            <option value="Dermatologist">Dermatologist</option>
+            <option value="Gyanacologist">Gyanacologist</option>
+          </select>
+
+          <br />
+          <br />
+
+          <input type="number" id="experience" placeholder="experience..." />
+
+          <br />
+          <br />
+
+          <input type="text" id="location" placeholder="location..." />
+
+          <br />
+          <br />
+
+          <input type="date" id="date" placeholder="date..." />
+
+          <br />
+          <br />
+
+          <select id="slots">
+            <option value="">select_no_of_slots</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+
+          <br /><br />
+
+          <input type="number" id="fee" placeholder="Fees..." />
+
+          <br />
+          <br />
+
+          <button type="submit">Add</button>
+        </form>
+      </div>
+
+      <div id="doctor-table">
+        <h3>Doctor Table</h3>
+        <div>
+          <table id="doctor-list">
+            <thead>
+              <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>specialization</th>
+                <th>experience</th>
+                <th>location</th>
+                <th>slots</th>
+                <th>Edit</th>
+                <th>Delete</th>
+                <th>Appointments</th>
+              </tr>
+            </thead>
+            <tbody id="doctor-table-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="/scripts/admin.js"></script>

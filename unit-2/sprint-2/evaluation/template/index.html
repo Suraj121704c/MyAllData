@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web-111 C1 Evaluation</title>
+
+  <style>
+    body {
+      background-color: rgb(250, 250, 250);
+    }
+    
+  
+
+    .top{
+      display: flex;
+      height: 500px;
+      width: 90%;
+      margin: auto;
+      justify-content: space-evenly;
+    }
+    .top>div{
+      height: 100%;
+      width: 45%;
+    }
+    .top>div>h1 {
+      margin-top: 180px;
+    }
+    .grid{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 5px
+      ;
+     height: auto;
+     width: auto;
+    }
+    .grid>div{
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      border-radius: 10px;
+    }
+    .grid>div>img{
+      margin-top: 20px;
+      height: 30%;
+      width: 20%;
+    }
+
+    .mid{
+     height: 400px;
+     width: 90%;
+     margin: 50px auto;
+     /* border:1px solid red; */
+    }
+    .mid>div>h1{
+      text-align: center;
+    }
+    .flex
+    {
+      height: 320px;
+      width: 100%;
+      /* border: 1px solid purple; */
+      display: flex;
+      margin: auto;
+      justify-content: space-evenly;
+    }
+    .flex>div{
+      height: 100%;
+      width: 30%;
+      /* border: 1px solid orange; */
+      text-align: center;
+    }
+    .flex>div>img{
+      height: 75%;
+      width: 100%;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      border-radius: 10px;
+    }
+    .bottom{
+      height: 500px;
+      width: 90%;
+      background-color: aquamarine;
+     border-radius: 20px ;
+      margin: 50px auto;
+    }
+    .bottom>h1{
+      text-align: center;
+    }
+    .bottom>h4{
+      text-align: center;
+    }
+    div.center{
+      height: 300px;
+      width: 60%;
+      margin: auto;
+      /* border: 1px solid purple; */
+    }
+    
+    
+    .center{
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 50px
+      ;
+     width: auto;
+     text-align: center;
+    }
+    .center>div{
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+      border-radius: 30px;
+    }
+    .acid{
+      height: 50%;
+      width: 30%;
+      border-radius: 50%;
+    }
+    .center>div>h3{
+      font-size: 15px;
+    }
+    .bottom>button{
+      margin-top: 30px;
+      margin-left: 610px;
+    }
+
+
+    .info{
+      height: 400px;
+      width: 80%;
+      margin: auto;
+      /* border: 1px solid black; */
+      display: flex;
+      color: white;
+      justify-content: space-around;
+      background-color: rgb(47, 119, 47);
+      border-radius: 20px ;
+      
+      }
+      
+     .info>div{
+       height: 100%;
+       width: 45%;
+       /* border: 1px solid blue; */
+     }
+     .info>div>h1{
+       margin-top: 100px;
+     }
+     .info>div>img{
+      height: 100%;
+      width: 100%;
+     }
+
+     @media screen and (min-width:701px) and (max-width:1000px) {
+      /* Here Write all the necessery styles for Medium Screen size  */
+      .center{
+      grid-template-columns: repeat(2,1fr);
+    }
+    .flex
+    {
+      /* border: 1px solid purple; */
+      display: inline;
+    }
+    .info{
+      display: inline;
+    }
+    .top{
+      display: inline;
+    }
+    .grid{
+      grid-template-columns: repeat(3,1fr);
+    }
+    .top>div>h1{
+      margin-top: 10px;
+    }
+    .mid>div>h1{
+      text-align: left;
+    }
+    .bottom{
+      margin-top: 10px;
+    }
+    .bottom>button{
+      margin-left: 10px;
+    }
+    }
+
+    @media screen and (min-width:100px) and (max-width:700px) {
+      /* Here Write all the necessery styles for Small Screen size  */
+      .center{
+      grid-template-columns: repeat(1,1fr);
+    }
+    .flex
+    {
+      /* border: 1px solid purple; */
+      display: inline;
+    }
+    .info{
+      display: inline;
+    }
+    .top{
+      display: inline;
+    }
+    .grid{
+      grid-template-columns: repeat(2,1fr);
+    }
+    .top>div>h1{
+      margin-top: 10px;
+    }
+    .mid>div>h1{
+      text-align: left;
+    }
+    .bottom{
+      margin-top: 10px;
+    }
+    .bottom>button{
+      margin-left: 10px;
+    }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="top">
+      <!-- This is the top part. Here should be 2 divs(flex) and inside the second div there should be 6 more divs(Grid) -->
+      <div>
+        <h1>Ivest In Ipos</h1>
+        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+        <button>Get Started</button>
+      </div>
+      <div class="grid">
+        <div>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSc0ZaKPggbJSqlLQeQroLmwvqv-swkCVafA&usqp=CAU" alt="a">
+          <h1>Instagram</h1>
+        </div>
+        <div>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSc0ZaKPggbJSqlLQeQroLmwvqv-swkCVafA&usqp=CAU" alt="a">
+          <h1>Instagram</h1>
+        </div>
+        <div>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSc0ZaKPggbJSqlLQeQroLmwvqv-swkCVafA&usqp=CAU" alt="a">
+          <h1>Instagram</h1>
+        </div>
+        <div>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSc0ZaKPggbJSqlLQeQroLmwvqv-swkCVafA&usqp=CAU" alt="a">
+          <h1>Instagram</h1>
+        </div>
+        <div>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSc0ZaKPggbJSqlLQeQroLmwvqv-swkCVafA&usqp=CAU" alt="a">
+          <h1>Instagram</h1>
+        </div>
+        <div>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSc0ZaKPggbJSqlLQeQroLmwvqv-swkCVafA&usqp=CAU" alt="a">
+          <h1>Instagram</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="mid">
+      <!-- This is the mid part. Here you should have div where there will be 3 more divs(flex)  -->
+      <div>
+         <h1>Keep Learning. Keep Growing</h1>
+         <div class="flex">
+        <div>
+          <img src="https://assets-netstorage.groww.in/web-assets/billion_groww_desktop/prod/build/client/images/blog1.d3a78143.png" alt="b">
+          <h1>How to select</h1>
+        </div>
+        <div>
+          <img src="https://assets-netstorage.groww.in/web-assets/billion_groww_desktop/prod/build/client/images/blog1.d3a78143.png" alt="b">
+          <h1>How to select</h1>
+        </div>
+        <div>
+          <img src="https://assets-netstorage.groww.in/web-assets/billion_groww_desktop/prod/build/client/images/blog1.d3a78143.png" alt="b">
+          <h1>How to select</h1>
+        </div>
+      </div>
+      </div>
+    </div>
+
+
+    <div class="bottom">
+      <!-- This is the bottom part. Here you should have div where there will be 6 more divs(Grid)  -->
+        <h1>Growing Mutual funds
+        </h1>
+        <h4>Search mutual funds</h4>
+        <div class="center">
+          <div>
+            <img class="acid" src="https://storage.googleapis.com/groww-assets/mf-assets/web/collection/light/high_returns.svg" alt="c">
+            <h3>High Returns</h3>
+          </div>
+          
+          <div>
+            <img class="acid" src="https://storage.googleapis.com/groww-assets/mf-assets/web/collection/light/high_returns.svg" alt="c">
+            <h3>High Returns</h3>
+          </div>
+          <div>
+            <img class="acid" src="https://storage.googleapis.com/groww-assets/mf-assets/web/collection/light/high_returns.svg" alt="c">
+            <h3>High Returns</h3>
+          </div>
+          <div>
+            <img class="acid" src="https://storage.googleapis.com/groww-assets/mf-assets/web/collection/light/high_returns.svg" alt="c">
+            <h3>High Returns</h3>
+          </div>
+          <div>
+            <img class="acid" src="https://storage.googleapis.com/groww-assets/mf-assets/web/collection/light/high_returns.svg" alt="c">
+            <h3>High Returns</h3>
+          </div>
+          <div>
+            <img class="acid" src="https://storage.googleapis.com/groww-assets/mf-assets/web/collection/light/high_returns.svg" alt="c">
+            <h3>High Returns</h3>
+          </div>
+
+        </div>
+
+          <button>
+            Explore all mutual funds
+          </button>
+        
+        
+        
+    </div>
+
+
+    <div class="info">
+      <!-- Here we should have a image and a div  -->
+        <div>
+          <h1>We are with you</h1>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum soluta velit quas repellendus, <br> pariatur quo iusto voluptate a recusandae aut eius suscipit! Tempora assumenda illo quis quia ad repellendus qui.</p>
+          <button>
+            Get in Touch
+          </button>
+        </div>
+        <div>
+        <img src="https://assets-netstorage.groww.in/web-assets/billion_groww_desktop/prod/build/client/images/mfSupportImg.0379d5a2.png" alt="d">
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mens Cart</title>
+    <style>
+        .container{
+            height: 400px;
+            width: 85%;
+            margin:20px auto;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 10px;
+            
+        }
+        .container>div{
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        .container>div>img{
+            height: 60%;
+            width: 100%;
+        }
+        h1
+        {
+         text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>MENS SHOES CART</h1>
+    <div class="container">
+       <div>
+        <img src="https://images.meesho.com/images/products/79288171/rcff7_512.jpg">
+        <h2 class="name1">MEN'S REEBOK RUNNING ROADMAP SHOES 1</h2>
+        <h3>Price : <span class="p1"> 1170 </span> </h3>
+        <button class="b1">Add TO Cart</button>
+       </div>
+       <div>
+        <img src="https://images.meesho.com/images/products/79288171/rcff7_512.jpg">
+        <h2 class="name2">MEN'S REEBOK RUNNING ROADMAP SHOES 2</h2>
+        <h3>Price : <span class="p2"> 117 </span></h3>
+        <button class="b2">Add TO Cart</button>
+       </div>
+       <div>
+        <img src="https://images.meesho.com/images/products/79288171/rcff7_512.jpg">
+        <h2 class="name3">MEN'S REEBOK RUNNING ROADMAP SHOES 3</h2>
+        <h3>Price : <span class="p3"> 11 </span></h3>
+        <button class="b3">Add TO Cart</button>
+       </div>
+       <div>
+        <img src="https://images.meesho.com/images/products/79288171/rcff7_512.jpg">
+        <h2 class="name4">MEN'S REEBOK RUNNING ROADMAP SHOES 4</h2>
+        <h3>Price :<span class="p4"> 1 </span></h3>
+        <button class="b4">Add TO Cart</button>
+       </div>
+    </div>
+</body>
+</html>
+<script>
+let cartArr = JSON.parse(localStorage.getItem("cart")) || []
+
+let button1 = document.querySelector(".b1").addEventListener("click",function(){
+    let name = document.querySelector(".name1").innerText = "MEN'S REEBOK RUNNING ROADMAP SHOES 1"
+    let price = document.querySelector(".p1").innerText = "1170"
+    let obj = {
+        name,
+        price,
+    }
+    cartArr.push(obj)
+    localStorage.setItem("cart",JSON.stringify(cartArr))
+})
+let button2 = document.querySelector(".b2").addEventListener("click",function(){
+    let name = document.querySelector(".name2").innerText = "MEN'S REEBOK RUNNING ROADMAP SHOES 2"
+    let price = document.querySelector(".p2").innerText = "117"
+    let obj = {
+        name,
+        price,
+    }
+    cartArr.push(obj)
+    localStorage.setItem("cart",JSON.stringify(cartArr))
+})
+let button3 = document.querySelector(".b3").addEventListener("click",function(){
+    let name = document.querySelector(".name3").innerText = "MEN'S REEBOK RUNNING ROADMAP SHOES 3"
+    let price = document.querySelector(".p3").innerText = "11"
+    let obj = {
+        name,
+        price,
+    }
+    cartArr.push(obj)
+    localStorage.setItem("cart",JSON.stringify(cartArr))
+})
+let button4 = document.querySelector(".b4").addEventListener("click",function(){
+    let name = document.querySelector(".name4").innerText = "MEN'S REEBOK RUNNING ROADMAP SHOES 4"
+    let price = document.querySelector(".p4").innerText = "1"
+    let obj = {
+        name,
+        price,
+    }
+    cartArr.push(obj)
+    localStorage.setItem("cart",JSON.stringify(cartArr))
+})
+</script>

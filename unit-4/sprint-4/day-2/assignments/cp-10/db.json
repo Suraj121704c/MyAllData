@@ -1,0 +1,74 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "title": "React",
+      "status": true
+    },
+    {
+      "id": 2,
+      "title": "Redux",
+      "status": true
+    },
+    {
+      "id": 3,
+      "title": "Css",
+      "status": true
+    },
+    {
+      "id": 4,
+      "title": "MongoDb",
+      "status": false
+    },
+    {
+      "id": 5,
+      "title": "TypeScript",
+      "status": false
+    },
+    {
+      "title": "dancing",
+      "staus": false,
+      "id": 6
+    },
+    {
+      "title": "Singing",
+      "staus": false,
+      "id": 7
+    },
+    {
+      "title": "newreading",
+      "staus": false,
+      "id": 8
+    },
+    {
+      "title": "newreading",
+      "staus": false,
+      "id": 9
+    },
+    {
+      "title": "new",
+      "staus": false,
+      "id": 10
+    },
+    {
+      "title": "ok",
+      "staus": false,
+      "id": 11
+    },
+    {
+      "title": "songs",
+      "staus": false,
+      "id": 12
+    },
+    {
+      "title": "songs",
+      "staus": false,
+      "id": 13
+    },
+    {
+      "title": "singing",
+      "staus": false,
+      "id": 14
+    }
+  ]
+}

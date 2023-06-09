@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Layout</title>
+</head>
+<style>
+    .container{
+        border: 1px solid white;
+    }
+    .container > h1,.container>p{
+        text-align: center;
+       
+    }
+    .container>div{
+        display: flex;
+       
+    }
+    .container>div>div{
+         width: 32%;
+         box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+         margin: auto;
+         padding: 2%;
+         text-align: center;
+     
+    }
+    .container>div>div>button{
+        font-size: 20px;
+        padding: 2%;
+        border: 1px solid violet;
+        color: rgb(255, 5, 255);
+        background-color: white;
+        border-radius: 5px;
+    }
+
+    .container>div>div:nth-child(1) h2{
+        color: green;
+    }
+    .container>div>div:nth-child(2) h2{
+        color: orange;
+    }
+    .container>div>div:nth-child(3) h2{
+        color: blue;
+    }
+   
+</style>
+<body>
+    <div class="container">
+        <h1>Chose a plan that right for your bussiness</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus vitae ipsa aut rerum dolore minus.</p>
+        <div>
+            <div>
+                <h3>Starter Plan</h3>
+                <h2>Free
+                </h2>
+                <p>Per Month</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, enim?</p>
+                <button>Start Now</button>
+            </div>
+            <div>
+                <h3>Starter Plan</h3>
+                <h2>Free
+                </h2>
+                <p>Per Month</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, enim?</p>
+                <button>Start Now</button>
+            </div>
+            <div>
+                <h3>Starter Plan</h3>
+                <h2>Free
+                </h2>
+                <p>Per Month</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, enim?</p>
+                <button>Start Now</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

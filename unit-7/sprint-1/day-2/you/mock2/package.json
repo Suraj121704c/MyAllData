@@ -1,0 +1,39 @@
+{
+  "name": "rct-201-e1-boilerplate",
+  "version": "0.1.0",
+  "private": true,
+  "engines":{
+    "npm":">=8.0.0 <9.0.0",
+    "node":"16.16.0"
+  },
+  "dependencies": {
+    "cypress": "^11.2.0",
+    "http-server": "^14.1.1",
+    "typescript": "^4.7.4",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "http-server",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "homepage": "."
+}

@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Tshirt",
+    "brand": "Nike",
+    "price": 3000,
+    "image": "https://contents.mediadecathlon.com/p2175064/a323df0c88381a47cf8c79a3a38aeb5f/p2175064.jpg?format=auto&quality=70&f=650x0",
+    "id": 1,
+    "like": 6,
+    "dislike": 4
+  },
+  {
+    "name": "Tshirt-4",
+    "brand": "Puma",
+    "price": 5000,
+    "image": "https://contents.mediadecathlon.com/p2175064/a323df0c88381a47cf8c79a3a38aeb5f/p2175064.jpg?format=auto&quality=70&f=650x0",
+    "id": 2,
+    "like": 9,
+    "dislike": 8
+  },
+  {
+    "name": "Tshirt-6",
+    "brand": "Nike",
+    "price": 3000,
+    "image": "https://contents.mediadecathlon.com/p2175064/a323df0c88381a47cf8c79a3a38aeb5f/p2175064.jpg?format=auto&quality=70&f=650x0",
+    "id": 3,
+    "like": 4,
+    "dislike": 2
+  },
+  {
+    "name": "Tshirt-7",
+    "brand": "Puma",
+    "price": 5000,
+    "image": "https://contents.mediadecathlon.com/p2175064/a323df0c88381a47cf8c79a3a38aeb5f/p2175064.jpg?format=auto&quality=70&f=650x0",
+    "id": 4,
+    "like": 2,
+    "dislike": 2
+  },
+  {
+    "name": "Shoe-8",
+    "brand": "Nike",
+    "price": 8000,
+    "image": "https://contents.mediadecathlon.com/p2175064/a323df0c88381a47cf8c79a3a38aeb5f/p2175064.jpg?format=auto&quality=70&f=650x0",
+    "id": 5,
+    "like": 3,
+    "dislike": 1
+  }
+]

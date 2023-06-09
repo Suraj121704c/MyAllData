@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <title>Home Page</title>
+  </head>
+  <body>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="Admin.html">Admin</a>
+      <a href="Doctors.html">Doctors</a>
+    </nav>
+    <div class="form-container">
+      <div id="login-form">
+        <h3>
+          Login &nbsp;&nbsp;<span>
+            <button id="toggle-register">Register</button>
+          </span>
+        </h3>
+        <br />
+        <br />
+        <input type="text" id="login-email" placeholder="Email" />
+        <br />
+        <br />
+        <input type="password" id="login-password" placeholder="Password" />
+        <br />
+        <br />
+        <button id="login-btn">Login</button>
+        <br />
+        <br />
+      </div>
+      <div id="register-form" style="display: none">
+        <h3>
+          Register &nbsp;&nbsp;
+          <span> <button id="toggle-login">Login</button></span>
+        </h3>
+        <br>
+        <br>
+
+        <input type="text" id="register-name" placeholder="Name" />
+        <br>
+        <br>
+
+        <input type="email" id="register-email" placeholder="Email" />
+        <br>
+        <br>
+
+        <input type="password" id="register-password" placeholder="Password" />
+        <br>
+        <br>
+
+        <button id="register-btn">Register</button>
+        <br>
+        <br>
+
+      </div>
+    </div>
+  </body>
+</html>
+<script src="/scripts/index.js"></script>

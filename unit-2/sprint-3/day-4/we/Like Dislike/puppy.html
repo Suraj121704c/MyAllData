@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puppy</title>
+    <style>
+        div{
+            display: flex;
+        }
+        #a{
+            text-align: center;
+            height: 200px;
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <img src="https://i.natgeofe.com/k/559a884a-41d7-4731-b940-96f4cf2c8831/puppy-life-book-5_2x1.jpg" id="a">
+    </div>
+    <br>
+    <h1></h1>
+    <button class="area">Like</button>
+    <h2></h2>
+    <button class="width">Dislike</button>
+        
+</div>
+</body>
+</html>
+<script>
+ document.querySelector(".area").addEventListener("click",Like)
+ let count = localStorage.getItem("like") || 0
+ document.querySelector("h1").innerText=count
+ function Like(){
+   count++;
+   document.querySelector("h1").innerText=count
+   localStorage.setItem("like",count)
+ }
+
+ document.querySelector(".width").addEventListener("click",dislike)
+ let cont = localStorage.getItem("dislike") || 0
+ document.querySelector("h2").innerText=cont
+ function dislike(){
+   cont++;
+   document.querySelector("h2").innerText=cont
+   localStorage.setItem("dislike",cont)
+ }
+
+</script>

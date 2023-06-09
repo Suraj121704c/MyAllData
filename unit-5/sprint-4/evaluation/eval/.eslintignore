@@ -1,0 +1,10 @@
+*.test.tsx
+*.test.ts
+*.spec.tsx
+*.spec.ts
+*.png
+*.svg
+*.css
+*.json
+*jpeg
+*.cy.ts

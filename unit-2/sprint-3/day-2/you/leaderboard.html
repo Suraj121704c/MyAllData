@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leader Board</title>
+    <style>
+        .container{
+            height: 600px;
+            width: 40%;
+            margin: 100px auto;
+            /* border: 1px solid red; */
+        }
+        .top{
+            height: 15%;
+            width: 100%;
+            margin: 0px auto 20px auto;
+            display: flex;
+            /* border: 1px solid black; */
+            justify-content: space-around;
+        }.bottom{
+            height: 15%;
+            width: 100%;
+            margin: 20px auto;
+            /* border: 1px solid red; */
+            text-align: center;
+        }
+       
+        .niche{
+            height: 10%;
+            width: 100%;
+            margin: 20px auto 20px auto;
+            display: flex;
+            /* border: 1px solid purple; */
+            text-align: center;
+            justify-content: space-between;
+        }
+        .top>div{
+            height: 70%;
+            width: 23%;
+            /* border: 1px solid blue; */
+            text-align: center;
+            font-size: 50px;
+        }
+        .bottom>input{
+            height: 100%;
+            width: 50%;
+            color: black;
+            text-align: center;
+            font-size: 70px;
+            margin: auto;
+            background-color: red;
+        }
+        .bottom2{
+            height: 45%;
+            width: 60%;
+            margin: auto;
+            /* border: 1px solid green; */
+            display: grid;
+          grid-template-columns: repeat(3,1fr);
+          gap : 10px 10px;
+          justify-content: center;
+          font-size: 65px;
+          text-align: center;
+          margin-top: 40px;
+        }
+        .bottom2>div{
+            display: flex;
+            text-align: center;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+          /* background-color: red; */
+        }
+        .bottom3{
+          height: 15%;
+          width: 100%;
+          margin-top: 10px;
+          text-align: center;
+        }
+        .bottom3>div{
+          height: 100%;
+          width: 18%;
+          box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+          /* border: 1px solid blue; */
+          background-color: purple;
+          margin: auto;
+          font-size: 75px;
+          color: wheat;
+        }
+        .niche>div{
+            height: 100%;
+            width: 30%;
+            /* border:1px solid blue; */
+            margin: auto;
+            font-size: 45px;
+            background-color: black;
+            color: white;
+        }
+        .top>div:nth-child(1){
+         background-color: red;
+         color: black;
+        }
+        .top>div:nth-child(3){
+         background-color: green;
+         color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+     <div class="top">
+        <div id="min">43</div><h2>Min</h2> 
+        <div id="max">2019</div> <h2>Max</h2>
+     </div>
+     <div class="bottom">
+      <input type="number" id="w" placeholder="#">  
+     </div>
+
+
+     <div class="bottom2">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+     </div>
+     <div class="bottom3">
+        <div>0</div>
+     </div>
+
+
+     <div class="niche">
+        <div>Enter</div>
+     </div>
+    </div>
+</body>
+</html>
+<script>
+let keys = document.querySelectorAll(".bottom2>div")
+let bag =""
+
+for(let i = 0;i<keys.length;i++){
+    keys[i].addEventListener("click",mycal)
+}
+function mycal(){
+    let target = event.target.innerText 
+    bag = bag + target
+    document.querySelector("#w").value = bag
+}
+
+let leftkey = document.querySelector(".bottom3>div")
+leftkey.addEventListener("click",myleft)
+function myleft(){
+    let target = event.target.innerText
+    bag = bag + target
+    document.querySelector("#w").value = bag
+}
+
+let enterkey = document.querySelector(".niche>div")
+enterkey.addEventListener("click",myenter)
+function myenter(){
+    let target = event.target.innerText
+    bag = bag + target
+    
+    let val = document.querySelector("#w").value
+    let mini = document.querySelector("#min").innerText
+    let maxi = document.querySelector("#max").innerText
+    if(val < mini){
+        document.querySelector("#min").innerText = val
+    }
+    else if(val > maxi){
+        document.querySelector("#max").innerText = val
+    }
+    else{
+        document.querySelector("#w").value = 0
+    }
+}
+</script>

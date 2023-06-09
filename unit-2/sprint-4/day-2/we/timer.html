@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #clock{
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           height: 100vh;
+           background-color: grey; 
+        }
+        #clock>div{
+            padding: 30px;
+            margin: 30px;
+            background-color:blue;
+            font-size: 50px;
+            color: white;
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="clock">
+        <div id="hrs">16</div>
+        <span>:</span>
+        <div id="mins">56</div>
+        <span>:</span>
+        <div id="secs">00</div>
+        <div id="ampm">AM</div>
+    </div>
+</body>
+</html>
+
+<script>
+let clock = function(){
+let date = new Date()
+let hours = date.getHours();
+let minutes = date.getMinutes();
+let seconds = date.getSeconds();
+
+var half = "";
+if(hours >= 12){
+    half = "PM";
+}
+else
+{
+    half = "AM"
+}
+
+document.querySelector("#hrs").innerText = hours;
+document.querySelector("#mins").innerText = minutes;
+document.querySelector("#secs").innerText = seconds;
+document.querySelector("#ampm").innerText = half;
+setInterval(clock,1000)
+};
+clock()
+</script>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Womens Cart</title>
+    <style>
+        .container{
+            height: 400px;
+            width: 85%;
+            margin:20px auto;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 10px;
+            
+        }
+        .container>div{
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        .container>div>img{
+            height: 60%;
+            width: 100%;
+        }
+        h1
+        {
+         text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>WOMENS SHOES CART</h1>
+    <div class="container">
+       <div>
+        <img src="https://img.freepik.com/premium-photo/red-woman-shoes_92686-4.jpg?w=2000">
+        <h2 class="name1">WOMENS shoes no1</h2>
+        <h3 >Price : <span class="p1"> 1133 </span></h3>
+        <button class="b1">Add TO Cart</button>
+       </div>
+       <div>
+        <img src="https://img.freepik.com/premium-photo/red-woman-shoes_92686-4.jpg?w=2000">
+        <h2 class="name2">WOMENS shoes no2</h2>
+        <h3>Price : <span class="p2"> 1122</span></h3>
+        <button class="b2">Add TO Cart</button>
+       </div>
+       <div>
+        <img src="https://img.freepik.com/premium-photo/red-woman-shoes_92686-4.jpg?w=2000">
+        <h2 class="name3">WOMENS shoes no3</h2>
+        <h3>Price : <span class="p3"> 1133 </span></h3>
+        <button class="b3">Add TO Cart</button>
+       </div>
+       <div>
+        <img src="https://img.freepik.com/premium-photo/red-woman-shoes_92686-4.jpg?w=2000">
+        <h2 class="name4">WOMENS shoes no4</h2>
+        <h3>Price : <span class="p4"> 121 </span></h3>
+        <button class="b4">Add TO Cart</button>
+       </div>
+    </div>
+</body>
+</html>
+<script>
+let cartArr = JSON.parse(localStorage.getItem("cart2")) || []
+
+let button1 = document.querySelector(".b1").addEventListener("click",function(){
+    let name = document.querySelector(".name1").innerText = "WOMENS shoes no1"
+    let price = document.querySelector(".p1").innerText = "1170"
+    let obj = {
+        name,
+        price,
+    }
+    cartArr.push(obj)
+    localStorage.setItem("cart2",JSON.stringify(cartArr))
+})
+let button2 = document.querySelector(".b2").addEventListener("click",function(){
+    let name = document.querySelector(".name2").innerText = "WOMENS shoes no2"
+    let price = document.querySelector(".p2").innerText = "117"
+    let obj = {
+        name,
+        price,
+    }
+    cartArr.push(obj)
+    localStorage.setItem("cart2",JSON.stringify(cartArr))
+})
+let button3 = document.querySelector(".b3").addEventListener("click",function(){
+    let name = document.querySelector(".name3").innerText = "WOMENS shoes no3"
+    let price = document.querySelector(".p3").innerText = "1133"
+    let obj = {
+        name,
+        price,
+    }
+    cartArr.push(obj)
+    localStorage.setItem("cart2",JSON.stringify(cartArr))
+})
+let button4 = document.querySelector(".b4").addEventListener("click",function(){
+    let name = document.querySelector(".name4").innerText = "WOMENS shoes no4"
+    let price = document.querySelector(".p4").innerText = "121"
+    let obj = {
+        name,
+        price,
+    }
+    cartArr.push(obj)
+    localStorage.setItem("cart2",JSON.stringify(cartArr))
+})
+</script>

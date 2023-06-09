@@ -1,0 +1,50 @@
+--> use graduates
+
+--> db.createCollection("users")
+
+--> db.users.insertMany([{
+ "first_name": "Ida",
+ "last_name": "Hammerman",
+ "percentage": 41,
+ "gender": "Female",
+ "university": "Fordham University",
+ "isMarried": false
+}, {
+ "first_name": "Phyllida",
+ "last_name": "Gauntlett",
+ "percentage": 73,
+ "gender": "Non-binary",
+ "university": "Medical Academy in Bialystok",
+ "isMarried": false
+}, {
+ "first_name": "Gilemette",
+ "last_name": "Balshen",
+ "percentage": 34,
+ "gender": "Female",
+ "university": "Universidad Rey Juan Carlos",
+ "isMarried": false
+}, {
+ "first_name": "Pebrook",
+ "last_name": "Currum",
+ "percentage": 82,
+ "gender": "Male",
+ "university": "Universidade Cruzeiro do Sul",
+ "isMarried": false
+}, {
+ "first_name": "Sidney",
+ "last_name": "Corbert",
+ "percentage": 82,
+ "gender": "Male",
+ "university": "Hogeschool voor Wetenschap en Kunst (VLEKHO), Brussel",
+ "isMarried": false
+}])
+
+--> db.users.find({gender: "Male", isMarried: false})
+
+--> db.users.find({gender: "Female", percentage: {$gt: 80}})
+
+--> db.users.find({percentage: {$gte: 50}})
+
+--> db.users.updateMany({gender: "Female"}, {$set: {scholarship: true}})
+
+--> db.users.deleteMany({percentage: {$lt: 40}})

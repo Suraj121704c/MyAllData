@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Coffee</title>
+    <style>
+     .coffee{
+        display: grid;
+        width: 90%;
+        margin: 120px auto;
+        grid-template-areas: "a b c"
+                             "d e f"
+                             "g h i";
+
+                             gap: 10px
+                             ;
+     }
+     .coffee>div:nth-child(1){
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;        grid-area: a;
+        height: 150px;
+       
+        text-align: center;
+        align-items: center;
+        border-radius: 20px;
+     }
+     .coffee>div:nth-child(2){
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;        grid-area: b;
+        height: 150px;
+        text-align: center;
+        align-items: center;
+        border-radius: 20px;
+     }
+     .coffee>div:nth-child(3){
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;        grid-area: c;
+        height: 150px;
+        text-align: center;
+        align-items: center;
+        border-radius: 20px;
+     }
+     .coffee>div:nth-child(4){
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        grid-area: d;
+        height: 150px;
+        text-align: center;
+        align-items: center;
+        border-radius: 20px;
+     }
+     .coffee>div:nth-child(5){
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        grid-area: e;
+        height: 150px;
+        text-align: center;
+        align-items: center;
+        border-radius: 20px;
+     }
+     .coffee>div:nth-child(6){
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        grid-area: f;
+        height: 150px;
+        text-align: center;
+        align-items: center;
+        border-radius: 20px;
+     }
+     .coffee>div:nth-child(7){
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        grid-area: g;
+        height: 150px;
+        text-align: center;
+        align-items: center;
+        border-radius: 20px;
+     }
+     .coffee>div:nth-child(8){
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        grid-area: h;
+        height: 150px;
+        text-align: center;
+        align-items: center;
+        border-radius: 20px;
+     }
+     .coffee>div:nth-child(9){
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        grid-area: i;
+        height: 150px;
+        text-align: center;
+        align-items: center;
+        border-radius: 20px;
+     }
+
+     .all{
+        display: grid;
+        grid-template-areas: "ab bc"
+                              "cd cd";
+        gap: 0px;
+        height: auto;
+        text-align: center;
+        width: auto;
+     }
+     .all>div:nth-child(1){
+      grid-area: ab;
+     }
+     .all>div:nth-child(2){
+        color: gold;
+      grid-area: bc;
+     }
+     .all>div:nth-child(3){
+      
+      grid-area: cd;
+     }
+
+     .bll{
+        display: grid;
+        grid-template-areas: "ab bc"
+                              "cd cd";
+        height: auto;
+        gap: 0px;
+        text-align: center;
+        width: auto;
+     }
+     .bll>div:nth-child(1){
+      grid-area: ab;
+     }
+     .bll>div:nth-child(2){
+        color: gold;
+      grid-area: bc;
+     }
+     .bll>div:nth-child(3){
+      
+      grid-area: cd;
+     }
+
+     .cll{
+        display: grid;
+        grid-template-areas: "ab bc"
+                              "cd cd";
+        height: auto;
+        text-align: center;
+        width: auto;
+     }
+     .cll>div:nth-child(1){
+      grid-area: ab;
+     }
+     .cll>div:nth-child(2){
+        color: gold;
+      grid-area: bc;
+     }
+     .cll>div:nth-child(3){
+      grid-area: cd;
+     }
+
+     .dll{
+        display: grid;
+        grid-template-areas: "ab bc"
+                              "cd cd";
+        height: auto;
+        text-align: center;
+        width: auto;
+     }
+     .dll>div:nth-child(1){
+      grid-area: ab;
+     }
+     .dll>div:nth-child(2){
+      grid-area: bc;
+      color: gold;
+     }
+     .dll>div:nth-child(3){
+      grid-area: cd;
+     }
+     .ell{
+        display: grid;
+        grid-template-areas: "ab bc"
+                              "cd cd";
+        height: auto;
+        text-align: center;
+        width: auto;
+     }
+     .ell>div:nth-child(1){
+      grid-area: ab;
+     }
+     .ell>div:nth-child(2){
+      grid-area: bc;
+      color: gold;
+     }
+     .ell>div:nth-child(3){
+      grid-area: cd;
+     }
+     .fll{
+        display: grid;
+        grid-template-areas: "ab bc"
+                              "cd cd";
+        height: auto;
+        text-align: center;
+        width: auto;
+     }
+     .fll>div:nth-child(1){
+      grid-area: ab;
+     }
+     .fll>div:nth-child(2){
+      grid-area: bc;
+      color: gold;
+     }
+     .fll>div:nth-child(3){
+      grid-area: cd;
+     }
+     .gll{
+        display: grid;
+        grid-template-areas: "ab bc"
+                              "cd cd";
+        height: auto;
+        text-align: center;
+        width: auto;
+     }
+     .gll>div:nth-child(1){
+      grid-area: ab;
+     }
+     .gll>div:nth-child(2){
+      grid-area: bc;
+      color: gold;
+     }
+     .gll>div:nth-child(3){
+      grid-area: cd;
+     }
+     .hll{
+        display: grid;
+        grid-template-areas: "ab bc"
+                              "cd cd";
+        height: auto;
+        text-align: center;
+        width: auto;
+     }
+     .hll>div:nth-child(1){
+      grid-area: ab;
+     }
+     .hll>div:nth-child(2){
+      grid-area: bc;
+      color: gold;
+     }
+     .hll>div:nth-child(3){
+      grid-area: cd;
+     }
+     .ill{
+        display: grid;
+        grid-template-areas: "ab bc"
+                              "cd cd";
+        height: auto;
+        text-align: center;
+        width: auto;
+     }
+     .ill>div:nth-child(1){
+      grid-area: ab;
+     }
+     .ill>div:nth-child(2){
+      grid-area: bc;
+      color: gold;
+     }
+     .ill>div:nth-child(3){
+      grid-area: cd;
+     }
+
+
+     @media all and (min-width:601px) and (max-width:900px) {
+    .coffee{
+        grid-template-areas: "a b"
+                              "c d"
+                               "e f"
+                               "g h"
+                               "i  i"
+                              ;
+    }
+}
+@media all and (min-width:100px) and (max-width:600px) {
+    .coffee{
+        grid-template-areas: "a"
+                              "b"
+                               "c"
+                               "d"
+                               "e"
+                               "f"
+                               "g"
+                               "h"
+                               "i"
+                              ;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="coffee">
+        <div class="all">
+            <div><h1>Capchino</h1></div>
+            <div><h1>$49</h1></div>
+            <div><p>Lorem ipsum dolor sit amet consectetur <br> 
+                adipisicing elit. Inventore, aliquam.</p></div>
+         </div>
+         <div>
+            <div class="bll">
+                <div><h1>Capchino</h1></div>
+                <div><h1>$49</h1></div>
+                <div><p>Lorem ipsum dolor sit amet consectetur <br> 
+                    adipisicing elit. Inventore, aliquam.</p></div>
+             </div>
+         </div>
+         <div>
+            <div class="cll">
+                <div><h1>Capchino</h1></div>
+                <div><h1>$49</h1></div>
+                <div><p>Lorem ipsum dolor sit amet consectetur <br> 
+                    adipisicing elit. Inventore, aliquam.</p></div>
+             </div>
+         </div>
+
+         <div>
+            <div class="dll">
+                <div><h1>Capchino</h1></div>
+                <div><h1>$49</h1></div>
+                <div><p>Lorem ipsum dolor sit amet consectetur <br> 
+                    adipisicing elit. Inventore, aliquam.</p></div>
+             </div>
+         </div>
+        <div>
+            <div class="ell">
+                <div><h1>Capchino</h1></div>
+                <div><h1>$49</h1></div>
+                <div><p>Lorem ipsum dolor sit amet consectetur <br> 
+                    adipisicing elit. Inventore, aliquam.</p></div>
+             </div>
+        </div>
+        <div>
+            <div class="fll">
+                <div><h1>Capchino</h1></div>
+                <div><h1>$49</h1></div>
+                <div><p>Lorem ipsum dolor sit amet consectetur <br> 
+                    adipisicing elit. Inventore, aliquam.</p></div>
+             </div>
+        </div>
+
+        <div>
+            <div class="gll">
+                <div><h1>Capchino</h1></div>
+                <div><h1>$49</h1></div>
+                <div><p>Lorem ipsum dolor sit amet consectetur <br> 
+                    adipisicing elit. Inventore, aliquam.</p></div>
+             </div>
+        </div>
+        <div>
+            <div class="hll">
+                <div><h1>Capchino</h1></div>
+                <div><h1>$49</h1></div>
+                <div><p>Lorem ipsum dolor sit amet consectetur <br> 
+                    adipisicing elit. Inventore, aliquam.</p></div>
+             </div>
+        </div>
+        <div>
+            <div class="ill">
+                <div><h1>Capchino</h1></div>
+                <div><h1>$49</h1></div>
+                <div><p>Lorem ipsum dolor sit amet consectetur <br> 
+                    adipisicing elit. Inventore, aliquam.</p></div>
+             </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "staus": false,
+      "status": true
+    },
+    {
+      "title": "singing",
+      "status": false,
+      "id": 2
+    },
+    {
+      "title": "task-3",
+      "status": false,
+      "id": 3
+    },
+    {
+      "title": "task-4",
+      "status": false,
+      "id": 4
+    }
+  ]
+}

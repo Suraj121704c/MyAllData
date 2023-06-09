@@ -1,0 +1,382 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "name": "Ritesh kamthe",
+      "batch": "RCT211",
+      "student_code": "fw22_74",
+      "score": 5,
+      "green_card": 4,
+      "Poster": "https://assets.webiconspng.com/uploads/2016/12/User-Icon.png"
+    },
+    {
+      "id": 2,
+      "name": "Shubham",
+      "batch": "JS201",
+      "student_code": "fw22_84",
+      "score": 1,
+      "green_card": 5,
+      "Poster": "https://assets.webiconspng.com/uploads/2016/12/User-Icon.png"
+    },
+    {
+      "id": 3,
+      "name": "Suraj Pathak",
+      "batch": "JS201",
+      "student_code": "fw22_16",
+      "score": 7,
+      "green_card": 2,
+      "Poster": "https://assets.webiconspng.com/uploads/2016/12/User-Icon.png"
+    },
+    {
+      "id": 4,
+      "name": "Dipak Prakash Tange",
+      "batch": "RCT101",
+      "student_code": "fw22_14",
+      "score": 10,
+      "green_card": 4,
+      "Poster": "https://assets.webiconspng.com/uploads/2016/12/User-Icon.png"
+    },
+    {
+      "id": 5,
+      "name": "Dhiraj Giri",
+      "batch": "NXM101",
+      "student_code": "fw22_50",
+      "score": 10,
+      "green_card": 1,
+      "Poster": "https://assets.webiconspng.com/uploads/2016/12/User-Icon.png"
+    },
+    {
+      "id": 6,
+      "name": "Tanisha",
+      "batch": "RCT211",
+      "student_code": "fw22_87",
+      "score": 6,
+      "green_card": 3,
+      "Poster": "https://assets.webiconspng.com/uploads/2016/12/User-Icon.png"
+    },
+    {
+      "id": 7,
+      "name": "Mayur Bhaskar khachane",
+      "batch": "JS201",
+      "student_code": "fw22_4",
+      "score": 4,
+      "green_card": 5,
+      "Poster": "https://assets.webiconspng.com/uploads/2016/12/User-Icon.png"
+    },
+    {
+      "id": 8,
+      "name": "Venugopal Anant Burli",
+      "batch": "JS201",
+      "student_code": "fw22_2",
+      "score": 10,
+      "green_card": 3,
+      "Poster": "https://assets.webiconspng.com/uploads/2016/12/User-Icon.png"
+    },
+    {
+      "id": 9,
+      "name": " Deepanshu Mehra",
+      "batch": "RCT101",
+      "student_code": "fw22_51",
+      "score": 1,
+      "green_card": 1,
+      "Poster": "https://assets.webiconspng.com/uploads/2016/12/User-Icon.png"
+    },
+    {
+      "id": 10,
+      "name": "Anshumaan Baaghi",
+      "batch": "RCT211",
+      "student_code": "fw22_4",
+      "score": 2,
+      "green_card": 2,
+      "Poster": "https://assets.webiconspng.com/uploads/2016/12/User-Icon.png"
+    },
+    {
+      "id": 11,
+      "name": "Aashish Kumar",
+      "batch": "RCT211",
+      "student_code": "fw22_43",
+      "score": 5,
+      "green_card": 2,
+      "Poster": "https://assets.webiconspng.com/uploads/2016/12/User-Icon.png"
+    },
+    {
+      "id": 12,
+      "name": "Mahesh Murlidhar Wankhade",
+      "batch": "JS201",
+      "student_code": "fw22_3",
+      "score": 6,
+      "green_card": 2,
+      "Poster": "https://assets.webiconspng.com/uploads/2016/12/User-Icon.png"
+    },
+    {
+      "id": 13,
+      "name": "Vaibhav Jagdevrao Sultane",
+      "batch": "WEB101",
+      "student_code": "fw22_65",
+      "score": 4,
+      "green_card": 5,
+      "Poster": "https://assets.webiconspng.com/uploads/2016/12/User-Icon.png"
+    },
+    {
+      "id": 14,
+      "name": "Rahul Rajeevan",
+      "batch": "RCT101",
+      "student_code": "fw22_98",
+      "score": 5,
+      "green_card": 2,
+      "Poster": "https://assets.webiconspng.com/uploads/2016/12/User-Icon.png"
+    },
+    {
+      "id": 15,
+      "name": "Rovin Singh",
+      "batch": "NXM101",
+      "student_code": "fw22_6",
+      "score": 11,
+      "green_card": 1,
+      "Poster": "https://assets.webiconspng.com/uploads/2016/12/User-Icon.png"
+    },
+    {
+      "id": 16,
+      "name": "Inder Pal",
+      "batch": "RCT211",
+      "student_code": "fw22_96",
+      "score": 7,
+      "green_card": 5,
+      "Poster": "https://assets.webiconspng.com/uploads/2016/12/User-Icon.png"
+    },
+    {
+      "id": 17,
+      "name": "Srikanth Chiramana",
+      "batch": "WEB101",
+      "student_code": "fw22_66",
+      "score": 6,
+      "green_card": 4,
+      "Poster": "https://assets.webiconspng.com/uploads/2016/12/User-Icon.png"
+    },
+    {
+      "id": 18,
+      "name": "Aakash",
+      "batch": "JS201",
+      "student_code": "fw22_32",
+      "score": 3,
+      "green_card": 1,
+      "Poster": "https://assets.webiconspng.com/uploads/2016/12/User-Icon.png"
+    },
+    {
+      "id": 19,
+      "name": "Pankaj Kandpal",
+      "batch": "RCT101",
+      "student_code": "fw22_1",
+      "score": 1,
+      "green_card": 2,
+      "Poster": "https://assets.webiconspng.com/uploads/2016/12/User-Icon.png"
+    },
+    {
+      "id": 20,
+      "name": "Debobrota haldar",
+      "batch": "NXM101",
+      "student_code": "fw22_42",
+      "score": 3,
+      "green_card": 1,
+      "Poster": "https://assets.webiconspng.com/uploads/2016/12/User-Icon.png"
+    },
+    {
+      "id": 21,
+      "name": "Sandeep Yadav",
+      "batch": "RCT211",
+      "student_code": "fw22_15",
+      "score": 7,
+      "green_card": 4,
+      "Poster": "https://assets.webiconspng.com/uploads/2016/12/User-Icon.png"
+    },
+    {
+      "id": 22,
+      "name": "Mohammad Ayaz Noori",
+      "batch": "WEB101",
+      "student_code": "fw22_61",
+      "score": 7,
+      "green_card": 1,
+      "Poster": "https://assets.webiconspng.com/uploads/2016/12/User-Icon.png"
+    },
+    {
+      "id": 23,
+      "name": "Mohsin Iqbal",
+      "batch": "JS201",
+      "student_code": "fw22_82",
+      "score": 5,
+      "green_card": 3,
+      "Poster": "https://assets.webiconspng.com/uploads/2016/12/User-Icon.png"
+    },
+    {
+      "id": 24,
+      "name": "Om Prakash",
+      "batch": "RCT101",
+      "student_code": "fw22_10",
+      "score": 8,
+      "green_card": 3,
+      "Poster": "https://assets.webiconspng.com/uploads/2016/12/User-Icon.png"
+    },
+    {
+      "id": 25,
+      "name": "Prajwal Jaiswal",
+      "batch": "NXM101",
+      "student_code": "fw22_77",
+      "score": 4,
+      "green_card": 2,
+      "Poster": "https://assets.webiconspng.com/uploads/2016/12/User-Icon.png"
+    },
+    {
+      "id": 26,
+      "name": "Sanjaykumar Verma",
+      "batch": "RCT211",
+      "student_code": "fw22_79",
+      "score": 3,
+      "green_card": 3,
+      "Poster": "https://assets.webiconspng.com/uploads/2016/12/User-Icon.png"
+    },
+    {
+      "id": 27,
+      "name": "Manoj Attri",
+      "batch": "WEB101",
+      "student_code": "fw22_85",
+      "score": 1,
+      "green_card": 4,
+      "Poster": "https://assets.webiconspng.com/uploads/2016/12/User-Icon.png"
+    },
+    {
+      "id": 28,
+      "name": "Vivek Goswami",
+      "batch": "JS201",
+      "student_code": "fw22_73",
+      "score": 1,
+      "green_card": 3,
+      "Poster": "https://assets.webiconspng.com/uploads/2016/12/User-Icon.png"
+    },
+    {
+      "id": 29,
+      "name": "Mohit Agrawal",
+      "batch": "RCT101",
+      "student_code": "fw22_79",
+      "score": 1,
+      "green_card": 4,
+      "Poster": "https://assets.webiconspng.com/uploads/2016/12/User-Icon.png"
+    },
+    {
+      "id": 30,
+      "name": "Ejaz Ali Khan",
+      "batch": "NXM101",
+      "student_code": "fw22_36",
+      "score": 6,
+      "green_card": 3,
+      "Poster": "https://assets.webiconspng.com/uploads/2016/12/User-Icon.png"
+    },
+    {
+      "id": 31,
+      "name": "Nitin Aggarwal",
+      "batch": "RCT211",
+      "student_code": "fw22_55",
+      "score": 2,
+      "green_card": 2,
+      "Poster": "https://assets.webiconspng.com/uploads/2016/12/User-Icon.png"
+    },
+    {
+      "id": 32,
+      "name": "Mo Zakir",
+      "batch": "WEB101",
+      "student_code": "fw22_2",
+      "score": 3,
+      "green_card": 3,
+      "Poster": "https://assets.webiconspng.com/uploads/2016/12/User-Icon.png"
+    },
+    {
+      "id": 33,
+      "name": " Bivek Rai",
+      "batch": "JS201",
+      "student_code": "fw22_61",
+      "score": 3,
+      "green_card": 2,
+      "Poster": "https://assets.webiconspng.com/uploads/2016/12/User-Icon.png"
+    },
+    {
+      "id": 34,
+      "name": "Adarsha Khatua",
+      "batch": "RCT101",
+      "student_code": "fw22_38",
+      "score": 1,
+      "green_card": 4,
+      "Poster": "https://assets.webiconspng.com/uploads/2016/12/User-Icon.png"
+    },
+    {
+      "id": 35,
+      "name": "Abhishek Rishikant Pandey",
+      "batch": "NXM101",
+      "student_code": "fw22_74",
+      "score": 5,
+      "green_card": 2,
+      "Poster": "https://assets.webiconspng.com/uploads/2016/12/User-Icon.png"
+    },
+    {
+      "id": 36,
+      "name": "Shaheen Ahmad Khan",
+      "batch": "RCT211",
+      "student_code": "fw22_11",
+      "score": 1,
+      "green_card": 5,
+      "Poster": "https://assets.webiconspng.com/uploads/2016/12/User-Icon.png"
+    },
+    {
+      "id": 37,
+      "name": "Sumit Beniwal",
+      "batch": "WEB101",
+      "student_code": "fw22_66",
+      "score": 4,
+      "green_card": 2,
+      "Poster": "https://assets.webiconspng.com/uploads/2016/12/User-Icon.png"
+    },
+    {
+      "id": 38,
+      "name": "Prakash kumar gupta",
+      "batch": "JS201",
+      "student_code": "fw22_37",
+      "score": 11,
+      "green_card": 3,
+      "Poster": "https://assets.webiconspng.com/uploads/2016/12/User-Icon.png"
+    },
+    {
+      "id": 39,
+      "name": "Soumya Hakke",
+      "batch": "RCT101",
+      "student_code": "fw22_98",
+      "score": 4,
+      "green_card": 2,
+      "Poster": "https://assets.webiconspng.com/uploads/2016/12/User-Icon.png"
+    },
+    {
+      "id": 40,
+      "name": "Somyakant Mohapatra",
+      "batch": "NXM101",
+      "student_code": "fw22_92",
+      "score": 2,
+      "green_card": 4,
+      "Poster": "https://assets.webiconspng.com/uploads/2016/12/User-Icon.png"
+    },
+    {
+      "id": 41,
+      "name": "Safal Ali Khan",
+      "batch": "RCT211",
+      "student_code": "fw22_52",
+      "score": 9,
+      "green_card": 5,
+      "Poster": "https://assets.webiconspng.com/uploads/2016/12/User-Icon.png"
+    },
+    {
+      "id": 42,
+      "name": "Shishir kumar Padhan",
+      "batch": "WEB101",
+      "student_code": "fw22_15",
+      "score": 1,
+      "green_card": 4,
+      "Poster": "https://assets.webiconspng.com/uploads/2016/12/User-Icon.png"
+    }
+  ]
+}

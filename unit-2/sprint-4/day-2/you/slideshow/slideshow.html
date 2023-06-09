@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+#slides{
+	position: relative;
+    /* to make it like a heap of images */
+	height: 150px;
+	padding: 0px;
+	margin: 0px;
+	list-style-type: none;
+}
+.slide{
+	position: absolute;
+    /* to make like a heap of images */
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	z-index: 1;
+
+	-webkit-transition: opacity 1s;
+	-moz-transition: opacity 1s;
+	-o-transition: opacity 1s;
+	transition: opacity 1s;
+}
+
+.showing{
+	opacity: 1;
+	z-index: 2;
+}
+.slide{
+	font-size: 40px;
+	padding: 40px;
+	box-sizing: border-box;
+	color: #fff;
+}
+img{
+    height: 400px;
+    width: 700px;
+}
+.controls{
+    margin-top: 300px;
+    margin-left: 50px;
+}
+</style>
+<body>
+    <ul id="slides">
+        <li class="slide showing"><img src="1.jpg" alt=""></li>
+        <li class="slide"><img src="2.jpg" alt=""></li>
+        <li class="slide"><img src="3.jpg" alt=""></li>
+        <li class="slide"><img src="4.jpg" alt=""></li>
+        <li class="slide"><img src="5.jpg" alt=""></li>
+		<li class="slide"><img src="5.jpg" alt=""></li>
+		<li class="slide"><img src="6.jpg" alt=""></li>
+		<li class="slide"><img src="7.jpg" alt=""></li>
+		<li class="slide"><img src="8.jpg" alt=""></li>
+		<li class="slide"><img src="9.jpg" alt=""></li>
+		<li class="slide"><img src="10.jpg" alt=""></li>
+		<li class="slide"><img src="11.jpg" alt=""></li>
+		<li class="slide"><img src="12.jpg" alt=""></li>
+		<li class="slide"><img src="13.jpg" alt=""></li>
+		<li class="slide"><img src="14.jpg" alt=""></li>
+		<li class="slide"><img src="15.jpg" alt=""></li>
+		<li class="slide"><img src="16.jpg" alt=""></li>
+		<li class="slide"><img src="17.jpg" alt=""></li>
+		<li class="slide"><img src="18.jpg" alt=""></li>
+		<li class="slide"><img src="19.jpg" alt=""></li>
+		<li class="slide"><img src="20.jpg" alt=""></li>
+		<li class="slide"><img src="21.jpg" alt=""></li>
+    </ul>
+    <div>
+    <button class="controls" id="pause">Pause</button>
+    </div>
+</body>
+</html>
+<script>
+    var slides = document.querySelectorAll('#slides .slide');
+var currentSlide = 0;
+var slideInterval = setInterval(nextSlide,1000);
+
+function nextSlide(){
+	slides[currentSlide].className = 'slide';
+	currentSlide = (currentSlide+1)%slides.length;
+	slides[currentSlide].className = 'slide showing';
+}
+
+var playing = true;
+var pauseButton = document.getElementById('pause');
+
+function pauseSlideshow(){
+	pauseButton.innerHTML = 'Play';
+	playing = false;
+	clearInterval(slideInterval);
+}
+
+function playSlideshow(){
+	pauseButton.innerHTML = 'Pause';
+	playing = true;
+	slideInterval = setInterval(nextSlide,1000);
+}
+
+pauseButton.onclick = function(){
+	if(playing){ pauseSlideshow(); }
+	else{ playSlideshow(); }
+};
+</script>

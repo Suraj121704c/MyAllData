@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: black;
+    font-size: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+.form-container {
+  width: 300px;
+  margin: 20px auto;
+  box-shadow: 10px 5px 5px green;
+}
+.form-container input {
+    width: 80%;
+    margin-bottom: 10px;
+}
+
+.form-container button {
+    color: blue;
+}

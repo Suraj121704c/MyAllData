@@ -1,0 +1,18 @@
+.App {
+  text-align: center;
+  margin: 0px;
+  padding: 0px
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App {
+  border : 2px solid black;
+  background-color: blueviolet;
+  
+  color:white
+
+}

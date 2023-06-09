@@ -1,0 +1,233 @@
+{
+  "cats": [
+    {
+      "id": 1,
+      "name": "Kristoffer",
+      "cost": 47.82,
+      "likes": 633,
+      "image": "/images/cat/cat-unsplash-1.jpg",
+      "thumb": "/images/cat/cat-unsplash-1-thumb.jpg",
+      "description": "Eveniet sed accusantium doloribus atque. Perferendis accusamus nemo accusamus debitis deserunt. Consequuntur animi nobis veniam. Nemo enim ratione odio soluta tempora placeat veritatis.",
+      "breed": "Peterbald",
+      "createdAt": 1670165980567
+    },
+    {
+      "id": 2,
+      "name": "Destiny",
+      "cost": 86.57,
+      "likes": 368,
+      "image": "/images/cat/cat-unsplash-2.jpg",
+      "thumb": "/images/cat/cat-unsplash-2-thumb.jpg",
+      "description": "Earum natus saepe. Deserunt dolorem totam voluptates enim dolorum hic. Sequi atque illo quae distinctio. Repellat et nam sapiente facilis.",
+      "breed": "Nebelung",
+      "createdAt": 1670165980567
+    },
+    {
+      "id": 3,
+      "name": "Emmalee",
+      "cost": 32.4,
+      "likes": 713,
+      "image": "/images/cat/cat-unsplash-3.jpg",
+      "thumb": "/images/cat/cat-unsplash-3-thumb.jpg",
+      "description": "Veritatis repellendus dolore eius. Quibusdam voluptates vero doloribus repellat nisi sit perferendis. Quod ad itaque. Ducimus aliquam corporis minus nemo est molestias. Nesciunt quis incidunt explicabo animi cupiditate quia rem occaecati eos.",
+      "breed": "Persian",
+      "createdAt": 1670165980567
+    },
+    {
+      "id": 4,
+      "name": "Rahul",
+      "cost": 57.37,
+      "likes": 634,
+      "image": "/images/cat/cat-unsplash-4.jpg",
+      "thumb": "/images/cat/cat-unsplash-4-thumb.jpg",
+      "description": "Incidunt at natus. Dignissimos a quas similique molestiae eligendi. Quasi placeat aperiam. Illum soluta eos ipsa dolorum natus ex molestias eaque accusantium. Unde nesciunt nihil sint. Expedita quis ut similique natus excepturi.",
+      "breed": "Birman",
+      "createdAt": 1670165980567
+    },
+    {
+      "id": 5,
+      "name": "Mercedes",
+      "cost": 53.08,
+      "likes": 37,
+      "image": "/images/cat/cat-unsplash-5.jpg",
+      "thumb": "/images/cat/cat-unsplash-5-thumb.jpg",
+      "description": "Accusantium non quidem quisquam vero eveniet. Consequuntur recusandae repudiandae velit accusamus. Voluptatibus alias quia vel inventore eius ducimus atque odit accusamus. Veritatis voluptatibus accusantium voluptatibus cumque tenetur.",
+      "breed": "Peterbald",
+      "createdAt": 1670165980568
+    },
+    {
+      "id": 6,
+      "name": "Eloy",
+      "cost": 52.47,
+      "likes": 429,
+      "image": "/images/cat/cat-unsplash-6.jpg",
+      "thumb": "/images/cat/cat-unsplash-6-thumb.jpg",
+      "description": "A illum fugiat dolores voluptatum non possimus libero impedit. Deleniti ipsa porro laborum natus error. Non deleniti in inventore maiores fuga repudiandae ea quam nulla.",
+      "breed": "Nebelung",
+      "createdAt": 1670165980568
+    },
+    {
+      "id": 7,
+      "name": "Derrick",
+      "cost": 88.6,
+      "likes": 535,
+      "image": "/images/cat/cat-unsplash-7.jpg",
+      "thumb": "/images/cat/cat-unsplash-7-thumb.jpg",
+      "description": "Cum ducimus quis possimus. Temporibus commodi esse. Accusantium asperiores dolor assumenda.",
+      "breed": "Oriental",
+      "createdAt": 1670165980568
+    },
+    {
+      "id": 8,
+      "name": "Roosevelt",
+      "cost": 33.85,
+      "likes": 238,
+      "image": "/images/cat/cat-unsplash-8.jpg",
+      "thumb": "/images/cat/cat-unsplash-8-thumb.jpg",
+      "description": "Voluptas quae aspernatur assumenda distinctio harum. Rem id molestiae quas quas rerum animi. Expedita dolor a debitis vitae culpa neque blanditiis inventore assumenda. Quasi magnam necessitatibus debitis aperiam suscipit consequatur deserunt. Quibusdam aliquam blanditiis expedita aliquid suscipit voluptatum doloribus amet. Quam voluptas nulla earum laboriosam.",
+      "breed": "Nebelung",
+      "createdAt": 1670165980568
+    },
+    {
+      "id": 9,
+      "name": "Roxane",
+      "cost": 27.67,
+      "likes": 118,
+      "image": "/images/cat/cat-unsplash-9.jpg",
+      "thumb": "/images/cat/cat-unsplash-9-thumb.jpg",
+      "description": "Debitis aliquam recusandae id quos aliquam ad et inventore unde. Ratione corrupti dolore. Deserunt rerum aspernatur dolor quia sit voluptatem. Vero inventore architecto quibusdam doloremque earum. Facilis debitis reprehenderit nesciunt natus hic harum. Officiis vitae libero aspernatur sit porro aliquid recusandae.",
+      "breed": "Birman",
+      "createdAt": 1670165980568
+    },
+    {
+      "id": 10,
+      "name": "Judah",
+      "cost": 61.95,
+      "likes": 249,
+      "image": "/images/cat/cat-unsplash-10.jpg",
+      "thumb": "/images/cat/cat-unsplash-10-thumb.jpg",
+      "description": "Corporis dicta nam fugiat perspiciatis necessitatibus error aut facilis. Maiores laudantium eos at aliquam enim vero quasi accusamus. Ad inventore beatae nobis repudiandae. Unde tempora illum ab laboriosam voluptatem blanditiis alias.",
+      "breed": "Birman",
+      "createdAt": 1670165980568
+    },
+    {
+      "id": 11,
+      "name": "Braxton",
+      "cost": 41.65,
+      "likes": 773,
+      "image": "/images/cat/cat-unsplash-11.jpg",
+      "thumb": "/images/cat/cat-unsplash-11-thumb.jpg",
+      "description": "Deleniti rem quisquam praesentium a ipsum dolores recusandae atque. Non molestias tenetur. Consequatur sed deserunt doloribus eligendi animi reprehenderit. Quisquam vero facere vel cum provident sed dolorem aperiam. Unde animi neque recusandae sint quibusdam. Cum quidem repellendus eaque repellendus iure voluptatibus asperiores voluptatum.",
+      "breed": "Birman",
+      "createdAt": 1670165980568
+    },
+    {
+      "id": 12,
+      "name": "Vincenza",
+      "cost": 37.29,
+      "likes": 582,
+      "image": "/images/cat/cat-unsplash-12.jpg",
+      "thumb": "/images/cat/cat-unsplash-12-thumb.jpg",
+      "description": "Soluta vitae officiis. Pariatur eius labore blanditiis quasi. Modi sint in voluptate reiciendis ad voluptatum expedita. Vero veniam possimus quidem numquam reiciendis autem assumenda nihil. Voluptatibus quis placeat dolorem vitae pariatur incidunt similique. Minus quaerat sapiente earum cupiditate facilis.",
+      "breed": "American Bobtail",
+      "createdAt": 1670165980568
+    },
+    {
+      "id": 14,
+      "name": "Axel",
+      "cost": 29.59,
+      "likes": 509,
+      "image": "/images/cat/cat-unsplash-14.jpg",
+      "thumb": "/images/cat/cat-unsplash-14-thumb.jpg",
+      "description": "Odio quidem veritatis possimus ex. Blanditiis dicta aut dolor consectetur nulla veritatis. Sunt quidem libero ea veniam incidunt placeat.",
+      "breed": "Birman",
+      "createdAt": 1670165980568
+    },
+    {
+      "id": 15,
+      "name": "Linwood",
+      "cost": 50.14,
+      "likes": 711,
+      "image": "/images/cat/cat-unsplash-15.jpg",
+      "thumb": "/images/cat/cat-unsplash-15-thumb.jpg",
+      "description": "Recusandae voluptatum illo atque temporibus. In alias aut quisquam error aliquam nihil sunt architecto et. Nemo culpa dolorum fugiat sit.",
+      "breed": "Persian",
+      "createdAt": 1670165980568
+    },
+    {
+      "id": 18,
+      "name": "Tomasa",
+      "cost": 90.6,
+      "likes": 281,
+      "image": "/images/cat/cat-unsplash-18.jpg",
+      "thumb": "/images/cat/cat-unsplash-18-thumb.jpg",
+      "description": "Qui eos earum sit voluptatibus rerum voluptate. Occaecati dolores repellat harum minus libero. Nam similique provident similique non. Officia consectetur quod eius ipsum recusandae vero. Cum recusandae delectus. Saepe aliquid voluptatum est consectetur quo occaecati similique hic.",
+      "breed": "Savannah",
+      "createdAt": 1670165980568
+    },
+    {
+      "id": 19,
+      "name": "Daisha",
+      "cost": 41.47,
+      "likes": 578,
+      "image": "/images/cat/cat-unsplash-19.jpg",
+      "thumb": "/images/cat/cat-unsplash-19-thumb.jpg",
+      "description": "Inventore dolorem qui atque temporibus. Ea suscipit explicabo. Veritatis quis sed. Unde officiis recusandae veritatis amet perspiciatis repellat reprehenderit. Placeat autem ipsam a maiores vero dolorem non illo. Assumenda iste quos impedit consequuntur eos aut.",
+      "breed": "Norwegian Forest Cat",
+      "createdAt": 1670165980568
+    },
+    {
+      "id": 20,
+      "name": "Daisha",
+      "cost": 41.47,
+      "likes": 578,
+      "image": "/images/cat/cat-unsplash-19.jpg",
+      "thumb": "/images/cat/cat-unsplash-19-thumb.jpg",
+      "description": "Inventore dolorem qui atque temporibus. Ea suscipit explicabo. Veritatis quis sed. Unde officiis recusandae veritatis amet perspiciatis repellat reprehenderit. Placeat autem ipsam a maiores vero dolorem non illo. Assumenda iste quos impedit consequuntur eos aut.",
+      "breed": "Norwegian Forest Cat",
+      "createdAt": 1670165980568
+    },
+    {
+      "id": 21,
+      "name": "Giles",
+      "cost": 58.75,
+      "likes": 134,
+      "image": "/images/cat/cat-unsplash-21.jpg",
+      "thumb": "/images/cat/cat-unsplash-21-thumb.jpg",
+      "description": "Animi error inventore commodi dolor. Incidunt temporibus delectus beatae voluptatum id. Ipsam nisi fugit sunt doloremque ex distinctio ullam. Impedit mollitia labore. Saepe libero aliquid perferendis magni hic incidunt itaque. Exercitationem aperiam eos et neque nisi dolores.",
+      "breed": "Himalayan",
+      "createdAt": 1670165980568
+    },
+    {
+      "id": 22,
+      "name": "Branson",
+      "cost": 66.56,
+      "likes": 154,
+      "image": "/images/cat/cat-unsplash-22.jpg",
+      "thumb": "/images/cat/cat-unsplash-22-thumb.jpg",
+      "description": "Magni molestias et fugiat maiores consequuntur. Nobis quod sit itaque praesentium enim tempora quos dolore consequuntur. Alias esse temporibus. Tempore ab esse soluta voluptate excepturi. Vero voluptates consequuntur animi optio facilis ea magnam recusandae.",
+      "breed": "Himalayan",
+      "createdAt": 1670165980569
+    },
+    {
+      "id": 23,
+      "name": "Dejah",
+      "cost": 77.32,
+      "likes": 550,
+      "image": "/images/cat/cat-unsplash-23.jpg",
+      "thumb": "/images/cat/cat-unsplash-23-thumb.jpg",
+      "description": "Quae rerum officiis doloribus ratione vero nulla dolore optio laboriosam. Culpa exercitationem odit facere laudantium. Quae nemo odit veritatis iste necessitatibus facilis officiis tempore explicabo. Impedit commodi exercitationem blanditiis provident tempora ipsum labore sint consequuntur. Perferendis cupiditate fugiat quaerat quas rerum placeat. Eaque veniam quaerat.",
+      "breed": "Peterbald",
+      "createdAt": 1670165980569
+    },
+    {
+      "image": "",
+      "name": "Suraj Singh",
+      "cost": "123123123",
+      "likes": "123123",
+      "breed": "new",
+      "description": "Suraj Singh",
+      "id": 24
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Api</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    
+
+    <div class="display">
+        
+    </div>
+</body>
+</html>
+<script>
+  
+
+  let bag = []
+
+  fetch("http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=aadfabea72f8bae22729466e4fa5905b")
+  .then((response) => response.json())
+  .then((data)=>{
+        bag = data
+        displayTable(data)
+  })
+  
+  function displayTable(data){
+    let div = document.createElement("div")
+
+    let city = document.createElement("h1")
+    city.innerText = data.city.name
+
+    let mint = document.createElement("h2")
+    mint.innerText = data.list[0].main.temp_min
+
+    div.append(city,mint)
+
+    document.querySelector(".display").append(div)
+  }
+  
+  
+
+
+
+
+
+</script>

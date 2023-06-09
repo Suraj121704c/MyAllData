@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      nav {
+        display: flex;
+        justify-content: space-evenly;
+        background-color: black;
+        font-size: 30px;
+      }
+      nav a {
+        text-decoration: none;
+        color: white;
+      }
+      .form-container {
+        width: 300px;
+        margin: 0 auto;
+      }
+
+      .form-container input {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+
+      .form-container button {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="admin.html">Admin</a>
+      <a href="product.html">Product</a>
+    </nav>
+
+    <div class="form-container">
+      <div id="login-form">
+        <h3>
+          Login
+          <span>
+            <button id="toggle-register">Register</button>
+          </span>
+        </h3>
+        <input type="text" id="login-email" placeholder="Email" />
+        <input type="password" id="login-password" placeholder="Password" />
+        <button id="login-btn">Login</button>
+      </div>
+      <div id="register-form" style="display: none">
+        <h3>
+          Register
+          <span> <button id="toggle-login">Login</button></span>
+        </h3>
+        <input type="text" id="register-name" placeholder="Name" />
+        <input type="email" id="register-email" placeholder="Email" />
+        <input type="password" id="register-password" placeholder="Password" />
+        <button id="register-btn">Register</button>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Get form elements
+    const loginForm = document.getElementById("login-form");
+    const registerForm = document.getElementById("register-form");
+
+    // Get toggle links
+    const toggleRegisterLink = document.getElementById("toggle-register");
+    const toggleLoginLink = document.getElementById("toggle-login");
+
+    // Show register form and hide login form when clicking "Register" link
+    toggleRegisterLink.addEventListener("click", function (event) {
+      event.preventDefault();
+      loginForm.style.display = "none";
+      registerForm.style.display = "block";
+    });
+
+    // Show login form and hide register form when clicking "Login" link
+    toggleLoginLink.addEventListener("click", function (event) {
+      event.preventDefault();
+      loginForm.style.display = "block";
+      registerForm.style.display = "none";
+    });
+
+    // Handle login form submission
+    document
+      .getElementById("login-btn")
+      .addEventListener("click", function (event) {
+        event.preventDefault();
+        const email = document.getElementById("login-email").value;
+        const password = document.getElementById("login-password").value;
+        console.log(email, password);
+        if (email == "eve.holt@reqres.in") {
+          fetch(`https://reqres.in/api/login`, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ email, password }),
+          })
+            .then((res) => res.json())
+            .then((res) => {
+              console.log(res);
+              alert("Admin Login Success...");
+              window.location.href = "/admin.html";
+            })
+            .catch((err) => {
+              console.log(err);
+            });
+        } else {
+          fetch("http://localhost:3000/users")
+            .then((response) => response.json())
+            .then((users) => {
+              const user = users.find(
+                (user) => user.email === email && user.password === password
+              );
+              if (user) {
+                alert("User login successful");
+                window.location.href = "/product.html";
+              } else {
+                alert("User login failed");
+              }
+            })
+            .catch((error) => {
+              console.error("Error:", error);
+            });
+        }
+      });
+
+    // Handle register form submission
+    document
+      .getElementById("register-btn")
+      .addEventListener("click", function (event) {
+        event.preventDefault();
+        const name = document.getElementById("register-name").value;
+        const email = document.getElementById("register-email").value;
+        const password = document.getElementById("register-password").value;
+
+        fetch("http://localhost:3000/users", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ name, email, password }),
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            alert("User registered successfully");
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+          });
+      });
+  });
+</script>

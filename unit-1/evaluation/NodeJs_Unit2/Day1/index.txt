@@ -1,0 +1,49 @@
+mongo db --> some new rules
+
+{
+    "name" : "Thor",
+    "powers" : ["god" , "magic"],
+    "health" : 57,
+    "villains" : [
+        {"name" : "Surtur" , "health" : 50},
+         {"name" : "Hela" , "health" : 87},
+    ],
+    "metadata" : {"favoriteColor": "yellow" , "age" : 313}
+},{
+    "name" : "Dr.Strange",
+    "powers" : ["magic"],
+    "health" : 86,
+    "villains" : [
+        {"name" : "Hela" , "health" : 87},
+         {"name" : "Doramamu" , "health" : 100},
+    ],
+    "metadata" : {"favoriteColor": "orange" , "age" : 44}
+},{
+    "name" : "Iron Man",
+    "powers" : ["tech"],
+    "health" : 45,
+    "villains" : [
+        {"name" : "Thanos" , "health" : 100},
+         {"name" : "Hulk" , "health" : 80},
+    ],
+    "metadata" : {"favoriteColor": "Red" , "age" : 45}
+},{
+    "name" : "SpiderMan",
+    "powers" : ["web"],
+    "health" : 55,
+    "villains" : [
+        {"name" : "Venom" , "health" : 75},
+         {"name" : "Hulk" , "health" : 80},
+    ],
+    "metadata" : {"favoriteColor": "red" , "age" : 20}
+},{
+    "name" : "Hulk",
+    "powers" : ["Strength"],
+    "health" : 80,
+    "villains" : [
+        {"name" : "Thanos" , "health" : 100},
+         {"name" : "IronMan" , "health" : 45},
+    ],
+    "metadata" : {"favoriteColor": "Green" , "age" : 53}
+},
+

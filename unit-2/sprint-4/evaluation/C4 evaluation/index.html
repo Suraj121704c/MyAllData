@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <style>
+      /* Write all necessery css here  */
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      #product-container{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(4,1fr);
+        gap: 20px;
+      }
+
+      #product-container>div>img{
+        width: 100%;
+        height: 50%;
+      }
+      #product-container>div{
+        text-align: center;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      }
+      .nav{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      }
+      #filter{
+        width: 200px;
+        height: 30px;
+        align-items: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="nav">
+      <h1>Masai E-Commerce</h1>
+      <a href="./index.html">Home</a>
+      <a href="./cart.html">Cart</a>
+    </div>
+    <!-- Use this Select Tag for Filtering the Products  -->
+    <select id="filter" onchange="productFilter()">
+      <option value="">Filter By Category</option>
+      <option value="Laptop">Laptop</option>
+      <option value="Mobile">Mobile</option>
+      <option value="Speakers">Speakers</option>
+    </select>
+    <div id="product-container">
+      <!-- Here Append All the Products  -->
+    </div>
+  </body>
+  <script>
+    // Write all necessery JS here 
+    let bag = []
+    
+    let cartItems = JSON.parse(localStorage.getItem("cart")) || []
+
+    let url = "https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-tech-products"
+
+    fetch(url)
+    .then((res)=>res.json())
+    .then((data)=>{
+      bag = data
+      displayProduct(data)
+    })
+     
+
+    function displayProduct(data){
+    
+
+      for(let i = 0;i<data.data.length;i++){
+        
+      let div = document.createElement("div")
+
+      let pic = document.createElement("img")
+      pic.setAttribute("src",data.data[i].img)
+
+      let brand = document.createElement("h1")
+      brand.innerText = data.data[i].brand
+
+      let price = document.createElement("h2")
+      price.innerText = data.data[i].price
+
+      let details = document.createElement("p")
+      details.innerText = data.data[i].details
+
+      let Category = document.createElement("h3")
+      Category.innerText = data.data[i].category
+
+      let btn = document.createElement("button")
+      btn.innerText = "Add To Cart"
+      btn.addEventListener("click",function(){
+        if(cartItems[i] == data.data[i]){
+          alert("Product Already in the Cart ")
+        }else{
+        cartItems.push(data.data[i])
+        localStorage.setItem("cart",JSON.stringify(cartItems))
+        alert("Product added to Cart")
+      }
+      })
+      
+      div.append(pic,brand,price,details,Category,btn)
+
+      document.querySelector("#product-container").append(div)
+
+      }
+    }
+    function productFilter(data){
+      document.querySelector("#product-container").innerHTML = ""
+      let selected = document.querySelector("#filter").value
+      let select = []
+      let near = []
+      if(selected == ""){
+        displayProduct(bag)
+      }else{
+      for(let i = 0;i<bag.data.length;i++){
+        if(bag.data[i].category == selected){
+          select.push(bag.data[i])
+        }
+      }
+      near["data"]=select
+      displayProduct(near)
+    }
+    }
+  </script>
+</html>

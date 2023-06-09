@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+</head>
+<style>
+     .container{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: auto;
+        gap:20px;
+    }
+    .container>div>img{
+        width: 100%;
+        height: 50%;
+    }
+    .container>div{
+        text-align: center;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        
+    }
+</style>
+<body>
+    <h1>Total Price</h1>
+   <div class="container">
+     
+   </div>
+</body>
+</html>
+<script>
+     
+     let cartItems = JSON.parse(localStorage.getItem("cartProducts")) || []
+      
+     displayCard(cartItems)
+        
+     let totalPrice = cartItems.reduce((acc,el) => acc + el.price , 0)
+     document.querySelector("h1").innerText = totalPrice
+
+      function displayCard(data){
+        data.forEach(function(elem){
+        let div = document.createElement("div")
+
+        let imageProd = document.createElement("img")
+        imageProd.setAttribute("src",elem.image)
+
+        let title = document.createElement("h2")
+        title.innerText = elem.title
+
+        let des = document.createElement("p")
+        des.innerText = elem.description
+
+        let cost = document.createElement("p")
+        cost.innerText = elem.price
+
+        let rating = document.createElement("p")
+        rating.innerText = elem.rating.rate
+
+
+        div.append(imageProd,title,des,cost,rating)
+
+        document.querySelector(".container").append(div)
+     })
+    }
+</script>

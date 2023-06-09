@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Noodles",
+    "price": 30,
+    "quantity": 1
+  },
+  {
+    "id": 2,
+    "name": "Biriyani",
+    "price": 90,
+    "quantity": 1
+  },
+  {
+    "id": 3,
+    "name": "Chips",
+    "price": 10,
+    "quantity": 1
+  }
+]

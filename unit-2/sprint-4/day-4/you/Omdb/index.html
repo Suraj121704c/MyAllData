@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOVIES</title>
+    <style>
+        #contaier {
+            display: flex;
+            justify-content: center;
+            margin-top: 7%;
+        }
+
+        #container {
+            width: 30%;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 3%;
+         
+        }
+
+        input {
+            font-size: 20px;
+            width: 25%;
+            display: flex;
+            margin: auto
+        }
+
+        button {
+            font-size: 20px;
+            display: block;
+            margin-top: 1%;
+            display: flex;
+            margin: 5px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="searchbar" placeholder="search movies here">
+    <button>SEARCH</button>
+    <div id="container">
+
+    </div>
+</body>
+
+</html>
+<script>
+
+    let bag = []
+
+    document.querySelector("button").addEventListener("click", searchfunction)
+
+    function searchfunction() {
+
+
+        var q = document.querySelector("input").value
+        let url = `http://www.omdbapi.com/?apikey=51ecb9c8&t=${q}`;
+        fetch(url)
+            .then((res) => res.json())
+            .then((data) => {
+                let x = new Promise(function (res, rej) {
+                    res(data)
+                    rej("OOPS!MOVIE NOT FOUND")
+                })
+                x
+                    .then((result) => displaycard(result))
+                    .catch((err) => alert(err))
+
+                bag = data
+            }).catch((err) => alert(err))
+
+
+
+    }
+
+
+
+    function displaycard(data) {
+
+        let div = document.createElement("div")
+
+        let poster = document.createElement("img")
+        poster.setAttribute("src", data.Poster)
+
+        let title = document.createElement("h2")
+        title.innerText = data.Title
+
+        let lang = document.createElement("h3")
+        lang.innerText = data.Language
+
+
+        let rating = document.createElement("h3")
+        if(data.imdbRating > 8.5){
+            rating.innerText = "Recommended"
+        }else{
+            rating.innerText = data.imdbRating
+        }
+
+
+
+        div.append(poster, title, lang, rating)
+
+        document.querySelector("#container").append(div)
+
+    }
+</script>

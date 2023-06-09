@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: black;
+    font-size: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+#admin-dashboard {
+    text-align: center;
+}
+
+#add-doctor-form {
+    margin-top: 20px;
+    width: 300px;
+    margin: 20px auto;
+    box-shadow: 10px 5px 5px green;
+  }

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Chart1</title>
+  </head>
+  <body style="text-align: center">
+    <div style="width: 600px">
+      <canvas id="chart"></canvas>
+    </div>
+
+    <form id="dataForm">
+      <label for="month">Select a month:</label>
+      <select id="month" name="month">
+        <option value="January">January</option>
+        <option value="February">February</option>
+        <option value="March">March</option>
+        <option value="April">April</option>
+        <option value="May">May</option>
+        <option value="June">June</option>
+        <option value="July">July</option>
+        <option value="August">August</option>
+        <option value="September">September</option>
+        <option value="October">October</option>
+        <option value="November">November</option>
+        <option value="December">December</option>
+      </select>
+
+      <label for="value">Value:</label>
+      <input type="number" id="value" name="value" />
+
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
+<script>
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  let data = Array.from({ length: 12 }, () => 0); // Initialize with 0 values for each month
+
+  // Function to update chart with current data
+  function updateChart() {
+    const ctx = document.getElementById("chart").getContext("2d");
+
+    new Chart(ctx, {
+      type: "bar",
+      data: {
+        labels: months,
+        datasets: [
+          {
+            label: "Data",
+            data: data,
+            backgroundColor: "rgba(75, 192, 192, 0.2)",
+            borderColor: "rgba(75, 192, 192, 1)",
+            borderWidth: 1,
+          },
+        ],
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true,
+          },
+        },
+      },
+    });
+  }
+
+  // Function to handle form submission
+  function handleSubmit(event) {
+    event.preventDefault();
+
+    const month = document.getElementById("month").value;
+    const value = parseInt(document.getElementById("value").value);
+
+    const monthIndex = months.indexOf(month);
+    if (monthIndex !== -1) {
+      data[monthIndex] = value;
+    }
+
+    document.getElementById("dataForm").reset(); // Reset form fields
+
+    updateChart();
+  }
+
+  // Add event listener for form submission
+  document.getElementById("dataForm").addEventListener("submit", handleSubmit);
+
+  // Initial chart update
+  updateChart();
+</script>

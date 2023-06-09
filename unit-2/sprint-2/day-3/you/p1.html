@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Problem 1</title>
+    <style>
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 10px 20px;
+        height:400px;
+        color: white;
+        text-align: left;
+    }
+    .grid>div{
+    background-color: rgba(28, 28, 28, 0.796);
+    font-size: 20px;
+    color: white;
+    border-radius: 10px;
+    font-size: 50px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.grid>div:nth-child(1){
+    background-color: rgba(28, 28, 28, 0.796);
+    font-size: 20px;
+    color: white;
+    grid-column-start:1;
+    grid-column-end: 3 ; 
+    font-size: 50px;
+}
+.grid>div:nth-child(2){
+    background-color: rgba(28, 28, 28, 0.796);
+    font-size: 20px;
+    color: white;
+    grid-column-start:3;
+    grid-column-end: 5 ; 
+    font-size: 50px;
+}
+.grid>div:nth-child(4){
+    background-color: rgba(28, 28, 28, 0.796);
+    font-size: 20px;
+    color: white;
+    grid-column-start:2;
+    grid-column-end: 5 ; 
+    font-size: 50px;
+}
+.grid>div:nth-child(5){
+    background-color: rgba(28, 28, 28, 0.796);
+    font-size: 20px;
+    color: white;
+    grid-column-start:1;
+    grid-column-end:5; 
+    font-size: 50px;
+}
+    </style>
+</head>
+<body>
+    <div class="box">
+    <div class="grid">
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+        <div>D</div>
+        <div>E</div>
+    </div>
+    </div>
+</body>
+</html>

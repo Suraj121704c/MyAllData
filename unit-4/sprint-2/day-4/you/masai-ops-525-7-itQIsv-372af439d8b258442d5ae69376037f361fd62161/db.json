@@ -1,0 +1,25 @@
+{
+  "data": [
+    {
+      "name": "Batman ",
+      "height": "190",
+      "weight": "85",
+      "power": "6",
+      "id": 1
+    },
+    {
+      "name": "Superman",
+      "height": "210",
+      "weight": "110",
+      "power": "9",
+      "id": 2
+    },
+    {
+      "name": "Flash",
+      "height": "180",
+      "weight": "75",
+      "power": "7",
+      "id": 3
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Debouncing</title>
+  </head>
+  <body>
+    <input type="text" id="search" placeholder="search..." />
+  </body>
+</html>
+<script>
+  function debouncer(callback, delay) {
+    let timeoutId = null;
+
+    return function (...args) {
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => {
+        callback.apply(this, args);
+      }, delay);
+    };
+  }
+
+  const searchInput = document.querySelector("#search");
+
+  function handleSearch(value) {
+    console.log("Searching for:", value);
+  }
+
+  const debouncedSearch = debouncer(handleSearch, 500);
+
+  searchInput.addEventListener("input", function (event) {
+    const value = event.target.value;
+    debouncedSearch(value);
+  });
+</script>

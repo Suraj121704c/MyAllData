@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+</head>
+<style>
+    *{
+            margin: 0;
+            padding: 0;
+        }
+        .nav{
+            display: flex;
+            color: black;
+            height: 65px;
+            justify-content: space-between;
+            padding: 0px 15px;
+            align-items: center;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        }
+        .nav>div{
+            width: 800px;
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+        }
+        .nav>h1{
+          color: white;
+          font-size: 300%; 
+        }
+        .a{
+            color:blue;
+        }
+        form {
+           margin: 0 auto;
+           margin-top: 50px;
+           width: 30%;
+           box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+           padding: 30px;
+           border-radius: 20px;
+        }
+        label {
+            font-size: 20px;
+        }
+        input[type="text"],
+        select,
+        textarea,input[type="number"] {
+          width: 100%;
+          padding: 12px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+          margin-top: 6px;
+          margin-bottom: 16px;
+          resize: vertical;
+}
+input[type="submit"] {
+  background-color: #2b619e;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 20px;   
+  cursor: pointer;
+  width: 100%;
+  font-size: 20px;
+}
+input[type="submit"]:hover {
+  background-color: #3973b6;
+}
+h3{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 50px;
+    color: #23d5ab;
+}
+</style>
+<body>
+    <div class="nav">
+        <h1>Registration Portal</h1>
+        <div>
+            <h2 class="a"><a href="resgistration.html">Registration</h2></a>
+            <h2 class="a"><a href="dashboard.html">Dashboard</h2></a>
+            <h2 class="a"><a href="vaccination.html">Vacination</h2></a>
+        </div>
+    </div>
+    <h3>Registration Form</h3>
+    <form>
+        <label for="">Unique ID</label><br />
+        <input id="Id" type="text" placeholder="Enter Unique ID" /><br />
+        <label for="">Name </label><br />
+        <input id="Name" type="text" placeholder="Enter Your Name" /><br />
+        <label for="">Age </label><br />
+        <input id="Age" type="number" placeholder="Enter Your Age" /><br />
+        <label for="">Designation </label><br />
+        <select id="Designation">
+          <option value="">Select Ocuppation</option>
+          <option value="Employee">Employee</option>
+          <option value="Student">Student</option>
+        <br /> 
+        <label for=""></label><br />
+        <select id="pri">
+         <br>
+         <br><br>
+        <br />
+        <label for="">Priority </label><br />
+        <select id="Priority">
+          <option value="">Select Priority</option>
+          <option value="Highest">p0</option>
+          <option value="High">p1</option>
+          <option value="Medium">p2</option>
+          <option value="Low">p3</option>
+        <br />
+        <label for=""> </label><br />
+        <select id="pre">
+          <br>
+          <br>
+          <br>
+          <br>
+        <br />
+        <label for="">Vaccine Type</label><br />
+        <select id="Vaccine">
+          <option value="">Select Vaccine</option>
+          <option value="Covishield">Covishield</option>
+          <option value="Covaxin">Covaxin</option>
+          <option value="Sputnik">Sputnik</option>
+        <br />
+        <br />
+        <br />
+        <input type="submit" value="Register Here" />
+      </form>
+</body>
+</html>
+<script>
+  document.querySelector("form").addEventListener("submit",MyData);
+ 
+  let DataArr = JSON.parse(localStorage.getItem("Data")) || []; 
+
+  function MyData(){
+    event.preventDefault()
+    //preventing it from refresh 
+    let id = document.querySelector("#Id").value
+    let Name = document.querySelector("#Name").value
+    let Age = document.querySelector("#Age").value
+    let des = document.querySelector("#Designation").value
+    let pri = document.querySelector("#Priority").value
+    let Vaccine = document.querySelector("#Vaccine").value
+    let DataObj = {
+      id,
+      Name,
+      Age,
+      des,
+      pri,
+      Vaccine
+    }; 
+    if(DataObj.id == "" || DataObj.Name == "" || DataObj.Age == "" || DataObj.des == "" || DataObj.pri == "" || DataObj.Vaccine == ""){
+      alert("Please Fill all the Details")
+    } else{
+    DataArr.push(DataObj)
+    localStorage.setItem("Data",JSON.stringify(DataArr))
+    }
+   }
+
+</script>

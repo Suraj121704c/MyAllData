@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masai Calculator</title>
+    <style>
+     .outer{
+        height: auto;width: auto;
+    }
+     .outer>h1{
+        color: rgb(2, 161, 60);text-align: center;font-size:70px;margin-bottom: 3% ;
+    }
+     .outer>div{
+        height: auto;width:350px;margin: 20px auto 20px auto;padding: 10px;text-align: center;box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+        border-radius: 10px;
+    }
+     .outer>div>div{
+        height: 60px ;width: 80%;margin: 5% auto 5% auto;
+        display: flex;
+        justify-content: space-evenly;
+        font-size: 50px;
+    }
+     .outer>div>div>div{
+        height: auto;width: 18% ;text-align: center;margin: 2% auto 2% auto;
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+        border-radius: 10px;font-size: 20px;font-weight: 700;padding: 11px 1px 1px 1px ;
+    }
+        .outer>div>div>div:nth-child(4)
+        {
+            background-color: black ;color: white;
+        }
+        .outer>div>.red>div:nth-child(1)
+        {
+            background-color: red ;color: white;
+        }
+        .outer>div>.red>div:nth-child(3)
+        {
+            background-color: black ;color: white
+            ;}
+        .outer>div>div:first-child {
+            box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <h1>Masai Calculator</h1>
+     <div >
+        <div >
+         
+        </div>
+        <div>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>+</div>
+        </div>
+        <div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>-</div>
+        </div>
+        <div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>*</div>
+        </div>
+        <div class="red" >
+            <div>C</div>
+            <div>0</div>
+            <div>=</div>
+            <div>/</div>
+        </div>
+    </div>
+   </div>
+</body>
+</html>
+<script>
+    let keys = document.querySelectorAll(" .outer>div>div>div")
+    let bag = ""
+    for(let i = 0;i<keys.length;i++){
+        keys[i].addEventListener("click",mycal)
+    }
+    function mycal(){
+         let target = event.target.innerText 
+        //  use to target innertext of the button 
+         if(target == "C"){
+            bag = ""
+            document.querySelector(".outer>div>div").innerText = bag
+         }
+         else if(target == "="){
+            let res = eval(bag)
+            document.querySelector(".outer>div>div").innerText = res
+         }
+         else{
+         bag = bag + target
+        document.querySelector(".outer>div>div").innerText = bag
+         }
+        
+    }
+   
+</script>

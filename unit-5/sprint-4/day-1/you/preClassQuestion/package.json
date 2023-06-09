@@ -1,0 +1,15 @@
+{
+  "name": "preclassquestion",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "tsc src/problem1.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^5.0.2"
+  }
+}

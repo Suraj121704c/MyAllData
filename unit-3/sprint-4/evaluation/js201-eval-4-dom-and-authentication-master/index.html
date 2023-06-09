@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/skeleton.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="column">
+          <h1>Todo App</h1>
+          <p>Cute little app</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="columns four sidebar-one" id="sidebar-one">
+
+          <h4>Log in an existing User</h4>
+          <input type="text" id="login-user-username" class="u-full-width" placeholder="username" />
+          <input type="password" id="login-user-passowrd" class="u-full-width" placeholder="password" />
+          <button id="login-user" class="u-full-width button button-primary">Login User</button>
+          <hr>
+
+          <button id="fetch-todos" class="u-full-width button button-primary">fetch todos</button>
+          <hr>
+
+        </div>
+          <div class="columns eight main">
+            <div class="notifications-wrapper" id="notifications-wrapper"></div>
+            <div class="data-list-wrapper" id="data-list-wrapper"></div>
+          </div>
+      </div>
+    </div>
+
+    <script src="./scripts/main.js" type="module"></script>
+  </body>
+</html>

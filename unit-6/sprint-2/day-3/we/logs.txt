@@ -1,0 +1,23 @@
+Route : /data Method : GETRoute : /data Method : GETRoute : / Method : GETRoute : / Method : GET
+Route : /data Method : GET
+Route : /about Method : GET
+Route : /about Method : GET Time:Thu Apr 13 2023 17:15:02 GMT+0530 (India Standard Time)
+Route : / Method : GET Time:Thu Apr 13 2023 18:05:05 GMT+0530 (India Standard Time)
+Route : / Method : GET Time:Thu Apr 13 2023 18:05:24 GMT+0530 (India Standard Time)
+Route : /contact Method : GET Time:Thu Apr 13 2023 18:05:28 GMT+0530 (India Standard Time)
+Route : /contact Method : GET Time:Thu Apr 13 2023 18:05:48 GMT+0530 (India Standard Time)
+Route : /data Method : GET Time:Thu Apr 13 2023 18:06:20 GMT+0530 (India Standard Time)
+Route : /data Method : GET Time:Thu Apr 13 2023 18:06:40 GMT+0530 (India Standard Time)
+Route : / Method : GET Time:Fri Apr 14 2023 17:17:41 GMT+0530 (India Standard Time)
+Route : /favicon.ico Method : GET Time:Fri Apr 14 2023 17:17:42 GMT+0530 (India Standard Time)
+Route : /data Method : GET Time:Fri Apr 14 2023 17:17:49 GMT+0530 (India Standard Time)
+Route : /data Method : GET Time:Fri Apr 14 2023 17:18:03 GMT+0530 (India Standard Time)
+Route : /data Method : GET Time:Fri Apr 14 2023 17:27:15 GMT+0530 (India Standard Time)
+Route : /data?movie=Avatar Method : GET Time:Fri Apr 14 2023 18:43:34 GMT+0530 (India Standard Time)
+Route : /data?movie=Avatar Method : GET Time:Fri Apr 14 2023 18:45:23 GMT+0530 (India Standard Time)
+Route : /data?movie=Joker Method : GET Time:Fri Apr 14 2023 18:45:29 GMT+0530 (India Standard Time)
+Route : /data?city=Banglore Method : GET Time:Fri Apr 14 2023 18:50:22 GMT+0530 (India Standard Time)
+Route : /data?city=Delhi Method : GET Time:Fri Apr 14 2023 18:50:32 GMT+0530 (India Standard Time)
+Route : /data?city=Mumbai Method : GET Time:Fri Apr 14 2023 18:50:41 GMT+0530 (India Standard Time)
+Route : /students/student_code=3 Method : GET Time:Fri Apr 14 2023 18:58:30 GMT+0530 (India Standard Time)
+Route : /students/students_code=3 Method : GET Time:Fri Apr 14 2023 18:58:54 GMT+0530 (India Standard Time)

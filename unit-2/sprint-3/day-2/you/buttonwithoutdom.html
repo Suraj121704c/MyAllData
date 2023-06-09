@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        width: 90%;
+        height: 80px;
+        display: grid;
+        grid-template-columns: repeat(9,1fr);
+        text-align: center;
+        gap: 10px;
+        margin: 50px auto;
+        font-size: 55px;
+    }
+    .container>div{
+        border: 1px solid black;
+        border-radius: 10px;
+        display: flex;
+        text-align: center;
+    }
+    .container>div:nth-child(1)
+     {
+        background-color: blue;
+        color: white;
+     }
+     .container>div:nth-child(2)
+     {
+        background-color: gray;
+        color: white;
+     }
+     .container>div:nth-child(3)
+     {
+        background-color: green;
+        color: white;
+     }
+     .container>div:nth-child(4)
+     {
+        background-color: red;
+        color: white;
+     }
+     .container>div:nth-child(5)
+     {
+        background-color: yellow;
+        color: black;
+     }
+     .container>div:nth-child(6)
+     {
+        background-color: skyblue;
+        color: white;
+     }
+     .container>div:nth-child(7)
+     {
+        background-color: wheat;
+        color: black;
+     }
+     .container>div:nth-child(8)
+     {
+        background-color: black;
+        color: white;
+     }
+     .container>div:nth-child(9)
+     {
+        background-color: white;
+        color: blue;
+     }
+</style>
+<body>
+    <div class="container">
+        <div>Primary</div>
+        <div>Secondary</div>
+        <div>Success</div>
+        <div>Danger</div>
+        <div>Warning</div>
+        <div>info</div>
+        <div>light</div>
+        <div>Dark</div>
+        <div>Link</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+</head>
+<style>
+    *{
+            margin: 0;
+            padding: 0;
+        }
+        .nav{
+            display: flex;
+            color: black;
+            height: 65px;
+            justify-content: space-between;
+            padding: 0px 15px;
+            align-items: center;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        }
+        .nav>div{
+            width: 800px;
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+        }
+        .nav>h1{
+          color: white;
+          font-size: 300%; 
+        }
+        .a{
+            color:blue;
+        }
+        table {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 60%;
+        margin: auto;
+       margin-top: 90px;
+        text-align: center;
+}
+table tr:nth-child(even) {
+  background-color: #8caacf;
+}
+table tr:hover {
+  background-color: lightgreen;
+}
+
+table td,
+table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #0468aa;
+  color: white;
+  text-align: center;
+}
+#Filter_Vacine{
+    margin-top: 40px;
+    height: 30px;
+    color: white;
+    background-color: rebeccapurple;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+#Sort_Age{
+    margin-top: 40px;
+    height: 30px;
+    color: white;
+    background-color: red;
+    border-radius: 10px;
+}
+#Filter_Priority{
+    border-radius: 10px;
+    margin-top: 40px;
+    height: 30px;
+    color: white;
+    background-color: green;
+    margin-right: 20px;
+}
+.filters{
+    display: flex;
+    justify-content: space-between;
+}
+</style>
+<body>
+    <div class="nav">
+        <h1>DashBoard</h1>
+        <div>
+            <h2 class="a"><a href="resgistration.html">Registration</h2></a>
+            <h2 class="a"><a href="dashboard.html">Dashboard</h2></a>
+            <h2 class="a"><a href="vaccination.html">Vacination</h2></a>
+        </div>
+    </div>
+    <div class="filters">
+    <select id="Filter_Vacine" onchange="vaccineFilter()">
+        <option value="Sputnik">Sputnik</option>
+        <option value="Covaxin">Covaxin</option>
+        <option value="Covishield">Covishield</option>
+      </select>
+      <select id="Sort_Age" onchange="handleSort()">
+        <option value="all">Sort</option>
+        <option value="Top-Bottom">Top-Bottom</option>
+        <option value="Bottom-Top">Bottom-Top</option>
+      </select>
+      <select id="Filter_Priority" onchange="PriorityFilter()">
+        <option value="Highest">p0</option>
+        <option value="High">p1</option>
+        <option value="Medium">p2</option>
+        <option value="Low">p3</option>
+      </select>
+    </div>
+    <table>
+        <!-- Dont change order of columns -->
+        <thead>
+          <tr>
+            <th>Unique Id</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Designation</th>
+            <th>Priority</th>
+            <th>Vaccine Type</th>
+            <th>Delete</th>
+            <th>Vaccinate</th>
+          </tr>
+        </thead>
+        <tbody>
+        <!-- Append your output to tbody -->
+        
+        </tbody>
+      </table>
+</body>
+</html>
+<script>
+   let DataArr = JSON.parse(localStorage.getItem("Data")) || []; 
+
+   displayTable(DataArr)
+
+   let VaccinateArray = JSON.parse(localStorage.getItem("Vaccinated")) || [];
+
+   function displayTable(DataArr) {
+
+document.querySelector("tbody").innerHTML=""
+//before making a new row we are making previous row empty
+
+DataArr.forEach(function(elem,i){
+let row = document.createElement("tr")
+let td1 = document.createElement("td")
+td1.innerText=elem.id
+let td2 = document.createElement("td")
+td2.innerText=elem.Name
+
+let td3 = document.createElement("td")
+td3.innerText=elem.Age
+
+let td4 = document.createElement("td")
+td4.innerText=elem.des
+let td5 = document.createElement("td")
+td5.innerText=elem.pri
+let td6 = document.createElement("td")
+td6.innerText=elem.Vaccine
+let td7 = document.createElement("td")
+td7.innerText="Delete"
+td7.addEventListener("click",function(){
+      deleteFav(elem,i)
+})
+
+let td8 = document.createElement("td")
+td8.innerText="Vaccinate"
+td8.addEventListener("click",function(){
+  let x = Math.ceil(Math.random() * 10000)
+  let y = prompt(x,"Enter the given otp")
+  if(x == y){
+    alert("Name Added to the queue")
+    setTimeout(function(){
+      alert("Vaccination Is going to happen in 5mins")
+    },5000)
+    setTimeout(function(){
+      alert("You are now Vaccinated")
+    },10000)
+  }else{
+    alert("Please Enter Correct otp")
+  }
+})
+td8.addEventListener("click",function(){
+  VaccinateArray.push(elem)
+  localStorage.setItem("Vaccinated",JSON.stringify(VaccinateArray))
+})
+td8.addEventListener("click",function(){
+      deleteFav(elem,i)
+})
+
+row.append(td1,td2,td3,td4,td5,td6,td7,td8)
+
+document.querySelector("tbody").append(row)
+})
+}
+function deleteFav(elem,i){
+   DataArr.splice(i,1);
+   console.log(DataArr)
+   displayTable(DataArr)
+   localStorage.setItem("Data",JSON.stringify(DataArr))
+ }
+ function handleSort(){
+  let selected = document.querySelector("#Sort_Age").value
+  if(selected == "Top-Bottom"){
+    DataArr.sort((a,b)=>b.Age - a.Age)
+  }
+  if(selected == "Bottom-Top"){
+    DataArr.sort((a,b)=>a.Age - b.Age)
+  }
+  displayTable(DataArr)
+ }
+
+function vaccineFilter(){
+  let selected = document.querySelector("#Filter_Vacine").value
+  let filterData = DataArr.filter(function(elem){
+    return elem.Vaccine == selected
+  })
+  displayTable(filterData)
+}
+function PriorityFilter(){
+  let selected = document.querySelector("#Filter_Priority").value
+  let filterData = DataArr.filter(function(elem){
+    return elem.pri == selected
+  })
+  displayTable(filterData)
+}
+</script>

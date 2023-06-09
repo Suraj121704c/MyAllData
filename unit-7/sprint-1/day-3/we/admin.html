@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      nav {
+        display: flex;
+        justify-content: space-evenly;
+        background-color: black;
+        font-size: 30px;
+      }
+      nav a {
+        text-decoration: none;
+        color: white;
+      }
+      #admin-dashboard{
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="admin.html">Admin</a>
+      <a href="product.html">Product</a>
+    </nav>
+
+    <div id="admin-dashboard">
+        <h2>Admin Dashboard</h2>
+        <div id="add-hotel-form">
+          <h3>Add Hotel</h3>
+
+          <form id="hotel-form">
+            <label for="category">Category:</label>
+            <select id="category" required>
+              <option value="">Select category</option>
+              <option value="Family">Family</option>
+              <option value="Deluxe">Deluxe</option>
+              <option value="Suite">Suite</option>
+            </select>
+
+            <br>
+            <label for="image-url">Image URL:</label>
+            <input type="text" id="image-url" required>
+            <br>
+
+
+            <label for="room-type">Type of Room:</label>
+            <div id="room-type">
+              <input type="radio" name="room-type" value="AC" required> AC
+              <input type="radio" name="room-type" value="Non-AC" required> Non-AC
+            </div>
+
+            <br>
+
+
+            <label for="bed-type">Bed Type:</label>
+            <select id="bed-type" required>
+              <option value="">Select bed type</option>
+              <option value="Single">Single</option>
+              <option value="Double">Double</option>
+            </select>
+
+            <br>
+
+            <label for="no-of-adults">No of Adults:</label>
+            <input type="number" id="no-of-adults" required>
+
+            <br>
+
+            <label for="max-capacity">Max Capacity:</label>
+            <input type="number" id="max-capacity" required>
+
+            <br>
+
+            <label for="cost-per-night">Cost per Night (Rs):</label>
+            <input type="number" id="cost-per-night" required>
+
+            <br>
+            <button type="submit">Add</button>
+          </form>
+        </div>
+
+
+        <div id="hotel-table">
+            <h3>Hotel List</h3>
+            <table id="hotel-list">
+              <thead>
+                <tr>
+                  <th>Id</th>
+                  <th>Category</th>
+                  <th>Type of Room</th>
+                  <th>Bed Type</th>
+                  <th>No of Persons</th>
+                  <th>Capacity</th>
+                  <th>Cost</th> 
+                  <th>Edit</th>
+                  <th>Delete</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="hotel-table-body"></tbody>
+            </table>
+          </div>
+  </body>
+</html>
+
+<script>
+
+    // posting
+    document.getElementById("hotel-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const category = document.getElementById("category").value;
+    const imageUrl = document.getElementById("image-url").value;
+    const roomType = document.querySelector('input[name="room-type"]:checked').value;
+    const bedType = document.getElementById("bed-type").value;
+    const noOfAdults = document.getElementById("no-of-adults").value;
+    const maxCapacity = document.getElementById("max-capacity").value;
+    const costPerNight = document.getElementById("cost-per-night").value;
+
+    const newHotel = {
+      category,
+      image_url: imageUrl,
+      type_of_room: roomType,
+      bed_type: bedType,
+      no_of_persons: noOfAdults,
+      capacity: maxCapacity,
+      cost: costPerNight,
+      booked: false
+    };
+
+    fetch("http://localhost:3000/products", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(newHotel)
+    })
+      .then(response => response.json())
+      .then(data => {
+        alert("Hotel added successfully");
+        document.getElementById("hotel-form").reset();
+        fetchHotels(); // Fetch hotels again to update the table
+      })
+      .catch(error => {
+        console.error("Error:", error);
+      });
+  });
+
+
+  function fetchHotels() {
+    fetch("http://localhost:3000/products")
+      .then(response => response.json())
+      .then((res) => {
+        // console.log(res)
+         display(res)
+      })
+      .catch(error => {
+        console.error("Error:", error);
+      });
+  }
+
+  function display(data){
+    document.querySelector("tbody").innerHTML = "";
+    data.forEach((e) => {
+        let row = document.createElement("tr");
+
+        let td1 = document.createElement("td");
+        td1.innerText = e.id;   
+
+        let td2 = document.createElement("td");
+        td2.innerText = e.category;
+
+        let td3 = document.createElement("td");
+        td3.innerText = e.type_of_room;
+
+        let td4 = document.createElement("td");
+        td4.innerText = e.bed_type;
+
+        let td5 = document.createElement("td");
+        td5.innerText = e.no_of_persons;
+
+        let td6 = document.createElement("td");
+        td6.innerText = e.capacity;
+
+        let td7 = document.createElement("td");
+        td7.innerText = e.cost;
+
+        let td8 = document.createElement("td");
+        td8.innerText = "Edit";
+
+        let td9 = document.createElement("td");
+        td9.innerText = "Delete";
+
+
+        td9.addEventListener("click" , function() {
+          delFun(e)
+        })
+
+        let td10 = document.createElement("td");
+        td10.innerText = e.booked ? "Booked" : "Not Booked"
+
+        row.append(td1, td2, td3, td4, td5, td6, td7 , td8 , td9 , td10);
+
+        document.querySelector("tbody").append(row);
+    })
+  }
+
+  function delFun(e){
+    fetch(`http://localhost:3000/products/${e.id}`,{
+            method:"DELETE",
+        }).then((res) => {
+            if(res.ok){
+                display()
+                alert("Data deleted successfully")
+            }else{
+                console.log("Error in deleting data")
+            }
+        }).catch((err) => {
+            console.log(err)
+        })
+    
+  }
+
+
+
+ fetchHotels()
+
+</script>

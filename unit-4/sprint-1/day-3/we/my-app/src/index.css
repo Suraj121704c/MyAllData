@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.Gp{
+   text-align: center;
+   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   width: 80%;
+   margin: auto;
+   height: 120px;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+.todolist{
+  margin-top: 30px;
+}
+.todolist li {
+  padding: 10px;
+  margin: 10px;
+}

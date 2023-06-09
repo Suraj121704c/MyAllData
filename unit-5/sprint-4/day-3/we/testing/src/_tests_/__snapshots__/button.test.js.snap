@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tesing Button Component Should snapshot 1`] = `
+<div>
+  <button
+    className="blue large"
+    data-testId="custom-button"
+  >
+    Click Me
+  </button>
+</div>
+`;

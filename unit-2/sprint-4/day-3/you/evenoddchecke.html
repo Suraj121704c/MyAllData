@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let x;
+    let y = 2
+    let n = new Promise(function(res,rej){
+        res(y+21)
+    })
+    n
+    .then((a)=>a+20)
+    .then((b)=>b+120)
+    .then((c)=>{
+        x = new Promise(function(res,rej){
+            if(c % 2 == 0){
+                res("Even Number")
+            }else{
+                rej("Odd Number")
+            }
+        })
+        .then((res)=>console.log(res))
+        .catch((err)=>alert(err))
+    })
+</script>

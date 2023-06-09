@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Throtller</title>
+  </head>
+  <body>
+    <input type="text" id="search" placeholder="search..." />
+  </body>
+</html>
+<script>
+  function throttler(callback, delay) {
+    let throttling = false;
+    let timeoutId = null;
+
+    return function (...args) {
+      if (!throttling) {
+        throttling = true;
+        callback.apply(this, args);
+        timeoutId = setTimeout(() => {
+          throttling = false;
+        }, delay);
+      } else {
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(() => {
+          callback.apply(this, args);
+          throttling = false;
+        }, delay);
+      }
+    };
+  }
+
+  const searchInput = document.querySelector("#search");
+
+  function handleSearch(value) {
+    console.log("Searching for:", value);
+  }
+
+  const throttledSearch = throttler(handleSearch, 1000);
+
+  searchInput.addEventListener("input", function (event) {
+    const value = event.target.value;
+    throttledSearch(value);
+  });
+</script>

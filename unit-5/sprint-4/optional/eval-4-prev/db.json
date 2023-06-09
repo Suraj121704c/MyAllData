@@ -1,0 +1,36 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "name": "json-server",
+      "image": "https://via.placeholder.com/350",
+      "code": "fw21_1152",
+      "batch": "web-21",
+      "vote": 3
+    },
+    {
+      "name": "Uttam Kumar shaw",
+      "image": "https://via.placeholder.com/350",
+      "code": "web-21",
+      "batch": "fw21_1152",
+      "vote": 10,
+      "id": 2
+    },
+    {
+      "name": "rahul",
+      "image": "https://via.placeholder.com/350",
+      "code": "web-23",
+      "batch": "fw21_1154",
+      "vote": 6,
+      "id": 3
+    },
+    {
+      "name": "pablo data ",
+      "image": "https://via.placeholder.com/350",
+      "code": "web1",
+      "batch": "ia-25",
+      "vote": 20,
+      "id": 4
+    } 
+  ]
+}

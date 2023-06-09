@@ -1,0 +1,3 @@
+export const COFFEE_DATA = "COFFEE_DATA";
+export const RESTAURENT_DATA = "RESTAURENT_DATA";
+export const EMPLOYEE_DATA = "EMPLOYEE_DATA";

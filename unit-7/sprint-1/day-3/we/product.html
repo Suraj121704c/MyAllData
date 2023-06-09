@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      nav {
+        display: flex;
+        justify-content: space-evenly;
+        background-color: black;
+        font-size: 30px;
+      }
+      nav a {
+        text-decoration: none;
+        color: white;
+      }
+      img {
+        width: 300px;
+        height: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="admin.html">Admin</a>
+      <a href="product.html">Product</a>
+    </nav>
+    <div id="container">
+      <select id="category">
+        <option value="">--Select Category--</option>
+        <option value="Family">Family</option>
+        <option value="Suite">Suite</option>
+        <option value="Deluxe">Deluxe</option>
+      </select>
+      <select id="sort">
+        <option value="">--Select Price--</option>
+        <option value="asc">Ascending</option>
+        <option value="desc">Descending</option>
+      </select>
+
+      <button id="prev">Previous</button><button id="next">Next</button>
+    </div>
+
+    <div
+      id="cart-container"
+      style="display: grid; grid-template-columns: repeat(3, 1fr)">
+      <!-- Here Append All the cart Products  -->
+    </div>
+  </body>
+</html>
+<script>
+  let currentPage = 1;
+
+  function fetchProduct(category, sort) {
+    let apiUrl = `http://localhost:3000/products?_limit=3`;
+
+    if (sort) {
+      apiUrl += `&_sort=cost&_order=${sort}`;
+    }
+
+    if (category) {
+      apiUrl += `&category=${category}`;
+    }
+
+    fetch(apiUrl)
+      .then((res) => res.json())
+      .then((data) => {
+        display(data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
+
+  function display(data) {
+    document.querySelector("#cart-container").innerHTML = "";
+    data.map((e) => {
+      console.log(e);
+      let div = document.createElement("div");
+
+      let pic = document.createElement("img");
+      pic.setAttribute("src", e.image_url);
+
+      let h1 = document.createElement("h1");
+      h1.innerText = e.cost;
+
+      let p = document.createElement("p");
+      p.innerText = e.category;
+
+      let btn = document.createElement("button");
+      btn.innerText = e.booked ? "Booked" : "Not Booked";
+
+      btn.addEventListener("click", function () {
+        bookingJi(e, e.booked);
+      });
+
+      div.append(pic, h1, p, btn);
+
+      document.querySelector("#cart-container").append(div);
+    });
+  }
+
+  fetchProduct();
+
+  const filterData = () => {
+    const sort = document.querySelector("#sort").value;
+    const category = document.querySelector("#category").value;
+
+    fetchProduct(category, sort);
+  };
+
+  document.querySelector("#category").addEventListener("change", filterData);
+
+  document.querySelector("#sort").addEventListener("change", filterData);
+
+  function pageJi(page) {
+    let apiUrl = `http://localhost:3000/products?_page=${page}&_limit=3`;
+
+    fetch(apiUrl)
+      .then((res) => res.json())
+      .then((data) => {
+        display(data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
+
+  let prev = document.getElementById("prev");
+  let next = document.getElementById("next");
+
+  prev.addEventListener("click", () => {
+    if (currentPage > 1) {
+      currentPage--;
+      pageJi(currentPage);
+    }
+  });
+
+  next.addEventListener("click", () => {
+    currentPage++;
+    pageJi(currentPage);
+  });
+
+  function bookingJi(e, booked) {
+    // console.log(e)
+    fetch(`http://localhost:3000/products/${e.id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify({ booked: true }),
+    })
+      .then((res) => {
+        if (res.ok) {
+          fetchProduct();
+          alert("Booked successfully...");
+        } else {
+          console.log("Error in booking...");
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
+</script>

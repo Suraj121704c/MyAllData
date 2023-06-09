@@ -1,0 +1,134 @@
+Relationships:- The link/bond between two things.
+
+Thing: people, objects, networks, computers.
+
+        ==> Mongo
+            ==> Databases
+                ==> Collections ==> Multiple Collections: tech, ops, marketing, product, hr, finance, sales, purchase [employees]
+                    ==> Documents
+
+Why do we need relationships?
+    Masai Schools's Example (masai)
+        1. students
+        2. instructors
+
+        *student's collections ==> Document*
+        student_code
+        batch
+        blood_group
+
+        *instructor's collections ==> Document*
+        emp_id
+        sub
+        expr
+
+        *user's Collection ==> Document*
+        user_id
+        name
+        email
+        phone
+        location
+        gender
+        blood_group
+
+        ==> db.students.find({location:"BLR"})
+        ==> db.instructors.find({location:"BLR"})
+        ==> db.ops.find({location:"BLR"})
+        ==> db.sales.find({location:"BLR"})
+
+        ==> db.users.find({location:"BLR"})
+
+Types of Relationships:
+    ==> 1 - 1
+    ==> 1 - Many
+    ==> Many  - Many
+
+
+1 - 1 Relationships
+
+    *student's collections ==> Document*
+        student_id
+        batch
+        blood_group
+        user_id
+
+    *user's Collection ==> Document*
+        user_id
+        name
+        email
+        phone
+        location
+        gender
+        blood_group
+
+    Connection: Put parent's (independent Collection) id into child collection (Dependent)
+
+1 - Many Relationships
+
+    ==> Linkedin
+        ==>users
+            ==> posts
+
+        users=[
+            {
+                user_id:1 
+                name
+                age
+                gender
+                email            
+            },
+            {
+                user_id:2
+                name
+                age
+                gender
+                email
+                posts:[{},{},{},{}.......1000]
+            },
+            {
+                user_id:3
+                name
+                age
+                gender
+                email
+                posts:[{},{},{},{}.......1000]
+            },
+            {
+                user_id:4
+                name
+                age
+                gender
+                email
+                posts:[{},{},{},{}.......1000]
+            },
+            .
+            .
+            .
+            .
+            ..
+        ]        
+
+        posts=[
+            {
+                post_id
+                title,
+                body,
+                no_of_reactions
+                user_id:1
+            },
+            {},
+            .
+            .
+            .
+            .
+            1000
+        ]
+
+Many - Many Relationships
+
+    ==> One hashtag (#selfieKing) can be used on multiple pictures
+    ==> One Picture can have multiple hashtags (#selfieKing, #sunnyDay, #feeling_lucky )
+
+    Pictures <==> Hashtags (Many - Many)
+        ==> You can put hastag id in picture schema
+        ==> Picture id in hasgtag schema

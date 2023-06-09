@@ -1,0 +1,58 @@
+import React, { useState } from "react";
+import Navbar from "../Navbar/Navbar";
+import axios from "axios";
+
+const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const userDetails = {
+      email,
+      password,
+    };
+    axios({
+      method: "post",
+      url: "https://good-puce-walkingstick-garb.cyclic.app/users/login",
+      data: userDetails,
+    })
+      .then((res) => {
+        console.log(res.data);
+        localStorage.setItem("token", res.data.token);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
+  return (
+    <div>
+      <Navbar />
+      <h1>Login Here...</h1>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          placeholder="email..."
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <br />
+        <br />
+
+        <input
+          type="text"
+          placeholder="password..."
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <br />
+        <br />
+
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  );
+};
+
+export default Login;

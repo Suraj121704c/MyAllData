@@ -1,0 +1,64 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "status": false
+    },
+    {
+      "title": "sing",
+      "statu": false,
+      "id": 2
+    },
+    {
+      "title": "blink",
+      "statu": false,
+      "id": 3
+    },
+    {
+      "title": "bigg",
+      "statu": false,
+      "id": 4
+    },
+    {
+      "title": "tits",
+      "statu": false,
+      "id": 5
+    },
+    {
+      "title": "sixer",
+      "statu": false,
+      "id": 6
+    },
+    {
+      "title": "sex",
+      "statu": false,
+      "id": 7
+    },
+    {
+      "title": "sun",
+      "statu": false,
+      "id": 8
+    },
+    {
+      "title": "rock",
+      "statu": false,
+      "id": 9
+    },
+    {
+      "title": "sung",
+      "statu": false,
+      "id": 10
+    },
+    {
+      "title": "task-9",
+      "statu": false,
+      "id": 11
+    },
+    {
+      "title": "songs",
+      "statu": false,
+      "id": 12
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The E-cart</title>
+        <meta name="description" content="This is the description">
+        <link rel="stylesheet" href="styles.css" />
+        <script src="store.js" async></script>
+    </head>
+    <body>
+        <header class="main-header">
+            <h1 class="band-name band-name-large">My store</h1>
+        </header>
+        <section class="container content-section">
+            <h2 class="section-header">Shoes</h2>
+            <div class="shop-items">
+                <div class="shop-item">
+                    <span class="shop-item-title">Renno Shoes</span>
+                    <img class="shop-item-image" src="https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/7741225/2022/4/28/a25a206b-d66f-4c1f-864f-fe726f2f80251651146955597-Eego-Italy-Men-Black-Leather-High-Top-Trekking-Shoes-5441651-1.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">₹1999</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Menno Shoes</span>
+                    <img class="shop-item-image" src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/7ca580fc-6690-4b49-8274-58b6a7c8d387/zoom-lebron-2-mens-shoes-Ln9VcN.png">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">₹999</span>
+                        <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Nano Shoes</span>
+                    <img class="shop-item-image" src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/dc36a688-526a-40a7-b412-40e734a74487/dunk-high-retro-mens-shoe-dTVTCk.png">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">₹432</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Lelo Shoes</span>
+                    <img class="shop-item-image" src="https://m.media-amazon.com/images/I/618CBn3N0LL._AC_UL320_.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">₹403</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container content-section">
+            <h2 class="section-header">Cups</h2>
+            <div class="shop-items">
+                <div class="shop-item">
+                    <span class="shop-item-title">Earth Coffee
+                    </span>
+                    <img class="shop-item-image" src="https://cdn-ggkop.nitrocdn.com/MDLLEBFfOLBZHwwXDmQrPxHjnihyWPKp/assets/static/optimized/rev-33afe6f/wp-content/uploads/2021/09/Homepage_header_850x54px_3-1.png">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">₹120</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Green Tea</span>
+                    <img class="shop-item-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXzwJfB7J_WGCdgClu3E7JtI8tkHpAgyVfqDmD-wNtyIPVtfD3MRGqidZnnJqf-noFMUI&usqp=CAU">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">₹200</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+      <!-- ! To store the detials in the cart portion -->
+        <section class="container content-section">
+            <h2 class="section-header">CART</h2>
+            <div class="cart-row">
+                <span class="cart-item cart-header cart-column">ITEM</span>
+                <span class="cart-price cart-header cart-column">PRICE</span>
+                <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+            </div>
+            <div class="cart-items">
+            </div>
+            <div class="cart-total">
+               <div class="coupen">
+                <label id="copen-id">Enter Coupen Code</label>
+                 <input type="text" id="entercoupen">
+                 <button id="app">Apply coupen</button>
+               </div>
+               <div class="price">
+                <strong class="cart-total-title">Total</strong>
+                <span class="cart-total-price">₹0</span>
+               </div>
+            </div>
+            <button class="btn btn-primary btn-purchase" type="button"><a href="Paymet\payment.html"> PURCHASE </a></button>
+        </section>
+    </body>
+</html>

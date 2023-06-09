@@ -1,0 +1,6 @@
+ID is a number
+Name is a string
+Rating is a number
+Description is a string
+Genre is a string
+bad request.some data is incorrect.

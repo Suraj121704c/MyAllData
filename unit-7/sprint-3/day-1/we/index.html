@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chart</title>
+</head>
+<body>
+  
+    <canvas id="chart">
+<!-- write thins -->
+    </canvas>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.0/dist/chart.umd.min.js"></script>
+
+    <script type="text/javascript">
+
+        var ctx , chart
+        window.addEventListener('load' , (() => {
+            ctx = document.getElementById('chart')
+
+            chart = new Chart(ctx,{
+               type : 'bar',
+               data : {
+                label : ['January'],
+                database : [{
+                    label : 'attendance',
+                    data : [100 , 45 , 60 , 80 , 67 , 78]
+                }]
+               }
+            })
+        }))
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    //Take count as an variable and assign some value 
+    //create a new promise in such a way, that if (count > 0) resolve it.
+    //else reject it
+
+    let count = 7
+
+    let countPromise = new Promise((resolve,reject)=>{
+        if(count > 0){
+            resolve("Positive Count")
+        }else{
+            reject("Negative COunt")
+        }
+    })
+    console.log(countPromise)
+    countPromise
+    .then((fromResolve)=>console.log(fromResolve))
+    .catch((fromReject)=>console.log(fromReject))
+
+    //take a variable x with some value
+    //create a newPromise such that if given number is even then resolve it, else reject
+
+    // 
+</script>

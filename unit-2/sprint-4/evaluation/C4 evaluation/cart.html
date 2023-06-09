@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart Page</title>
+    <style>
+      /* Write all necessery css here  */
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      .nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+      }
+      #cart-container{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(4,1fr);
+        gap: 20px;
+      }
+      #cart-container>div>img{
+        width: 100%;
+        height: 50%;
+      }
+      #cart-container>div{
+        text-align: center;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+      #total{
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <h1>Masai E-Commerce</h1>
+      <a href="./index.html">Home</a>
+      <a href="./cart.html">Cart</a>
+    </div>
+    <h1 id="total">Your Total cart Price is:- <span id="cart-total">0</span></h1>
+    <div id="cart-container">
+      <!-- Here Append All the cart Products  -->
+    </div>
+  </body>
+  <script>
+    // Write all necessery JS here 
+    let data = JSON.parse(localStorage.getItem("cart")) || []
+
+    let totalPrice = data.reduce((acc,el)=> acc + el.price , 0)
+    document.querySelector("#total").innerText = "Your Total Card Price is : "+totalPrice
+
+    displayCard(data)
+
+    function displayCard(data){
+     document.querySelector("#cart-container").innerHTML = ""
+     
+      data.forEach(function(elem,i){
+        let div = document.createElement("div")
+
+        let pic = document.createElement("img")
+        pic.setAttribute("src",elem.img)
+
+        let brand = document.createElement("h1")
+      brand.innerText = elem.brand
+
+      let price = document.createElement("h2")
+      price.innerText = elem.price
+
+      let details = document.createElement("p")
+      details.innerText = elem.details
+
+      let Category = document.createElement("h3")
+      Category.innerText = elem.category
+
+      let btn = document.createElement("button")
+      btn.innerText = "Delete"
+      btn.addEventListener("click",function(){
+        deletepro(elem,i)
+      })
+      
+  
+        div.append(pic,Category,details,price,brand,btn)
+
+        document.querySelector("#cart-container").append(div)
+      })
+
+    }
+
+    function deletepro(elem,i){
+      data.splice(i,1)
+      displayCard(data)
+      localStorage.setItem("cart",JSON.stringify(data))
+    }
+
+  </script>
+</html>

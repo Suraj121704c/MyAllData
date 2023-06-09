@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/doctors.css">
+    <title>Doctors</title>
+</head>
+<body>
+    <nav>  
+        <a href="index.html">Home</a>
+        <a href="Admin.html">Admin</a>
+        <a href="Doctors.html">Doctors</a>
+    </nav>
+    <div id="container">
+        <select id="specialization">
+            <option value="">Select Specialist</option>
+            <option value="Pediatrician">Pediatrician</option>
+            <option value="Dermatologist">Dermatologist</option>
+            <option value="Gyanacologist">Gyanacologist</option>
+        </select>&nbsp;&nbsp;&nbsp;
+
+        <select id="sort">
+            <option value="">Select Order</option>
+            <option value="asc">Asc</option>
+            <option value="desc">Desc</option>
+        </select>&nbsp;&nbsp;&nbsp;
+
+        <button id="prev">Previous</button>&nbsp;&nbsp;&nbsp;
+        <button id="next">Next</button>&nbsp;&nbsp;&nbsp;
+
+        <input id="search" placeholder="search_here"/>
+    </div>
+
+    <div id="cart-container"
+    style="display: grid; grid-template-columns: repeat(2,1fr); margin-top: 20px;" 
+    >
+        
+    </div>
+</nav>
+</body>
+</html>
+
+<script src="/scripts/doctors.js"></script>

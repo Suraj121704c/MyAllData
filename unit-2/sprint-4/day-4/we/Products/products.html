@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: auto;
+        gap:20px;
+    }
+    .container>div>img{
+        width: 100%;
+        height: 50%;
+    }
+    .container>div{
+        text-align: center;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        
+    }
+    input{
+        padding: 10px;
+        width: 400px;
+        margin-left: 550px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+    }
+</style>
+<body>  <button><a href="cart.html">Visit to Cart</a></button>
+    <input oninput="search()" type="text" placeholder="Search Products">
+    <select onchange="handleSort()">
+        <option  value="LTH">LTH</option>
+        <option  value="HTL">HTL</option>
+    </select>
+    <div class="container">
+
+    </div>
+</body>
+</html>
+<script>
+    let bag = []
+    let cartItems = JSON.parse(localStorage.getItem("cartProducts")) || []
+    let url = "https://fakestoreapi.com/products";
+    fetch(url)
+    .then((res)=>res.json())
+    .then((data)=>{
+        bag = data
+        displayCard(data)
+    })
+ 
+    function search(){
+       document.querySelector(".container").innerHTML = ""
+       let q = document.querySelector("input").value
+       console.log(q)
+       let newData = bag.filter(function(elem){
+        return elem.title.toLowerCase().includes(q.toLowerCase())
+       })
+      displayCard(newData)
+    }
+
+    function handleSort(){
+        document.querySelector(".container").innerHTML = ""
+        let selected = document.querySelector("select").value
+        if(selected == "HTL"){
+         bag.sort((a,b)=>b.price - a.price)
+        }
+        if(selected == "LTH")
+        {
+          bag.sort((a,b) => a.price - b.price)
+        }
+        console.log(bag)
+        displayCard(bag)
+    }
+
+  function displayCard(data){
+     data.forEach(function(elem){
+        let div = document.createElement("div")
+
+        let imageProd = document.createElement("img")
+        imageProd.setAttribute("src",elem.image)
+
+        let title = document.createElement("h2")
+        title.innerText = elem.title
+
+        let des = document.createElement("p")
+        des.innerText = elem.description
+
+        let cost = document.createElement("p")
+        cost.innerText = elem.price
+
+        let rating = document.createElement("p")
+        rating.innerText = elem.rating.rate
+
+        let btn = document.createElement("button")
+        btn.innerText = "Add to Cart"
+        btn.addEventListener("click",function(){
+            cartItems.push(elem)
+            localStorage.setItem("cartProducts",JSON.stringify(cartItems))
+        })
+
+        div.append(imageProd,title,des,cost,rating,btn)
+
+
+        document.querySelector(".container").append(div)
+     })
+    }
+  
+</script>
