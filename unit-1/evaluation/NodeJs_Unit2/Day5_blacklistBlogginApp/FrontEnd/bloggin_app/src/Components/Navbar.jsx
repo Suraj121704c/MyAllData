@@ -1,11 +1,26 @@
+import axios from "axios";
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const navigate = useNavigate();
+
   const handleLogOut = () => {
-    localStorage.removeItem("token");
-    navigate("/");
+    axios
+      .post("http://localhost:5000/users/logout", {
+        headers: {
+          "content-type": "application/json",
+          Authorization: localStorage.getItem("token"),
+        },
+      })
+      .then((res) => {
+        alert(res.data);
+        localStorage.removeItem("token")
+        navigate("/");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
   return (
     <div
