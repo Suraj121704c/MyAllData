@@ -1,7 +1,7 @@
 body{
 	margin:0px;
 	padding: 0px;
-	background-color:#1b203d;
+	background-color:#51c53f;
 	overflow: hidden;
 	font-family: system-ui;
 }
@@ -12,11 +12,11 @@ body{
 	margin: 0px;
 	margin-left: 28px;
     font-weight: bold;
-    color: white;
+    color: rgb(16, 15, 15);
     margin-bottom: 30px;
 }
 .logo span{
-	color: #f7403b;
+	color: #fcfbfb;
 }
 .sidenav {
   height: 100%;
@@ -25,7 +25,7 @@ body{
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #272c4a;
+  background-color: #20ef00;
   overflow: hidden;
   transition: 0.5s;
   padding-top: 30px;
@@ -34,13 +34,13 @@ body{
   padding: 15px 8px 15px 32px;
   text-decoration: none;
   font-size: 20px;
-  color: #818181;
+  color: #131212;
   display: block;
   transition: 0.3s;
 }
 .sidenav a:hover {
-  color: #f1f1f1;
-  background-color:#1b203d;
+  color: #161616;
+  background-color:#2bc813;
 }
 .sidenav{
   position: absolute;
@@ -81,7 +81,7 @@ body{
 	font-weight: 400;
     font-size: 12px;
     display: block;
-    color: #8e8b8b;
+    color: #000000;
 }
 .col-div-3{
 	width: 25%;
@@ -90,13 +90,13 @@ body{
 .box{
 	width: 85%;
 	height: 100px;
-	background-color: #272c4a;
+	background-color: #87e779;
 	margin-left: 10px;
 	padding:10px;
 }
 .box p{
 	 font-size: 35px;
-    color: white;
+    color: rgb(14, 14, 14);
     font-weight: bold;
     line-height: 30px;
     padding-left: 10px;
@@ -106,13 +106,13 @@ body{
 .box p span{
 	font-size: 20px;
 	font-weight: 400;
-	color: #818181;
+	color: #181818;
 }
 .box-icon{
 	font-size: 40px!important;
     float: right;
     margin-top: 35px!important;
-    color: #818181;
+    color: #252323;
     padding-right: 10px;
 }
 .col-div-8{
@@ -129,17 +129,17 @@ body{
 .content-box p{
 	margin: 0px;
     font-size: 20px;
-    color: #f7403b;
+    color: #fafafa;
 }
 .content-box p span{
 	float: right;
-    background-color: #ddd;
+    background-color: #25b110;
     padding: 3px 10px;
     font-size: 15px;
 }
 .box-8, .box-4{
 	width: 95%;
-	background-color: #272c4a;
+	background-color: #25b110;
 	height: 330px;
 	
 }
@@ -159,14 +159,14 @@ table {
 td, th {
   text-align: left;
   padding:15px;
-  color: #ddd;
+  color: #121212;
   border-bottom: 1px solid #81818140;
 }
 .circle-wrap {
   margin: 50px auto;
   width: 150px;
   height: 150px;
-  background: #e6e2e7;
+  background: #f70df370;
   border-radius: 50%;
 }
 .circle-wrap .circle .mask,
@@ -182,7 +182,7 @@ td, th {
 
 .circle-wrap .circle .mask .fill {
   clip: rect(0px, 75px, 150px, 0px);
-  background-color: #f7403b;
+  background-color: #0d0d0d;
 }
 .circle-wrap .circle .mask.full,
 .circle-wrap .circle .fill {
@@ -202,7 +202,7 @@ td, th {
   width: 130px;
   height: 130px;
   border-radius: 50%;
-  background: #fff;
+  background: #c3c6c5;
   line-height: 130px;
   text-align: center;
   margin-top: 10px;
