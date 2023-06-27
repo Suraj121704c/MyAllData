@@ -141,7 +141,7 @@ body{
 	width: 95%;
 	background-color: #25b110;
 	height: 330px;
-	
+	border-radius: 10%;
 }
 .nav2{
 	display: none;
