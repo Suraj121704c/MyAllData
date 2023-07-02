@@ -9,7 +9,7 @@ const HomeScreen = ({ navigation }) => {
     axios
       .get("https://backend-mock-5.onrender.com/products")
       .then((response) => {
-        console.log(response.data);
+        setItems(response.data);
       })
       .catch((error) => {
         console.error("Error:", error.message);
