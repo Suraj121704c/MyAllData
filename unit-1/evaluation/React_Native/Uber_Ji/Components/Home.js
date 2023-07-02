@@ -16,6 +16,17 @@ const HomeScreen = ({ navigation }) => {
       });
   }
 
+  const handleDeleteItem = async (itemId) => {
+    try {
+      await axios.delete(
+        `https://backend-mock-5.onrender.com/products/${itemId}`
+      );
+      server();
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   useEffect(() => {
     server();
   }, []);
@@ -37,6 +48,8 @@ const HomeScreen = ({ navigation }) => {
               title="Edit"
               onPress={() => navigation.navigate("Edit", { item })}
             />
+
+            <Button title="Delete" onPress={() => handleDeleteItem(item.id)} />
           </View>
         )}
       />
