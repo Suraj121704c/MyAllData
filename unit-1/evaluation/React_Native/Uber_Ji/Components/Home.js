@@ -6,13 +6,14 @@ const HomeScreen = ({ navigation }) => {
   const [items, setItems] = useState([]);
 
   function server() {
-    axios.get('https://backend-mock-5.onrender.com/products')
-    .then(response => {
-      console.log(response.data);
-    })
-    .catch(error => {
-      console.error('Error:', error.message);
-    });
+    axios
+      .get("https://backend-mock-5.onrender.com/products")
+      .then((response) => {
+        console.log(response.data);
+      })
+      .catch((error) => {
+        console.error("Error:", error.message);
+      });
   }
 
   useEffect(() => {
@@ -22,8 +23,23 @@ const HomeScreen = ({ navigation }) => {
   return (
     <View>
       <Button title="Add Item" onPress={() => navigation.navigate("Add")} />
-      <Text>Aur Nunu</Text>
-      <Text>Aur Nunu</Text>
+      <FlatList
+        data={items}
+        keyExtractor={(item) => item.id.toString()}
+        renderItem={({ item }) => (
+          <View>
+            <Text>{item.title}</Text>
+            <Button
+              title="View Details"
+              onPress={() => navigation.navigate("Detail", { item })}
+            />
+            <Button
+              title="Edit"
+              onPress={() => navigation.navigate("Edit", { item })}
+            />
+          </View>
+        )}
+      />
     </View>
   );
 };

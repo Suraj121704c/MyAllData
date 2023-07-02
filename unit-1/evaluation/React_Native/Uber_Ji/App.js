@@ -4,10 +4,16 @@ import { createStackNavigator } from "react-navigation-stack";
 import { Provider } from "react-redux";
 import HomeScreen from "./Components/Home";
 import { createAppContainer } from "react-navigation";
+import AddScreen from "./Components/Add";
+import EditScreen from "./Components/Edit";
+import DetailScreen from "./Components/Details";
 
 const AppNavigatore = createStackNavigator(
   {
     Home: HomeScreen,
+    Add : AddScreen,
+    Edit : EditScreen,
+    Detail : DetailScreen
   },
   {
     initialRouteName: "Home",
