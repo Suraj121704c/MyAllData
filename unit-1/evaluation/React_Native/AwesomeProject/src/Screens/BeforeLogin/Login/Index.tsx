@@ -30,72 +30,71 @@ export const Login = () => {
           </View>
         </View>
 
-        <View
-        style={styles.CurverBox}>
-        <View style={{marginLeft: 20, marginTop: 20}}>
-          <TextInput placeholder="Email Address" style={styles.EmailAdress} />
+        <View style={styles.CurverBox}>
+          <View style={styles.EmailBoxFirst}>
+            <TextInput placeholder="Email Address" style={styles.EmailAdress} />
 
-          <TextInput placeholder="Password" style={styles.Password} />
+            <TextInput placeholder="Password" style={styles.Password} />
 
-          <TextInput style={styles.ForgetText}>Forget Password ?</TextInput>
+            <TextInput style={styles.ForgetText}>Forget Password ?</TextInput>
 
-          <View style={{width: '90%'}}>
-            <TouchableOpacity style={styles.Button}>
-              <Text style={styles.ButtonText}>LOGIN</Text>
-            </TouchableOpacity>
+            <View style={styles.LoginBox}>
+              <TouchableOpacity style={styles.Button}>
+                <Text style={styles.ButtonText}>LOGIN</Text>
+              </TouchableOpacity>
+            </View>
+
+            <Text style={styles.orLoginWith}>or Login With</Text>
+
+            <View style={styles.ButtonBox}>
+              <TouchableOpacity style={styles.GoogleButton}>
+                <Image
+                  source={{
+                    uri: 'https://w7.pngwing.com/pngs/543/934/png-transparent-google-app-logo-google-logo-g-suite-google-text-logo-circle.png',
+                  }}
+                  style={styles.GoogleImage}
+                />
+                <Text style={styles.GoogleButtonText}>
+                  Continue with Google
+                </Text>
+              </TouchableOpacity>
+            </View>
+
+            <View style={styles.ButtonBox}>
+              <TouchableOpacity style={styles.FacebookButton}>
+                <Image
+                  source={{
+                    uri: 'https://freepngimg.com/save/141243-logo-circle-facebook-free-hq-image/512x512',
+                  }}
+                  style={styles.GoogleImage}
+                />
+                <Text style={styles.FacebookButtonText}>
+                  Continue with Facebook
+                </Text>
+              </TouchableOpacity>
+            </View>
+
+            <View style={styles.ButtonBox}>
+              <TouchableOpacity style={styles.AppleButton}>
+                <Image
+                  source={{
+                    uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxChXjgBTSmGJKsCbcZJdiZ0ox3A8lBof3Pg&usqp=CAU',
+                  }}
+                  style={styles.GoogleImage}
+                />
+                <Text style={styles.FacebookButtonText}>
+                  Continue with Apple
+                </Text>
+              </TouchableOpacity>
+            </View>
+
+            <Text style={styles.NewToBeerStore}>
+              New to The Beer Store?
+              <Text style={{color: 'red'}}> Create an account.</Text>
+            </Text>
           </View>
-
-          <Text style={{textAlign: 'center', marginTop: 20}}>
-            or Login With
-          </Text>
-
-          <View style={{width: '90%', marginTop: 20}}>
-            <TouchableOpacity style={styles.GoogleButton}>
-              <Image
-                source={{
-                  uri: 'https://w7.pngwing.com/pngs/543/934/png-transparent-google-app-logo-google-logo-g-suite-google-text-logo-circle.png',
-                }}
-                style={styles.GoogleImage}
-              />
-              <Text style={styles.GoogleButtonText}>Continue with Google</Text>
-            </TouchableOpacity>
-          </View>
-
-          <View style={{width: '90%', marginTop: 20}}>
-            <TouchableOpacity style={styles.FacebookButton}>
-              <Image
-                source={{
-                  uri: 'https://freepngimg.com/save/141243-logo-circle-facebook-free-hq-image/512x512',
-                }}
-                style={styles.GoogleImage}
-              />
-              <Text style={styles.FacebookButtonText}>
-                Continue with Facebook
-              </Text>
-            </TouchableOpacity>
-          </View>
-
-          <View style={{width: '90%', marginTop: 20}}>
-            <TouchableOpacity style={styles.AppleButton}>
-              <Image
-                source={{
-                  uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxChXjgBTSmGJKsCbcZJdiZ0ox3A8lBof3Pg&usqp=CAU',
-                }}
-                style={styles.GoogleImage}
-              />
-              <Text style={styles.FacebookButtonText}>Continue with Apple</Text>
-            </TouchableOpacity>
-          </View>
-
-          <Text style={styles.NewToBeerStore}>
-            New to The Beer Store?
-            <Text style={{color: 'red'}}> Create an account.</Text>
-          </Text>
         </View>
-      </View>
       </ImageBackground>
-
-    
     </View>
   );
 };

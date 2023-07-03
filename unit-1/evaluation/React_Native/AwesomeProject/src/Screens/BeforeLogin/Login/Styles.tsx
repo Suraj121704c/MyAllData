@@ -5,8 +5,8 @@ export const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 24,
     fontWeight: 'bold',
-    color: 'yellow',
-    marginTop : 5
+    color: 'orange',
+    marginTop: 5,
   },
   HeadingSpan: {
     color: 'black',
@@ -20,13 +20,13 @@ export const styles = StyleSheet.create({
     fontSize: 30,
     textAlign: 'left',
     color: 'white',
-    fontWeight : 'bold'
+    fontWeight: 'bold',
   },
   LoginSmallText: {
     fontSize: 15,
     marginTop: 10,
     color: 'white',
-    fontWeight : 'bold'
+    fontWeight: 'bold',
   },
 
   EmailAdress: {
@@ -36,7 +36,7 @@ export const styles = StyleSheet.create({
     height: 50,
     borderWidth: 1,
     borderRadius: 8,
-    marginLeft : 10
+    marginLeft: 10,
   },
   Password: {
     borderColor: 'gray',
@@ -45,7 +45,7 @@ export const styles = StyleSheet.create({
     height: 50,
     borderWidth: 1,
     borderRadius: 8,
-    marginLeft : 10
+    marginLeft: 10,
   },
   ForgetText: {
     textAlign: 'right',
@@ -57,7 +57,7 @@ export const styles = StyleSheet.create({
     paddingVertical: 10,
     paddingHorizontal: 20,
     borderRadius: 5,
-    marginLeft : 10
+    marginLeft: 10,
   },
   ButtonText: {
     color: 'black',
@@ -67,16 +67,16 @@ export const styles = StyleSheet.create({
   },
   GoogleButton: {
     flexDirection: 'row',
-    justifyContent : "space-evenly",
+    justifyContent: 'space-evenly',
     backgroundColor: 'white',
     paddingVertical: 10,
     paddingHorizontal: 20,
     borderRadius: 5,
     borderColor: 'gray',
     borderWidth: 2,
-    marginLeft : 10
+    marginLeft: 10,
   },
-  GoogleImage : {
+  GoogleImage: {
     width: 28,
     height: 28,
     marginRight: 10,
@@ -89,12 +89,12 @@ export const styles = StyleSheet.create({
   },
   FacebookButton: {
     flexDirection: 'row',
-    justifyContent : "space-evenly",
+    justifyContent: 'space-evenly',
     backgroundColor: 'blue',
     paddingVertical: 10,
     paddingHorizontal: 20,
     borderRadius: 5,
-    marginLeft : 10
+    marginLeft: 10,
   },
   FacebookButtonText: {
     color: 'white',
@@ -104,12 +104,12 @@ export const styles = StyleSheet.create({
   },
   AppleButton: {
     flexDirection: 'row',
-    justifyContent : "space-evenly",
+    justifyContent: 'space-evenly',
     backgroundColor: 'black',
     paddingVertical: 10,
     paddingHorizontal: 20,
     borderRadius: 5,
-    marginLeft : 10
+    marginLeft: 10,
   },
 
   NewToBeerStore: {
@@ -118,11 +118,30 @@ export const styles = StyleSheet.create({
     fontSize: 14,
   },
 
-  CurverBox : {
+  CurverBox: {
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
     borderColor: 'white',
-    backgroundColor : "white",
+    backgroundColor: 'white',
     borderWidth: 2,
-  }
+  },
+  EmailBoxFirst: {
+    marginLeft: 20,
+    marginTop: 20,
+  },
+
+  LoginBox: {
+    width: '90%',
+  },
+
+  orLoginWith: {
+    textAlign: 'center',
+    marginTop: 20,
+    fontSize: 18,
+  },
+
+  ButtonBox: {
+    width: '90%',
+    marginTop: 20,
+  },
 });
