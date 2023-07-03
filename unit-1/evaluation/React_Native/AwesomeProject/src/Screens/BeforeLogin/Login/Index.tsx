@@ -29,14 +29,9 @@ export const Login = () => {
             </Text>
           </View>
         </View>
-      </ImageBackground>
 
-      <View
-        style={{
-          borderTopLeftRadius: 10,
-          borderTopRightRadius: 10,
-          borderColor: 'red',
-        }}>
+        <View
+        style={styles.CurverBox}>
         <View style={{marginLeft: 20, marginTop: 20}}>
           <TextInput placeholder="Email Address" style={styles.EmailAdress} />
 
@@ -98,6 +93,9 @@ export const Login = () => {
           </Text>
         </View>
       </View>
+      </ImageBackground>
+
+    
     </View>
   );
 };

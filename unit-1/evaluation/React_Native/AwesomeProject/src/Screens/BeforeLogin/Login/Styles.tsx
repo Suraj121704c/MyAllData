@@ -6,6 +6,7 @@ export const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     color: 'yellow',
+    marginTop : 5
   },
   HeadingSpan: {
     color: 'black',
@@ -19,11 +20,13 @@ export const styles = StyleSheet.create({
     fontSize: 30,
     textAlign: 'left',
     color: 'white',
+    fontWeight : 'bold'
   },
   LoginSmallText: {
     fontSize: 15,
     marginTop: 10,
     color: 'white',
+    fontWeight : 'bold'
   },
 
   EmailAdress: {
@@ -39,7 +42,7 @@ export const styles = StyleSheet.create({
     borderColor: 'gray',
     width: '90%',
     marginTop: 20,
-    height: 40,
+    height: 50,
     borderWidth: 1,
     borderRadius: 8,
     marginLeft : 10
@@ -108,9 +111,18 @@ export const styles = StyleSheet.create({
     borderRadius: 5,
     marginLeft : 10
   },
+
   NewToBeerStore: {
     textAlign: 'center',
     marginTop: 20,
     fontSize: 14,
   },
+
+  CurverBox : {
+    borderTopLeftRadius: 30,
+    borderTopRightRadius: 30,
+    borderColor: 'white',
+    backgroundColor : "white",
+    borderWidth: 2,
+  }
 });
