@@ -32,9 +32,9 @@ export const Login = () => {
 
         <View style={styles.CurverBox}>
           <View style={styles.EmailBoxFirst}>
-            <TextInput placeholder="Email Address" style={styles.EmailAdress} />
+            <TextInput placeholder="    Email Address" style={styles.EmailAdress} />
 
-            <TextInput placeholder="Password" style={styles.Password} />
+            <TextInput placeholder="    Password" style={styles.Password} />
 
             <TextInput style={styles.ForgetText}>Forget Password ?</TextInput>
 
@@ -44,7 +44,7 @@ export const Login = () => {
               </TouchableOpacity>
             </View>
 
-            <Text style={styles.orLoginWith}>or Login With</Text>
+            <Text style={styles.orLoginWith}><View style={styles.line} />or Login With</Text>
 
             <View style={styles.ButtonBox}>
               <TouchableOpacity style={styles.GoogleButton}>

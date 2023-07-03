@@ -144,4 +144,10 @@ export const styles = StyleSheet.create({
     width: '90%',
     marginTop: 20,
   },
+
+  line: {
+    width: '80%',
+    height: 1,
+    backgroundColor: 'black',
+  },
 });
