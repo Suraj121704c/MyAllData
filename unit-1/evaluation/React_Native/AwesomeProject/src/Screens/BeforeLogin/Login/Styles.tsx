@@ -1,6 +1,9 @@
 import {StyleSheet} from 'react-native';
 
 export const styles = StyleSheet.create({
+  BigBox: {
+    backgroundColor: 'black',
+  },
   HeadingTop: {
     textAlign: 'center',
     fontSize: 24,
@@ -116,6 +119,7 @@ export const styles = StyleSheet.create({
     textAlign: 'center',
     marginTop: 20,
     fontSize: 14,
+    marginBottom: 10,
   },
 
   CurverBox: {

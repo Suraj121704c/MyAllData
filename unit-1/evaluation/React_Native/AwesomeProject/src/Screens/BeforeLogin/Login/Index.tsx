@@ -14,25 +14,24 @@ import {apple, facebook, google} from '../../../Assests/Utils/images';
 
 const Login = () => {
   return (
-    <View>
-      <ImageBackground
-        source={{
-          uri: 'https://assets.gqindia.com/photos/5cdc07a454004370583c3a84/1:1/w_1080,h_1080,c_limit/top-image94.jpg',
-        }}>
-        <View>
-          <Text style={styles.HeadingTop}>
-            B<Text style={styles.HeadingSpan}>EER STORE</Text>
-          </Text>
-          <View style={styles.BearDiv}>
-            <Text style={styles.LoginText}>Login</Text>
-            <Text style={styles.LoginSmallText}>
-              Its time to rock n roll! Lets gets started now.
+    <View style={styles.BigBox}>   
+        <ImageBackground
+          source={{
+            uri: 'https://assets.gqindia.com/photos/5cdc07a454004370583c3a84/1:1/w_1080,h_1080,c_limit/top-image94.jpg',
+          }} 
+          >
+          <View>
+            <Text style={styles.HeadingTop}>
+              B<Text style={styles.HeadingSpan}>EER STORE</Text>
             </Text>
+            <View style={styles.BearDiv}>
+              <Text style={styles.LoginText}>Login</Text>
+              <Text style={styles.LoginSmallText}>
+                Its time to rock n roll! Lets gets started now.
+              </Text>
+            </View>
           </View>
-        </View>
-      </ImageBackground>
-
-
+        </ImageBackground>   
       <View style={styles.CurverBox}>
         <View style={styles.EmailBoxFirst}>
           <TextInput
@@ -66,10 +65,7 @@ const Login = () => {
           </View>
           <View style={styles.ButtonBox}>
             <TouchableOpacity style={styles.AppleButton}>
-              <Image
-                source={apple}
-                style={styles.GoogleImage}
-              />
+              <Image source={apple} style={styles.GoogleImage} />
               <Text style={styles.FacebookButtonText}>Continue with Apple</Text>
             </TouchableOpacity>
           </View>
