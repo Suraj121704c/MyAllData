@@ -38,7 +38,7 @@ export const Login = () => {
           borderColor: 'red',
         }}>
         <View style={{marginLeft: 20, marginTop: 20}}>
-          <TextInput placeholder="Email Adress" style={styles.EmailAdress} />
+          <TextInput placeholder="Email Address" style={styles.EmailAdress} />
 
           <TextInput placeholder="Password" style={styles.Password} />
 
@@ -68,6 +68,12 @@ export const Login = () => {
 
           <View style={{width: '90%', marginTop: 20}}>
             <TouchableOpacity style={styles.FacebookButton}>
+              <Image
+                source={{
+                  uri: 'https://freepngimg.com/save/141243-logo-circle-facebook-free-hq-image/512x512',
+                }}
+                style={styles.GoogleImage}
+              />
               <Text style={styles.FacebookButtonText}>
                 Continue with Facebook
               </Text>
@@ -76,6 +82,12 @@ export const Login = () => {
 
           <View style={{width: '90%', marginTop: 20}}>
             <TouchableOpacity style={styles.AppleButton}>
+              <Image
+                source={{
+                  uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxChXjgBTSmGJKsCbcZJdiZ0ox3A8lBof3Pg&usqp=CAU',
+                }}
+                style={styles.GoogleImage}
+              />
               <Text style={styles.FacebookButtonText}>Continue with Apple</Text>
             </TouchableOpacity>
           </View>

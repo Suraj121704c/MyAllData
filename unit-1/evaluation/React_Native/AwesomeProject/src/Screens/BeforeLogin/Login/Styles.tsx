@@ -30,9 +30,10 @@ export const styles = StyleSheet.create({
     borderColor: 'gray',
     width: '90%',
     marginTop: 10,
-    height: 40,
+    height: 50,
     borderWidth: 1,
     borderRadius: 8,
+    marginLeft : 10
   },
   Password: {
     borderColor: 'gray',
@@ -41,6 +42,7 @@ export const styles = StyleSheet.create({
     height: 40,
     borderWidth: 1,
     borderRadius: 8,
+    marginLeft : 10
   },
   ForgetText: {
     textAlign: 'right',
@@ -52,6 +54,7 @@ export const styles = StyleSheet.create({
     paddingVertical: 10,
     paddingHorizontal: 20,
     borderRadius: 5,
+    marginLeft : 10
   },
   ButtonText: {
     color: 'black',
@@ -68,6 +71,7 @@ export const styles = StyleSheet.create({
     borderRadius: 5,
     borderColor: 'gray',
     borderWidth: 2,
+    marginLeft : 10
   },
   GoogleImage : {
     width: 28,
@@ -81,10 +85,13 @@ export const styles = StyleSheet.create({
     textAlign: 'center',
   },
   FacebookButton: {
+    flexDirection: 'row',
+    justifyContent : "space-evenly",
     backgroundColor: 'blue',
     paddingVertical: 10,
     paddingHorizontal: 20,
     borderRadius: 5,
+    marginLeft : 10
   },
   FacebookButtonText: {
     color: 'white',
@@ -93,10 +100,13 @@ export const styles = StyleSheet.create({
     textAlign: 'center',
   },
   AppleButton: {
+    flexDirection: 'row',
+    justifyContent : "space-evenly",
     backgroundColor: 'black',
     paddingVertical: 10,
     paddingHorizontal: 20,
     borderRadius: 5,
+    marginLeft : 10
   },
   NewToBeerStore: {
     textAlign: 'center',
