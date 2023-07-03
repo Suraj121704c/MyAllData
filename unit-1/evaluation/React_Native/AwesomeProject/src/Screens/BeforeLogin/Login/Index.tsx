@@ -10,7 +10,7 @@ import {
 
 // user-defining import
 import {styles} from './Styles';
-import {facebook, google} from '../../../Assests/Utils/images';
+import {apple, facebook, google} from '../../../Assests/Utils/images';
 
 const Login = () => {
   return (
@@ -31,6 +31,8 @@ const Login = () => {
           </View>
         </View>
       </ImageBackground>
+
+
       <View style={styles.CurverBox}>
         <View style={styles.EmailBoxFirst}>
           <TextInput
@@ -65,9 +67,7 @@ const Login = () => {
           <View style={styles.ButtonBox}>
             <TouchableOpacity style={styles.AppleButton}>
               <Image
-                source={{
-                  uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxChXjgBTSmGJKsCbcZJdiZ0ox3A8lBof3Pg&usqp=CAU',
-                }}
+                source={apple}
                 style={styles.GoogleImage}
               />
               <Text style={styles.FacebookButtonText}>Continue with Apple</Text>
