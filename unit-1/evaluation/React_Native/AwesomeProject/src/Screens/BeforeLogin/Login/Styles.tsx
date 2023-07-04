@@ -42,7 +42,7 @@ export const styles = StyleSheet.create({
     height: hp('6%'),
     borderWidth: 1,
     borderRadius: 8,
-    marginLeft: wp('5%'),
+    marginLeft: wp('3%'),
   },
   Password: {
     borderColor: 'gray',
@@ -51,7 +51,7 @@ export const styles = StyleSheet.create({
     height: hp('6%'),
     borderWidth: 1,
     borderRadius: 8,
-    marginLeft: wp('5%'),
+    marginLeft: wp('3%'),
   },
   ForgetText: {
     textAlign: 'right',
@@ -75,12 +75,12 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-evenly',
     backgroundColor: 'white',
-    paddingVertical: hp('1.5%'), // Responsive padding vertical
-    paddingHorizontal: wp('4%'), // Responsive padding horizontal
+    paddingVertical: hp('1.5%'),
+    paddingHorizontal: wp('4%'), 
     borderRadius: 5,
     borderColor: 'gray',
     borderWidth: 2,
-    marginLeft: wp('5%'),
+    // marginLeft: wp('3%'),
   },
   GoogleImage: {
     width: hp('3%'), 
@@ -100,7 +100,7 @@ export const styles = StyleSheet.create({
     paddingVertical: hp('1.5%'), 
     paddingHorizontal: wp('4%'), 
     borderRadius: 5,
-    marginLeft: wp('5%'), 
+  
   },
   FacebookButtonText: {
     color: 'white',
@@ -115,7 +115,7 @@ export const styles = StyleSheet.create({
     paddingVertical: hp('1.5%'), 
     paddingHorizontal: wp('4%'), 
     borderRadius: 5,
-    marginLeft: wp('5%'),
+    // marginLeft: wp('3%'),
   },
 
   NewToBeerStore: {

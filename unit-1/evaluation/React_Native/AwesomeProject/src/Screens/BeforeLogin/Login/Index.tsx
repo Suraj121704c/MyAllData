@@ -46,7 +46,6 @@ const Login = () => {
             </TouchableOpacity>
           </View>
           <Text style={styles.orLoginWith}>
-            <View style={styles.line} />
             or Login With
           </Text>
           <View style={styles.ButtonBox}>
