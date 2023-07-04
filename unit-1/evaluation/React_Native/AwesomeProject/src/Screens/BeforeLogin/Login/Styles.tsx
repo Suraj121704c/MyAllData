@@ -7,7 +7,6 @@ import {
 export const styles = StyleSheet.create({
   BigBox: {
     backgroundColor: 'black',
-   
   },
   HeadingTop: {
     textAlign: 'center',
@@ -15,6 +14,10 @@ export const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: 'orange',
     marginTop: hp(1),
+  },
+  BackImage: {
+    marginTop: hp(2),
+    marginLeft: wp(1),
   },
   HeadingSpan: {
     color: 'black',
@@ -37,35 +40,35 @@ export const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   EmailAdress: {
-    borderColor: 'gray',
-    width: '90%',
-    marginTop: hp(1),
     height: hp(6),
-    borderWidth: 1,
-    borderRadius: 8,
     marginLeft: wp(3),
+    flex: 1,
   },
   Password: {
-    borderColor: 'gray',
-    width: '90%',
-    marginTop: hp(2),
     height: hp(6),
-    borderWidth: 1,
-    borderRadius: 8,
     marginLeft: wp(3),
+    flex: 1,
   },
   ForgetText: {
     textAlign: 'right',
     marginRight: '5%',
     color: 'red',
   },
+
   Button: {
     backgroundColor: 'orange',
     paddingVertical: hp(1.5),
     paddingHorizontal: wp(4),
-    borderRadius: 5,
-    marginLeft: wp(5),
+    flex: 1,
   },
+
+  ButtonBox: {
+    width: '80%',
+    paddingVertical: hp(1.5),
+    paddingHorizontal: wp(4),
+    flex: 1,
+  },
+
   ButtonText: {
     color: 'black',
     fontSize: hp(2),
@@ -76,12 +79,6 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-evenly',
     backgroundColor: 'white',
-    paddingVertical: hp(1.5),
-    paddingHorizontal: wp(4),
-    borderRadius: 5,
-    borderColor: 'gray',
-    borderWidth: 2,
-    marginLeft: wp(5),
   },
   GoogleImage: {
     width: hp(3),
@@ -97,11 +94,6 @@ export const styles = StyleSheet.create({
   FacebookButton: {
     flexDirection: 'row',
     justifyContent: 'space-evenly',
-    backgroundColor: 'blue',
-    paddingVertical: hp(1.5),
-    paddingHorizontal: wp(4),
-    borderRadius: 5,
-    marginLeft: wp(5),
   },
   FacebookButtonText: {
     color: 'white',
@@ -112,11 +104,6 @@ export const styles = StyleSheet.create({
   AppleButton: {
     flexDirection: 'row',
     justifyContent: 'space-evenly',
-    backgroundColor: 'black',
-    paddingVertical: hp(1.5),
-    paddingHorizontal: wp(4),
-    borderRadius: 5,
-    marginLeft: wp(5),
   },
 
   NewToBeerStore: {
@@ -132,38 +119,70 @@ export const styles = StyleSheet.create({
     borderColor: 'white',
     backgroundColor: 'white',
     borderWidth: 2,
+    alignItems: 'center',
   },
   EmailBoxFirst: {
     marginLeft: wp(5),
     marginTop: hp(2),
   },
 
-  LoginBox: {
-    width: '90%',
-  },
-
   orLoginWith: {
     textAlign: 'center',
     marginTop: hp(2),
-    fontSize: hp(2.5),
+    fontSize: hp(2),
+    width: 100,
   },
 
-  ButtonBox: {
-    width: '90%',
-    marginTop: hp(2),
-  },
 
-  line: {
-    width: wp(80),
-    height: 1,
-    backgroundColor: 'black',
-  },
-
-  ScrollJi : {
+  ScrollJi: {
     flexGrow: 1,
   },
 
-  CreateAnAccount : {
-    color: 'red'
+  CreateAnAccount: {
+    color: 'red',
+  },
+
+  LineBox: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    width: '90%',
+  },
+
+  Line: {
+    flex: 1,
+    height: 1,
+    backgroundColor: 'black',
+    marginTop: 20,
+  },
+
+  BoxJI: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    borderWidth: wp(0.2),
+    width: '87%',
+    marginTop : hp(2),
+    borderRadius : wp(2)
+  },
+  BoxJIFace: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    borderWidth: wp(0.2),
+    width: '87%',
+    backgroundColor: 'blue',
+    marginTop : hp(2),
+    borderRadius : wp(2)
+  },
+  BoxJiApple: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    borderWidth: wp(0.2),
+    width: '87%',
+    backgroundColor: 'black',
+    marginTop : hp(2),
+    borderRadius : wp(2)
+  },
+
+  widthHandling : {
+    width: '96%',
   }
 });

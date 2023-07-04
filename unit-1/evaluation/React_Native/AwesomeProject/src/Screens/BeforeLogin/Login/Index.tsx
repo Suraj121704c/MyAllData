@@ -1,5 +1,9 @@
 import React, {useState} from 'react';
 import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from 'react-native-responsive-screen';
+import {
   Image,
   ImageBackground,
   Text,
@@ -12,32 +16,42 @@ import {
 
 // user-defining import
 import {styles} from './Styles';
-import {apple, facebook, google} from '../../../Assests/Utils/images';
-
+import {
+  apple,
+  backImage,
+  facebook,
+  google,
+  passImage,
+} from '../../../Assests/Utils/images';
 
 const Login = () => {
   const [dimensions, setDimensions] = useState(Dimensions.get('window'));
   const [showPassword, setShowPassword] = useState(false);
-
-  const handleLayoutChange = () => {
-    setDimensions(Dimensions.get('window'));
-  };
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
 
   return (
-    <View style={styles.BigBox} onLayout={handleLayoutChange}>
+    <View style={styles.BigBox}>
       <ScrollView style={styles.ScrollJi}>
         <ImageBackground
           source={{
             uri: 'https://assets.gqindia.com/photos/5cdc07a454004370583c3a84/1:1/w_1080,h_1080,c_limit/top-image94.jpg',
           }}>
           <View>
-            <Text style={styles.HeadingTop}>
-              B<Text style={styles.HeadingSpan}>EER STORE</Text>
-            </Text>
+            <View
+              style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+              <View>
+                <Image source={backImage} style={styles.BackImage} />
+              </View>
+              <View>
+                <Text style={styles.HeadingTop}>
+                  B<Text style={styles.HeadingSpan}>EER STORE</Text>
+                </Text>
+              </View>
+              <View></View>
+            </View>
             <View style={styles.BearDiv}>
               <Text style={styles.LoginText}>Login</Text>
               <Text style={styles.LoginSmallText}>
@@ -48,47 +62,66 @@ const Login = () => {
         </ImageBackground>
         <View style={styles.CurverBox}>
           <View style={styles.EmailBoxFirst}>
-            <TextInput placeholder="Email Address" style={styles.EmailAdress} />
-
-           
+            <View style={styles.BoxJI}>
+              <TextInput
+                placeholder="Email Address"
+                style={styles.EmailAdress}
+              />
+            </View>
+            <View style={styles.BoxJI}>
               <TextInput
                 placeholder="Password"
                 style={styles.Password}
                 secureTextEntry={!showPassword}
+                textContentType="password"
               />
-             
-         
-
+              <Image source={passImage} style={{marginRight: wp(4)}} />
+            </View>
             <TextInput style={styles.ForgetText}>Forget Password ?</TextInput>
-            <View style={styles.LoginBox}>
+
+            <View style={styles.BoxJI}>
               <TouchableOpacity style={styles.Button}>
                 <Text style={styles.ButtonText}>LOGIN</Text>
               </TouchableOpacity>
             </View>
-            <Text style={styles.orLoginWith}>or Login With</Text>
-            <View style={styles.ButtonBox}>
-              <TouchableOpacity style={styles.GoogleButton}>
-                <Image source={google} style={styles.GoogleImage} />
-                <Text style={styles.GoogleButtonText}>
-                  Continue with Google
-                </Text>
-              </TouchableOpacity>
+            <View style={styles.widthHandling}>
+            <View style={styles.LineBox}>
+              <View style={styles.Line} />
+              <View>
+                <Text style={styles.orLoginWith}>or Login With</Text>
+              </View>
+              <View style={styles.Line} />
             </View>
-            <View style={styles.ButtonBox}>
-              <TouchableOpacity style={styles.FacebookButton}>
-                <Image source={facebook} style={styles.GoogleImage} />
-                <Text style={styles.FacebookButtonText}>
-                  Continue with Facebook
-                </Text>
-              </TouchableOpacity>
             </View>
-            <View style={styles.ButtonBox}>
-              <TouchableOpacity style={styles.AppleButton}>
-                <Image source={apple} style={styles.GoogleImage} />
-                <Text style={styles.FacebookButtonText}>
-                  Continue with Apple
-                </Text>
-              </TouchableOpacity>
+            <View style={styles.BoxJI}>
+              <View style={styles.ButtonBox}>
+                <TouchableOpacity style={styles.GoogleButton}>
+                  <Image source={google} style={styles.GoogleImage} />
+                  <Text style={styles.GoogleButtonText}>
+                    Continue with Google
+                  </Text>
+                </TouchableOpacity>
+              </View>
+            </View>
+            <View style={styles.BoxJIFace}>
+              <View style={styles.ButtonBox}>
+                <TouchableOpacity style={styles.FacebookButton}>
+                  <Image source={facebook} style={styles.GoogleImage} />
+                  <Text style={styles.FacebookButtonText}>
+                    Continue with Facebook
+                  </Text>
+                </TouchableOpacity>
+              </View>
+            </View>
+            <View style={styles.BoxJiApple}>
+              <View style={styles.ButtonBox}>
+                <TouchableOpacity style={styles.AppleButton}>
+                  <Image source={apple} style={styles.GoogleImage} />
+                  <Text style={styles.FacebookButtonText}>
+                    Continue with Apple
+                  </Text>
+                </TouchableOpacity>
+              </View>
             </View>
             <Text style={styles.NewToBeerStore}>
               New to The Beer Store?
