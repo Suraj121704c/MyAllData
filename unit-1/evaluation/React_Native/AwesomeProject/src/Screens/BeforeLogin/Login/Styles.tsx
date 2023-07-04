@@ -1,4 +1,8 @@
 import {StyleSheet} from 'react-native';
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from 'react-native-responsive-screen';
 
 export const styles = StyleSheet.create({
   BigBox: {
@@ -6,65 +10,64 @@ export const styles = StyleSheet.create({
   },
   HeadingTop: {
     textAlign: 'center',
-    fontSize: 24,
+    fontSize: hp('3%'),
     fontWeight: 'bold',
     color: 'orange',
-    marginTop: 5,
+    marginTop: hp('1%'),
   },
   HeadingSpan: {
     color: 'black',
   },
   BearDiv: {
-    marginTop: 100,
-    marginLeft: 20,
-    marginBottom: 10,
+    marginTop: hp('15%'),
+    marginLeft: wp('5%'),
+    marginBottom: hp('2%'),
   },
   LoginText: {
-    fontSize: 30,
+    fontSize: hp('4%'),
     textAlign: 'left',
     color: 'white',
     fontWeight: 'bold',
   },
   LoginSmallText: {
-    fontSize: 15,
-    marginTop: 10,
+    fontSize: hp('2%'),
+    marginTop: hp('1%'),
     color: 'white',
     fontWeight: 'bold',
   },
-
   EmailAdress: {
     borderColor: 'gray',
     width: '90%',
-    marginTop: 10,
-    height: 50,
+    marginTop: hp('1%'),
+    height: hp('6%'),
     borderWidth: 1,
     borderRadius: 8,
-    marginLeft: 10,
+    marginLeft: wp('5%'),
   },
   Password: {
     borderColor: 'gray',
     width: '90%',
-    marginTop: 20,
-    height: 50,
+    marginTop: hp('2%'),
+    height: hp('6%'),
     borderWidth: 1,
     borderRadius: 8,
-    marginLeft: 10,
+    marginLeft: wp('5%'),
   },
   ForgetText: {
     textAlign: 'right',
-    marginRight: 25,
+    marginRight: wp('5%'),
     color: 'red',
   },
   Button: {
     backgroundColor: 'orange',
-    paddingVertical: 10,
-    paddingHorizontal: 20,
+    paddingVertical: hp('1.5%'),
+    paddingHorizontal: wp('4%'),
     borderRadius: 5,
-    marginLeft: 10,
+    marginLeft: wp('5%'),
   },
   ButtonText: {
     color: 'black',
-    fontSize: 20,
+    fontSize: hp('2%'),
     fontWeight: 'bold',
     textAlign: 'center',
   },
@@ -72,21 +75,21 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-evenly',
     backgroundColor: 'white',
-    paddingVertical: 10,
-    paddingHorizontal: 20,
+    paddingVertical: hp('1.5%'), // Responsive padding vertical
+    paddingHorizontal: wp('4%'), // Responsive padding horizontal
     borderRadius: 5,
     borderColor: 'gray',
     borderWidth: 2,
-    marginLeft: 10,
+    marginLeft: wp('5%'),
   },
   GoogleImage: {
-    width: 28,
-    height: 28,
-    marginRight: 10,
+    width: hp('3%'), 
+    height: hp('3%'), 
+    marginRight: wp('2%'),
   },
   GoogleButtonText: {
     color: 'gray',
-    fontSize: 20,
+    fontSize: hp('2%'), 
     fontWeight: 'bold',
     textAlign: 'center',
   },
@@ -94,14 +97,14 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-evenly',
     backgroundColor: 'blue',
-    paddingVertical: 10,
-    paddingHorizontal: 20,
+    paddingVertical: hp('1.5%'), 
+    paddingHorizontal: wp('4%'), 
     borderRadius: 5,
-    marginLeft: 10,
+    marginLeft: wp('5%'), 
   },
   FacebookButtonText: {
     color: 'white',
-    fontSize: 20,
+    fontSize: hp('2%'), 
     fontWeight: 'bold',
     textAlign: 'center',
   },
@@ -109,29 +112,29 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-evenly',
     backgroundColor: 'black',
-    paddingVertical: 10,
-    paddingHorizontal: 20,
+    paddingVertical: hp('1.5%'), 
+    paddingHorizontal: wp('4%'), 
     borderRadius: 5,
-    marginLeft: 10,
+    marginLeft: wp('5%'),
   },
 
   NewToBeerStore: {
     textAlign: 'center',
-    marginTop: 20,
-    fontSize: 14,
-    marginBottom: 10,
+    marginTop: hp('2%'),
+    fontSize: hp('1.5%'), 
+    marginBottom: hp('1%'), 
   },
 
   CurverBox: {
-    borderTopLeftRadius: 30,
-    borderTopRightRadius: 30,
+    borderTopLeftRadius: hp('3%'), 
+    borderTopRightRadius: hp('3%'), 
     borderColor: 'white',
     backgroundColor: 'white',
     borderWidth: 2,
   },
   EmailBoxFirst: {
-    marginLeft: 20,
-    marginTop: 20,
+    marginLeft: wp('5%'),
+    marginTop: hp('2%'), 
   },
 
   LoginBox: {
@@ -140,17 +143,17 @@ export const styles = StyleSheet.create({
 
   orLoginWith: {
     textAlign: 'center',
-    marginTop: 20,
-    fontSize: 18,
+    marginTop: hp('2%'),
+    fontSize: hp('2.5%')
   },
 
   ButtonBox: {
-    width: '90%',
-    marginTop: 20,
+    width: wp('90%'), 
+    marginTop: hp('2%'),
   },
 
   line: {
-    width: '80%',
+    width: wp('80%'),
     height: 1,
     backgroundColor: 'black',
   },
