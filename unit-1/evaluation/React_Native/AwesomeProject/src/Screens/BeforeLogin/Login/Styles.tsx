@@ -76,20 +76,20 @@ export const styles = StyleSheet.create({
     justifyContent: 'space-evenly',
     backgroundColor: 'white',
     paddingVertical: hp('1.5%'),
-    paddingHorizontal: wp('4%'), 
+    paddingHorizontal: wp('4%'),
     borderRadius: 5,
     borderColor: 'gray',
     borderWidth: 2,
     // marginLeft: wp('3%'),
   },
   GoogleImage: {
-    width: hp('3%'), 
-    height: hp('3%'), 
+    width: hp('3%'),
+    height: hp('3%'),
     marginRight: wp('2%'),
   },
   GoogleButtonText: {
     color: 'gray',
-    fontSize: hp('2%'), 
+    fontSize: hp('2%'),
     fontWeight: 'bold',
     textAlign: 'center',
   },
@@ -97,14 +97,13 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-evenly',
     backgroundColor: 'blue',
-    paddingVertical: hp('1.5%'), 
-    paddingHorizontal: wp('4%'), 
+    paddingVertical: hp('1.5%'),
+    paddingHorizontal: wp('4%'),
     borderRadius: 5,
-  
   },
   FacebookButtonText: {
     color: 'white',
-    fontSize: hp('2%'), 
+    fontSize: hp('2%'),
     fontWeight: 'bold',
     textAlign: 'center',
   },
@@ -112,8 +111,8 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-evenly',
     backgroundColor: 'black',
-    paddingVertical: hp('1.5%'), 
-    paddingHorizontal: wp('4%'), 
+    paddingVertical: hp('1.5%'),
+    paddingHorizontal: wp('4%'),
     borderRadius: 5,
     // marginLeft: wp('3%'),
   },
@@ -121,20 +120,20 @@ export const styles = StyleSheet.create({
   NewToBeerStore: {
     textAlign: 'center',
     marginTop: hp('2%'),
-    fontSize: hp('1.5%'), 
-    marginBottom: hp('1%'), 
+    fontSize: hp('1.5%'),
+    marginBottom: hp('1%'),
   },
 
   CurverBox: {
-    borderTopLeftRadius: hp('3%'), 
-    borderTopRightRadius: hp('3%'), 
+    borderTopLeftRadius: hp('3%'),
+    borderTopRightRadius: hp('3%'),
     borderColor: 'white',
     backgroundColor: 'white',
     borderWidth: 2,
   },
   EmailBoxFirst: {
     marginLeft: wp('5%'),
-    marginTop: hp('2%'), 
+    marginTop: hp('2%'),
   },
 
   LoginBox: {
@@ -144,11 +143,11 @@ export const styles = StyleSheet.create({
   orLoginWith: {
     textAlign: 'center',
     marginTop: hp('2%'),
-    fontSize: hp('2.5%')
+    fontSize: hp('2.5%'),
   },
 
   ButtonBox: {
-    width: wp('90%'), 
+    width: wp('90%'),
     marginTop: hp('2%'),
   },
 

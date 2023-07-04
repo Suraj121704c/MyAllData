@@ -1,4 +1,4 @@
-import React from 'react';
+import React ,  { useState } from 'react';
 import {
   Image,
   ImageBackground,
@@ -6,6 +6,7 @@ import {
   TextInput,
   TouchableOpacity,
   View,
+  Dimensions 
 } from 'react-native';
 
 // user-defining import
@@ -13,8 +14,15 @@ import {styles} from './Styles';
 import {apple, facebook, google} from '../../../Assests/Utils/images';
 
 const Login = () => {
+  const [dimensions, setDimensions] = useState(Dimensions.get('window'));
+
+  const handleLayoutChange = () => {
+    setDimensions(Dimensions.get('window'));
+  };
+
+
   return (
-    <View style={styles.BigBox}>   
+    <View style={styles.BigBox} onLayout={handleLayoutChange}>   
         <ImageBackground
           source={{
             uri: 'https://assets.gqindia.com/photos/5cdc07a454004370583c3a84/1:1/w_1080,h_1080,c_limit/top-image94.jpg',
@@ -31,7 +39,7 @@ const Login = () => {
               </Text>
             </View>
           </View>
-        </ImageBackground>   
+        </ImageBackground>
       <View style={styles.CurverBox}>
         <View style={styles.EmailBoxFirst}>
           <TextInput
