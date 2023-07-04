@@ -7,6 +7,7 @@ import {
 export const styles = StyleSheet.create({
   BigBox: {
     backgroundColor: 'black',
+   
   },
   HeadingTop: {
     textAlign: 'center',
@@ -55,7 +56,7 @@ export const styles = StyleSheet.create({
   },
   ForgetText: {
     textAlign: 'right',
-    marginRight: wp('5%'),
+    marginRight: '5%',
     color: 'red',
   },
   Button: {
@@ -80,7 +81,7 @@ export const styles = StyleSheet.create({
     borderRadius: 5,
     borderColor: 'gray',
     borderWidth: 2,
-    // marginLeft: wp('3%'),
+    marginLeft: wp('5%'),
   },
   GoogleImage: {
     width: hp('3%'),
@@ -100,6 +101,7 @@ export const styles = StyleSheet.create({
     paddingVertical: hp('1.5%'),
     paddingHorizontal: wp('4%'),
     borderRadius: 5,
+    marginLeft: wp('5%'),
   },
   FacebookButtonText: {
     color: 'white',
@@ -114,7 +116,7 @@ export const styles = StyleSheet.create({
     paddingVertical: hp('1.5%'),
     paddingHorizontal: wp('4%'),
     borderRadius: 5,
-    // marginLeft: wp('3%'),
+    marginLeft: wp('5%'),
   },
 
   NewToBeerStore: {
@@ -147,7 +149,7 @@ export const styles = StyleSheet.create({
   },
 
   ButtonBox: {
-    width: wp('90%'),
+    width: '90%',
     marginTop: hp('2%'),
   },
 
@@ -156,4 +158,12 @@ export const styles = StyleSheet.create({
     height: 1,
     backgroundColor: 'black',
   },
+
+  ScrollJi : {
+    flexGrow: 1,
+  },
+
+  CreateAnAccount : {
+    color: 'red'
+  }
 });

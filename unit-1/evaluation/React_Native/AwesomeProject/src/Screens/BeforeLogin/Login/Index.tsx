@@ -6,7 +6,8 @@ import {
   TextInput,
   TouchableOpacity,
   View,
-  Dimensions 
+  Dimensions ,
+  ScrollView 
 } from 'react-native';
 
 // user-defining import
@@ -23,7 +24,8 @@ const Login = () => {
 
   return (
     <View style={styles.BigBox} onLayout={handleLayoutChange}>   
-        <ImageBackground
+    <ScrollView style={styles.ScrollJi}>
+ <ImageBackground
           source={{
             uri: 'https://assets.gqindia.com/photos/5cdc07a454004370583c3a84/1:1/w_1080,h_1080,c_limit/top-image94.jpg',
           }} 
@@ -78,10 +80,11 @@ const Login = () => {
           </View>
           <Text style={styles.NewToBeerStore}>
             New to The Beer Store?
-            <Text style={{color: 'red'}}> Create an account.</Text>
+            <Text style={styles.CreateAnAccount}> Create an account.</Text>
           </Text>
         </View>
       </View>
+    </ScrollView>  
     </View>
   );
 };
