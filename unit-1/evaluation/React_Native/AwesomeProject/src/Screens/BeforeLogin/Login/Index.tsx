@@ -75,9 +75,8 @@ const Login = () => {
                 textContentType="password"
               />
               <Image source={passImage} style={{marginRight: wp(4)}} />
-            </View>
-            <TextInput style={styles.ForgetText}>Forget Password ?</TextInput>
-
+            </View>     
+            <Text style={styles.ForgetText}>Forget Password ?</Text>      
             <View style={styles.BoxJI}>
               <TouchableOpacity style={styles.Button}>
                 <Text style={styles.ButtonText}>LOGIN</Text>
@@ -86,41 +85,35 @@ const Login = () => {
             <View style={styles.widthHandling}>
             <View style={styles.LineBox}>
               <View style={styles.Line} />
-              <View>
-                <Text style={styles.orLoginWith}>or Login With</Text>
+              <View style={styles.orLoginWith}>
+                <Text>or Login With</Text>
               </View>
               <View style={styles.Line} />
             </View>
             </View>
-            <View style={styles.BoxJI}>
-              <View style={styles.ButtonBox}>
+            <View style={styles.BoxJI}>   
                 <TouchableOpacity style={styles.GoogleButton}>
                   <Image source={google} style={styles.GoogleImage} />
                   <Text style={styles.GoogleButtonText}>
                     Continue with Google
                   </Text>
                 </TouchableOpacity>
-              </View>
             </View>
-            <View style={styles.BoxJIFace}>
-              <View style={styles.ButtonBox}>
+            <View style={styles.BoxJIFace}>     
                 <TouchableOpacity style={styles.FacebookButton}>
                   <Image source={facebook} style={styles.GoogleImage} />
                   <Text style={styles.FacebookButtonText}>
                     Continue with Facebook
                   </Text>
-                </TouchableOpacity>
-              </View>
+                </TouchableOpacity>          
             </View>
-            <View style={styles.BoxJiApple}>
-              <View style={styles.ButtonBox}>
+            <View style={styles.BoxJiApple}>              
                 <TouchableOpacity style={styles.AppleButton}>
                   <Image source={apple} style={styles.GoogleImage} />
                   <Text style={styles.FacebookButtonText}>
                     Continue with Apple
                   </Text>
-                </TouchableOpacity>
-              </View>
+                </TouchableOpacity>     
             </View>
             <Text style={styles.NewToBeerStore}>
               New to The Beer Store?

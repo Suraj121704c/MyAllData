@@ -44,8 +44,9 @@ export const styles = StyleSheet.create({
   },
   ForgetText: {
     textAlign: 'right',
-    marginRight: '5%',
-    color: '#FF8C00',
+    color: '#FF4500',
+    fontWeight : "bold",
+    marginTop : hp(1.5)
   },
 
   Button: {
@@ -53,6 +54,7 @@ export const styles = StyleSheet.create({
     paddingVertical: hp(1.5),
     paddingHorizontal: wp(4),
     flex: 1,
+    borderRadius : wp(2)
   },
 
   ButtonBox: {
@@ -70,8 +72,12 @@ export const styles = StyleSheet.create({
   },
   GoogleButton: {
     flexDirection: 'row',
-    justifyContent: 'space-evenly',
     backgroundColor: 'white',
+    justifyContent: 'center',
+    width : "100%",
+    height : hp(6),
+    alignItems : "center" , 
+    borderRadius : wp(2)
   },
   GoogleImage: {
     width: hp(3),
@@ -86,7 +92,12 @@ export const styles = StyleSheet.create({
   },
   FacebookButton: {
     flexDirection: 'row',
-    justifyContent: 'space-evenly',
+    justifyContent: 'center',
+    width : "100%",
+    height : hp(6),
+    alignItems : "center" , 
+    boxShadow: "rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px",
+    borderRadius : 10
   },
   FacebookButtonText: {
     color: 'white',
@@ -96,7 +107,10 @@ export const styles = StyleSheet.create({
   },
   AppleButton: {
     flexDirection: 'row',
-    justifyContent: 'space-evenly',
+    justifyContent: 'center',
+    width : "100%",
+    height : hp(6),
+    alignItems : "center" , 
   },
 
   NewToBeerStore: {
@@ -115,24 +129,16 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
   },
   EmailBoxFirst: {
-    // marginLeft: wp(5),
     marginTop: hp(2),
   },
-
-  orLoginWith: {
-    textAlign: 'center',
-    marginTop: hp(2),
-    fontSize: hp(2),
-    width: 100,
-  },
-
 
   ScrollJi: {
     flexGrow: 1,
   },
 
   CreateAnAccount: {
-    color: '#FF8C00',
+    color: '#FF4500',
+    fontWeight : "bold"
   },
 
   LineBox: {
@@ -149,13 +155,20 @@ export const styles = StyleSheet.create({
     marginTop: 20,
   },
 
+  orLoginWith: {
+    textAlign: 'center',
+    marginTop: hp(2),
+    fontSize: hp(2),
+  },
+
   BoxJI: {
     flexDirection: 'row',
     alignItems: 'center',
     borderWidth: wp(0.2),
     width: '87%',
     marginTop : hp(2),
-    borderRadius : wp(2)
+    borderRadius : wp(2),
+    boxShadow: "rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px"
   },
   BoxJIFace: {
     flexDirection: 'row',
@@ -164,7 +177,8 @@ export const styles = StyleSheet.create({
     width: '87%',
     backgroundColor: 'blue',
     marginTop : hp(2),
-    borderRadius : wp(2)
+    borderRadius : wp(2),
+    
   },
   BoxJiApple: {
     flexDirection: 'row',
