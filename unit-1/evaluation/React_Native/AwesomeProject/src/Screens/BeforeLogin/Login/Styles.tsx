@@ -9,18 +9,11 @@ export const styles = StyleSheet.create({
     backgroundColor: 'black',
   },
   HeadingTop: {
-    textAlign: 'center',
-    fontSize: hp(3),
-    fontWeight: 'bold',
-    color: 'orange',
-    marginTop: hp(1),
+    marginTop: hp(2),
   },
   BackImage: {
     marginTop: hp(2),
-    marginLeft: wp(1),
-  },
-  HeadingSpan: {
-    color: 'black',
+    marginLeft: wp(2),
   },
   BearDiv: {
     marginTop: hp(15),

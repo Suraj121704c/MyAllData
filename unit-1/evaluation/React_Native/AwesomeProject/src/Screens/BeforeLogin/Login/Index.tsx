@@ -18,7 +18,9 @@ import {
 import {styles} from './Styles';
 import {
   apple,
+  backGround,
   backImage,
+  brandLogo,
   facebook,
   google,
   passImage,
@@ -36,9 +38,7 @@ const Login = () => {
     <View style={styles.BigBox}>
       <ScrollView style={styles.ScrollJi}>
         <ImageBackground
-          source={{
-            uri: 'https://assets.gqindia.com/photos/5cdc07a454004370583c3a84/1:1/w_1080,h_1080,c_limit/top-image94.jpg',
-          }}>
+          source={backGround}>
           <View>
             <View
               style={{flexDirection: 'row', justifyContent: 'space-between'}}>
@@ -46,9 +46,7 @@ const Login = () => {
                 <Image source={backImage} style={styles.BackImage} />
               </View>
               <View>
-                <Text style={styles.HeadingTop}>
-                  B<Text style={styles.HeadingSpan}>EER STORE</Text>
-                </Text>
+                <Image source={brandLogo} style={styles.HeadingTop}/>
               </View>
               <View></View>
             </View>
