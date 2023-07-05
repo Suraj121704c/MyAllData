@@ -17,6 +17,7 @@ import {
 // user-defining import
 import {styles} from './Styles';
 import {
+  LoginBackground,
   apple,
   backGround,
   backImage,
@@ -38,7 +39,7 @@ const Login = () => {
     <View style={styles.BigBox}>
       <ScrollView style={styles.ScrollJi}>
         <ImageBackground
-          source={backGround}>
+          source={LoginBackground}>
           <View>
             <View
               style={{flexDirection: 'row', justifyContent: 'space-between'}}>

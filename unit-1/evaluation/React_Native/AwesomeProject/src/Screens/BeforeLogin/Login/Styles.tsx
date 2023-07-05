@@ -45,7 +45,7 @@ export const styles = StyleSheet.create({
   ForgetText: {
     textAlign: 'right',
     marginRight: '5%',
-    color: 'red',
+    color: '#FF8C00',
   },
 
   Button: {
@@ -115,7 +115,7 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
   },
   EmailBoxFirst: {
-    marginLeft: wp(5),
+    // marginLeft: wp(5),
     marginTop: hp(2),
   },
 
@@ -132,13 +132,14 @@ export const styles = StyleSheet.create({
   },
 
   CreateAnAccount: {
-    color: 'red',
+    color: '#FF8C00',
   },
 
   LineBox: {
     flexDirection: 'row',
     alignItems: 'center',
     width: '90%',
+    flex:1
   },
 
   Line: {
