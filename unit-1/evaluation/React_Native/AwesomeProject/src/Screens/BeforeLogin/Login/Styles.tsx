@@ -136,6 +136,10 @@ export const styles = StyleSheet.create({
     flexGrow: 1,
   },
 
+  scrollContent: {
+    flexGrow: 1,
+  },
+
   CreateAnAccount: {
     color: '#FF4500',
     fontWeight : "bold"

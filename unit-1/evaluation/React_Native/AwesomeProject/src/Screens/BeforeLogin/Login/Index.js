@@ -27,7 +27,7 @@ import {
   passImage,
 } from '../../../Assests/Utils/images';
 
-const Login = () => {
+const Login = ({ navigation }) => {
   const [dimensions, setDimensions] = useState(Dimensions.get('window'));
   const [showPassword, setShowPassword] = useState(false);
 
@@ -37,9 +37,9 @@ const Login = () => {
 
   return (
     <View style={styles.BigBox}>
-      <ScrollView style={styles.ScrollJi}>
+      <ScrollView style={styles.ScrollJi} contentContainerStyle={styles.scrollContent}>
         <ImageBackground
-          source={LoginBackground}>
+          source={LoginBackground} style={{flex : 1}}>
           <View>
             <View
               style={{flexDirection: 'row', justifyContent: 'space-between'}}>
@@ -76,7 +76,7 @@ const Login = () => {
               />
               <Image source={passImage} style={{marginRight: wp(4)}} />
             </View>     
-            <Text style={styles.ForgetText}>Forget Password ?</Text>      
+            <Text style={styles.ForgetText} onPress={() => navigation.navigate('Forget')}>Forget Password ?</Text>      
             <View style={styles.BoxJI}>
               <TouchableOpacity style={styles.Button}>
                 <Text style={styles.ButtonText}>LOGIN</Text>
@@ -117,7 +117,7 @@ const Login = () => {
             </View>
             <Text style={styles.NewToBeerStore}>
               New to The Beer Store?
-              <Text style={styles.CreateAnAccount}> Create an account.</Text>
+              <Text style={styles.CreateAnAccount} onPress={() => navigation.navigate('SignIn')}> Create an account.</Text>
             </Text>
           </View>
         </View>
