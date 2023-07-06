@@ -26,8 +26,9 @@ import {
   google,
   passImage,
 } from '../../../Assests/Utils/images';
+import {DrawerNavigation} from '../../../Assests/Utils/Navigations/SideBarNavigation';
 
-const Login = ({ navigation }) => {
+const Login = ({navigation}) => {
   const [dimensions, setDimensions] = useState(Dimensions.get('window'));
   const [showPassword, setShowPassword] = useState(false);
 
@@ -37,17 +38,22 @@ const Login = ({ navigation }) => {
 
   return (
     <View style={styles.BigBox}>
-      <ScrollView style={styles.ScrollJi} contentContainerStyle={styles.scrollContent}>
-        <ImageBackground
-          source={LoginBackground} style={{flex : 1}}>
+      <ScrollView
+        style={styles.ScrollJi}
+        contentContainerStyle={styles.scrollContent}>
+        <ImageBackground source={LoginBackground} style={{flex: 1}}>
           <View>
             <View
               style={{flexDirection: 'row', justifyContent: 'space-between'}}>
               <View>
-                <Image source={backImage} style={styles.BackImage} />
+                <Image
+                  source={backImage}
+                  style={styles.BackImage}
+                  onPress={() => navigation.navigate(<DrawerNavigation />)}
+                />
               </View>
               <View>
-                <Image source={brandLogo} style={styles.HeadingTop}/>
+                <Image source={brandLogo} style={styles.HeadingTop} />
               </View>
               <View></View>
             </View>
@@ -75,49 +81,58 @@ const Login = ({ navigation }) => {
                 textContentType="password"
               />
               <Image source={passImage} style={{marginRight: wp(4)}} />
-            </View>     
-            <Text style={styles.ForgetText} onPress={() => navigation.navigate('Forget')}>Forget Password ?</Text>      
+            </View>
+            <Text
+              style={styles.ForgetText}
+              onPress={() => navigation.navigate('Forget')}>
+              Forget Password ?
+            </Text>
             <View style={styles.BoxJI}>
               <TouchableOpacity style={styles.Button}>
                 <Text style={styles.ButtonText}>LOGIN</Text>
               </TouchableOpacity>
             </View>
             <View style={styles.widthHandling}>
-            <View style={styles.LineBox}>
-              <View style={styles.Line} />
-              <View style={styles.orLoginWith}>
-                <Text>or Login With</Text>
+              <View style={styles.LineBox}>
+                <View style={styles.Line} />
+                <View style={styles.orLoginWith}>
+                  <Text>or Login With</Text>
+                </View>
+                <View style={styles.Line} />
               </View>
-              <View style={styles.Line} />
             </View>
+            <View style={styles.BoxJI}>
+              <TouchableOpacity style={styles.GoogleButton}>
+                <Image source={google} style={styles.GoogleImage} />
+                <Text style={styles.GoogleButtonText}>
+                  Continue with Google
+                </Text>
+              </TouchableOpacity>
             </View>
-            <View style={styles.BoxJI}>   
-                <TouchableOpacity style={styles.GoogleButton}>
-                  <Image source={google} style={styles.GoogleImage} />
-                  <Text style={styles.GoogleButtonText}>
-                    Continue with Google
-                  </Text>
-                </TouchableOpacity>
+            <View style={styles.BoxJIFace}>
+              <TouchableOpacity style={styles.FacebookButton}>
+                <Image source={facebook} style={styles.GoogleImage} />
+                <Text style={styles.FacebookButtonText}>
+                  Continue with Facebook
+                </Text>
+              </TouchableOpacity>
             </View>
-            <View style={styles.BoxJIFace}>     
-                <TouchableOpacity style={styles.FacebookButton}>
-                  <Image source={facebook} style={styles.GoogleImage} />
-                  <Text style={styles.FacebookButtonText}>
-                    Continue with Facebook
-                  </Text>
-                </TouchableOpacity>          
-            </View>
-            <View style={styles.BoxJiApple}>              
-                <TouchableOpacity style={styles.AppleButton}>
-                  <Image source={apple} style={styles.GoogleImage} />
-                  <Text style={styles.FacebookButtonText}>
-                    Continue with Apple
-                  </Text>
-                </TouchableOpacity>     
+            <View style={styles.BoxJiApple}>
+              <TouchableOpacity style={styles.AppleButton}>
+                <Image source={apple} style={styles.GoogleImage} />
+                <Text style={styles.FacebookButtonText}>
+                  Continue with Apple
+                </Text>
+              </TouchableOpacity>
             </View>
             <Text style={styles.NewToBeerStore}>
               New to The Beer Store?
-              <Text style={styles.CreateAnAccount} onPress={() => navigation.navigate('SignIn')}> Create an account.</Text>
+              <Text
+                style={styles.CreateAnAccount}
+                onPress={() => navigation.navigate('SignIn')}>
+                {' '}
+                Create an account.
+              </Text>
             </Text>
           </View>
         </View>
