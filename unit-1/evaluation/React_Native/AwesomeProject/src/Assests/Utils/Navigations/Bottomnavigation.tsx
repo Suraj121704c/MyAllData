@@ -2,8 +2,9 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {StackNavigation} from './StackNaviagtion';
 import {Products} from '../../../Screens/AfterLogin/Products';
 import {Orders} from '../../../Screens/AfterLogin/Orders';
-import {HomeButton, OrdersButton, ProductButton} from '../images';
+import {HomeButton, OrdersButton, ProductButton, UserButton} from '../images';
 import {Image} from 'react-native';
+import OnHome from '../../../Screens/Drawers/OnHome';
 
 const Tab = createBottomTabNavigator();
 
@@ -40,6 +41,18 @@ export const TabNaviagtion = () => (
         tabBarIcon: ({color, size}) => (
           <Image
             source={OrdersButton}
+            style={{tintColor: color, width: size, height: size}}
+          />
+        ),
+      }}
+    />
+    <Tab.Screen
+      name="User"
+      component={OnHome}
+      options={{
+        tabBarIcon: ({color, size}) => (
+          <Image
+            source={UserButton}
             style={{tintColor: color, width: size, height: size}}
           />
         ),
