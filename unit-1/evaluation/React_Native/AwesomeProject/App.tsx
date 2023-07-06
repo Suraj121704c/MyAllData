@@ -15,7 +15,7 @@ const Tab = createBottomTabNavigator();
 
 const StackNavigation = () => (
   <Stack.Navigator initialRouteName="Home" screenOptions={{headerShown: false}}>
-    <Stack.Screen name="Home" component={Login} />
+    <Stack.Screen name="Login" component={Login} />
     <Stack.Screen name="Forget" component={Forget} />
     <Stack.Screen name="SignIn" component={SignIn} />
   </Stack.Navigator>
@@ -23,7 +23,7 @@ const StackNavigation = () => (
 
 const TabNaviagtion = () => (
   <Tab.Navigator initialRouteName="Home" screenOptions={{headerShown: false}}>
-    <Tab.Screen name="Home" component={Login} />
+    <Tab.Screen name="Home" component={StackNavigation} />
     <Tab.Screen name="Products" component={Products} />
   </Tab.Navigator>
 );
@@ -31,10 +31,7 @@ const TabNaviagtion = () => (
 const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{headerShown: false}}>
-        <Stack.Screen name="TabNavigation" component={TabNaviagtion} />
-        <Stack.Screen name="StackNavigation" component={StackNavigation} />
-      </Stack.Navigator>
+      <TabNaviagtion />
     </NavigationContainer>
   );
 };
