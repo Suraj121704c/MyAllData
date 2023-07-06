@@ -7,3 +7,7 @@ export const backGround = require("../Images/AppIntrobg.png");
 export const brandLogo = require("../Images/brandLogo.png");
 export const LoginBackground = require("../Images/Login-bg.png");
 export const HomeButton = require("../Images/Home.png");
+export const ProductButton = require("../Images/bucket.png");
+export const OrdersButton = require("../Images/card.png");
+export const LogoutButton = require("../Images/delete.png");
+export const UserButton = require("../Images/user.png");
