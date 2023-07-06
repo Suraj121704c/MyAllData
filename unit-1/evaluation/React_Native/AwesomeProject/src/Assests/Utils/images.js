@@ -6,3 +6,4 @@ export const backImage = require("../Images/back.png");
 export const backGround = require("../Images/AppIntrobg.png");
 export const brandLogo = require("../Images/brandLogo.png");
 export const LoginBackground = require("../Images/Login-bg.png");
+export const HomeButton = require("../Images/Home.png");

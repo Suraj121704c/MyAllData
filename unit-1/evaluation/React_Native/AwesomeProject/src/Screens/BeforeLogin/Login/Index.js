@@ -50,6 +50,7 @@ const Login = ({navigation}) => {
                 <Button
                   title="="
                   onPress={() => navigation.openDrawer()}
+                  color={"orange"}
                 />
               </View>
               <View>
