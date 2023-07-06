@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
     backgroundColor: 'black',
   },
   HeadingTop: {
-    marginTop: hp(2),
+    marginTop: hp(1),
   },
   BackImage: {
     marginTop: hp(2),

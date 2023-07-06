@@ -12,6 +12,7 @@ import {
   View,
   Dimensions,
   ScrollView,
+  Button,
 } from 'react-native';
 
 // user-defining import
@@ -46,10 +47,9 @@ const Login = ({navigation}) => {
             <View
               style={{flexDirection: 'row', justifyContent: 'space-between'}}>
               <View>
-                <Image
-                  source={backImage}
-                  style={styles.BackImage}
-                  onPress={() => navigation.navigate(<DrawerNavigation />)}
+                <Button
+                  title="="
+                  onPress={() => navigation.openDrawer()}
                 />
               </View>
               <View>
