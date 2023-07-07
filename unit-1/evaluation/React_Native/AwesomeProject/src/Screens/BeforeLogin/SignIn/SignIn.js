@@ -67,30 +67,16 @@ export const SignIn = ({navigation}) => {
                 style={styles.EmailAdress}
               />
             </View>
-            {/* <View style={styles.BoxJI}>
-              <TextInput
-                placeholder="Password"
-                style={styles.Password}
-                secureTextEntry={!showPassword}
-                textContentType="password"
-              />
-              <Image source={passImage} style={{marginRight: wp(4)}} />
-            </View> */}
-            {/* <Text
-              style={styles.ForgetText}
-              onPress={() => navigation.navigate('Forget')}>
-              Forget Password ?
-            </Text> */}
             <View style={styles.BoxJI}>
               <TouchableOpacity style={styles.Button}>
-                <Text style={styles.ButtonText}>Register</Text>
+                <Text style={styles.ButtonText}>CREATE AN CreateAnAccount</Text>
               </TouchableOpacity>
             </View>
             <View style={styles.widthHandling}>
               <View style={styles.LineBox}>
                 <View style={styles.Line} />
                 <View style={styles.orLoginWith}>
-                  <Text>or Login With</Text>
+                  <Text>or Register With</Text>
                 </View>
                 <View style={styles.Line} />
               </View>
@@ -123,8 +109,7 @@ export const SignIn = ({navigation}) => {
               New to The Beer Store?
               <Text
                 style={styles.CreateAnAccount}
-                onPress={() => navigation.navigate('SignIn')}>
-                {' '}
+                onPress={() => navigation.navigate('Login')}>
                 Create an account.
               </Text>
             </Text>

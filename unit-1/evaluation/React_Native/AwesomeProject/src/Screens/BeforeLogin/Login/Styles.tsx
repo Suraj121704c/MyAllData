@@ -7,6 +7,7 @@ import {
 export const styles = StyleSheet.create({
   BigBox: {
     backgroundColor: 'black',
+    flex : 1
   },
   HeadingTop: {
     marginTop: hp(1),
