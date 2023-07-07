@@ -9,7 +9,14 @@ import OnHome from '../../../Screens/Drawers/OnHome';
 const Tab = createBottomTabNavigator();
 
 export const TabNaviagtion = () => (
-  <Tab.Navigator initialRouteName="Home" screenOptions={{headerShown: false}}>
+  <Tab.Navigator
+    initialRouteName="Home"
+    screenOptions={{
+      tabBarStyle: {
+        backgroundColor: 'black',
+      },
+      headerShown: false,
+    }}>
     <Tab.Screen
       name="Home"
       component={StackNavigation}
