@@ -15,13 +15,8 @@ import {
   brandLogo,
   facebook,
   google,
-  passImage,
 } from '../../../Assests/Utils/images';
 import {styles} from './SingIn';
-import {
-  widthPercentageToDP as wp,
-  heightPercentageToDP as hp,
-} from 'react-native-responsive-screen';
 
 export const SignIn = ({navigation}) => {
   const [showPassword, setShowPassword] = useState(false);
@@ -29,6 +24,7 @@ export const SignIn = ({navigation}) => {
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
+
   return (
     <View style={{flex: 1}}>
       <ScrollView>
@@ -40,9 +36,9 @@ export const SignIn = ({navigation}) => {
                 flexDirection: 'row',
                 justifyContent: 'space-between',
               }}>
-              <View>
+              <TouchableOpacity onPress={() => navigation.goBack()}>
                 <Image source={backImage} />
-              </View>
+              </TouchableOpacity>
               <View>
                 <Image source={brandLogo} />
               </View>

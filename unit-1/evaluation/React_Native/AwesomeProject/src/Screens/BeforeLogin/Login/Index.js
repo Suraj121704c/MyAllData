@@ -28,14 +28,25 @@ import {
   passImage,
 } from '../../../Assests/Utils/images';
 import {DrawerNavigation} from '../../../Assests/Utils/Navigations/SideBarNavigation';
+import { useDispatch } from 'react-redux';
+import { login } from '../../../Redux/Actions/AuthAction';
+import { showMessage } from 'react-native-flash-message';
 
 const Login = ({navigation}) => {
   const [dimensions, setDimensions] = useState(Dimensions.get('window'));
   const [showPassword, setShowPassword] = useState(false);
+  const [username , setUsername] = useState('');
+  const [password , setPassword] = useState('');
+
+  const dispatch = useDispatch();
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
+
+  const handleLogin = () => {
+    dispatch(login(username, password));
+  }
 
   return (
     <View style={styles.BigBox}>
@@ -70,16 +81,20 @@ const Login = ({navigation}) => {
           <View style={styles.EmailBoxFirst}>
             <View style={styles.BoxJI}>
               <TextInput
+                value={username}
                 placeholder="Email Address"
                 style={styles.EmailAdress}
+                onChangeText={(text) => setUsername(text)}
               />
             </View>
             <View style={styles.BoxJI}>
               <TextInput
                 placeholder="Password"
+                value={password}
                 style={styles.Password}
                 secureTextEntry={!showPassword}
                 textContentType="password"
+                onChangeText={(text) => setPassword(text)}
               />
               <Image source={passImage} style={{marginRight: wp(4)}} />
             </View>
@@ -89,7 +104,7 @@ const Login = ({navigation}) => {
               Forget Password ?
             </Text>
             <View style={styles.BoxJI}>
-              <TouchableOpacity style={styles.Button}>
+              <TouchableOpacity style={styles.Button} onPress={handleLogin}>
                 <Text style={styles.ButtonText}>LOGIN</Text>
               </TouchableOpacity>
             </View>
