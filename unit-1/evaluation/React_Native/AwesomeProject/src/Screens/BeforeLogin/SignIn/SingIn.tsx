@@ -194,6 +194,13 @@ export const styles = StyleSheet.create({
     borderRadius : wp(2)
   },
 
+  BeforeFotterText: {
+    textAlign: 'center',
+    marginTop: hp('2%'),
+    fontSize: hp('1.5%'),
+    marginBottom: hp('1%')
+  },
+
   widthHandling : {
     width: '96%',
   }

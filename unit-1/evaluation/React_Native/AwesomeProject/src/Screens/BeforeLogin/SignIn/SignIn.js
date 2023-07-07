@@ -17,7 +17,7 @@ import {
   google,
   passImage,
 } from '../../../Assests/Utils/images';
-import { styles } from './SingIn';
+import {styles} from './SingIn';
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
@@ -76,7 +76,7 @@ export const SignIn = ({navigation}) => {
               <View style={styles.LineBox}>
                 <View style={styles.Line} />
                 <View style={styles.orLoginWith}>
-                  <Text>or Register With</Text>
+                  <Text>or Login With</Text>
                 </View>
                 <View style={styles.Line} />
               </View>
@@ -105,16 +105,21 @@ export const SignIn = ({navigation}) => {
                 </Text>
               </TouchableOpacity>
             </View>
+              <Text style={styles.BeforeFotterText}>
+                By registering, I agree to the Beer Store's{' '}
+                <Text style={styles.CreateAnAccount}>{'\n'}Terms & Conditions</Text> and{' '}
+                <Text style={styles.CreateAnAccount}>Privacy Policy</Text>
+              </Text>
+            </View>
             <Text style={styles.NewToBeerStore}>
-              New to The Beer Store?
+              Already have an Account?
               <Text
                 style={styles.CreateAnAccount}
                 onPress={() => navigation.navigate('Login')}>
-                Create an account.
+                Login.
               </Text>
             </Text>
           </View>
-        </View>
       </ScrollView>
     </View>
   );
