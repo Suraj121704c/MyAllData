@@ -9,29 +9,39 @@ import {Logout} from '../../../Screens/AfterLogin/Logout';
 const Drawer = createDrawerNavigator();
 
 export const DrawerNavigation = () => (
-  <SafeAreaView style={{flex : 1}}>
+  <SafeAreaView style={{flex: 1}}>
     <Drawer.Navigator
       initialRouteName="Home"
       screenOptions={{headerShown: false}}
       drawerStyle={{
         width: '100%',
-        flex : 1
+        backgroundColor : "purple"
       }}>
       <Drawer.Screen
         component={TabNaviagtion}
         options={{
+          drawerLabel: '',
           drawerIcon: ({color, size}) => (
             <View
               style={{
-                flexDirection: 'row',
-                alignItems: 'center',
-                marginRight: 30,
-                justifyContent: 'space-between',
+                flex: 30,
+                flexDirection: 'row-reverse',
+                justifyContent: 'space-evenly',
               }}>
-              <Image
-                source={HomeButton}
-                style={{tintColor: color, width: size, height: size}}
-              />
+              <View>
+                <Image
+                  source={HomeButton}
+                  style={{
+                    tintColor: color,
+                    width: size,
+                    height: size,
+                    marginLeft: 90,
+                  }}
+                />
+              </View>
+              <View>
+                <Text style={{fontSize: 20}}>Home</Text>
+              </View>
             </View>
           ),
         }}
@@ -41,18 +51,28 @@ export const DrawerNavigation = () => (
         name="Products"
         component={Products}
         options={{
+          drawerLabel: '',
           drawerIcon: ({color, size}) => (
             <View
               style={{
-                flexDirection: 'row',
-                alignItems: 'center',
-                marginRight: 23,
-                justifyContent: 'space-between',
+                flex: 30,
+                flexDirection: 'row-reverse',
+                justifyContent: 'space-evenly',
               }}>
-              <Image
-                source={ProductButton}
-                style={{tintColor: color, width: size, height: size}}
-              />
+              <View>
+                <Image
+                  source={ProductButton}
+                  style={{
+                    tintColor: color,
+                    width: size,
+                    height: size,
+                    marginLeft: 75,
+                  }}
+                />
+              </View>
+              <View>
+                <Text style={{fontSize: 20}}>Products</Text>
+              </View>
             </View>
           ),
         }}
@@ -61,18 +81,23 @@ export const DrawerNavigation = () => (
         name="Settings"
         component={OnHome}
         options={{
+          drawerLabel: '',
           drawerIcon: ({color, size}) => (
             <View
               style={{
-                flexDirection: 'row',
-                alignItems: 'center',
-                marginRight: 23,
+                flex: 30,
+                flexDirection: 'row-reverse',
                 justifyContent: 'space-between',
               }}>
-              <Image
-                source={UserButton}
-                style={{tintColor: color, width: size, height: size}}
-              />
+              <View>
+                <Image
+                  source={UserButton}
+                  style={{tintColor: color, width: size, height: size}}
+                />
+              </View>
+              <View>
+                <Text style={{fontSize: 20}}>Setting</Text>
+              </View>
             </View>
           ),
         }}
@@ -81,17 +106,23 @@ export const DrawerNavigation = () => (
         name="Logout"
         component={Logout}
         options={{
+          drawerLabel: '',
           drawerIcon: ({color, size}) => (
             <View
               style={{
-                alignItems: 'center',
-                marginRight: 30,
+                flex: 30,
+                flexDirection: 'row-reverse',
                 justifyContent: 'space-between',
               }}>
-              <Image
-                source={LogoutButton}
-                style={{tintColor: color, width: size, height: size}}
-              />
+              <View>
+                <Image
+                  source={LogoutButton}
+                  style={{tintColor: color, width: size, height: size}}
+                />
+              </View>
+              <View>
+                <Text style={{fontSize: 20}}>Logout</Text>
+              </View>
             </View>
           ),
         }}
