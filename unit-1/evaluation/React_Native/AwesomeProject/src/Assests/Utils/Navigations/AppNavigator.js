@@ -1,6 +1,7 @@
 import {Image, Text, View} from 'react-native';
 import FirstScreen from '../../../Screens/AfterLogin/FirstScreen';
 import {useEffect} from 'react';
+import {getInitialAuthState} from '../../../Redux/Reducers/AuthReducer';
 
 const {createBottomTabNavigator} = require('@react-navigation/bottom-tabs');
 const {createDrawerNavigator} = require('@react-navigation/drawer');
@@ -20,7 +21,7 @@ const {
   LogoutButton,
 } = require('../images');
 const {SafeAreaView} = require('react-native-safe-area-context');
-const {useSelector} = require('react-redux');
+const {useSelector, useDispatch} = require('react-redux');
 const {NavigationContainer} = require('@react-navigation/native');
 
 const Drawer = createDrawerNavigator();
@@ -221,8 +222,16 @@ const DrawerNavigation = () => (
 );
 
 export const AppNavigator = () => {
+  const dispatch = useDispatch();
   const isLoggedIn = useSelector(state => state.auth.isLoggedIn);
-  console.log(isLoggedIn);
+
+  useEffect(() => {
+    const checkTokn = async () => {
+      const initilaState = await getInitialAuthState();
+      console.log(initilaState);
+    };
+    checkTokn();
+  }, []);
 
   return (
     <NavigationContainer>

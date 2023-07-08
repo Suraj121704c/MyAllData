@@ -23,14 +23,18 @@ export const login = (username, password) => {
           message: 'Login Successful',
           type: 'success',
         });
-        console.log(AsyncStorage.getItem("token"))
+        console.log(AsyncStorage.getItem('token'));
       } else {
         console.log('Login failed: Invalid username or password');
+        showMessage({
+          message: error.message,
+          type: 'danger',
+        });
       }
     } catch (error) {
       console.log('Login failed:', error.message);
       showMessage({
-        message: 'Invalid Credentials',
+        message: "Invalid username or password",
         type: 'danger',
       });
     }

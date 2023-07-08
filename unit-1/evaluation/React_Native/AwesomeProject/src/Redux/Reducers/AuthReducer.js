@@ -1,7 +1,7 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {LOGIN_SUCCESS, LOGOUT} from '../Type';
 
-const getInitialAuthState = async () => {
+export const getInitialAuthState = async () => {
   try {
     const token = await AsyncStorage.getItem('token');
     return {
@@ -17,7 +17,10 @@ const getInitialAuthState = async () => {
   }
 };
 
-const initialState = getInitialAuthState()
+let initialState = {
+  isLoggedIn: false,
+  token: null,
+};
 
 AsyncStorage.getItem('token')
   .then(token => {
