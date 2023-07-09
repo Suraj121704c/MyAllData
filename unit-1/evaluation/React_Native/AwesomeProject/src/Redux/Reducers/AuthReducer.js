@@ -1,5 +1,6 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {LOGIN_SUCCESS, LOGOUT} from '../Type';
+// Logout ji
 
 export const getInitialAuthState = async () => {
   try {
