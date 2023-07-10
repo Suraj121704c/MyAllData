@@ -15,3 +15,8 @@ export const RegisterBackGround = require('../Images/Register-bg.png');
 export const BrandLogo = require('../Images/brandLogo.png');
 export const BrandIcon = require('../Images/brandIcon.png');
 export const TBSLogo = require('../Images/TBS_Logo.png');
+export const OrderImage = require('../Images/Order.png');
+export const Slider1 = require("../Images/slide1.jpg");
+export const Slider2 = require("../Images/slide2.jpg");
+export const Slider3 = require("../Images/slide3.jpg");
+

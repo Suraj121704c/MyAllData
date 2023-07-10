@@ -24,28 +24,34 @@ const {
 const {SafeAreaView} = require('react-native-safe-area-context');
 const {useSelector, useDispatch} = require('react-redux');
 const {NavigationContainer} = require('@react-navigation/native');
-
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from 'react-native-responsive-screen';
 const Drawer = createDrawerNavigator();
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
 
 const StackNavigation = () => (
-  <Stack.Navigator initialRouteName="Splash" screenOptions={{headerShown: false}}>
+  <Stack.Navigator
+    initialRouteName="FirstScreen"
+    screenOptions={{headerShown: false}}>
     <Stack.Screen name="Login" component={Login} />
-    <Stack.Screen name="Forget" component={Forget} />
-    <Stack.Screen name="SignIn" component={SignIn} />
     <Stack.Screen name="Settings" component={OnHome} />
-    <Stack.Screen name="Splash" component={SplashScreen}/>
+    <Stack.Screen name="Splash" component={SplashScreen} />
     <Stack.Screen name="Logout" component={Logout} />
+    <Stack.Screen name="FirstScreen" component={FirstScreen} />
   </Stack.Navigator>
 );
 
 const TabNaviagtion = () => (
   <Tab.Navigator
-    initialRouteName="Home"
+    initialRouteName="FirstScreen"
     screenOptions={{
       tabBarStyle: {
+        borderTopLeftRadius : wp(10),
         backgroundColor: 'black',
+        borderTopRightRadius : wp(10),
       },
       headerShown: false,
     }}>
@@ -103,7 +109,7 @@ const TabNaviagtion = () => (
 const DrawerNavigation = () => (
   <SafeAreaView style={{flex: 1}}>
     <Drawer.Navigator
-      initialRouteName="Home"
+      initialRouteName="FirstScreen"
       screenOptions={{headerShown: false}}
       drawerStyle={{
         width: '100%',
@@ -224,25 +230,25 @@ const DrawerNavigation = () => (
 );
 
 export const AppNavigator = () => {
-  const dispatch = useDispatch();
   const isLoggedIn = useSelector(state => state.auth.isLoggedIn);
 
   useEffect(() => {
-    const checkTokn = async () => {
-      const initilaState = await getInitialAuthState();
-      console.log(initilaState);
-    };
-    checkTokn();
-  }, []);
+    console.log(isLoggedIn);
+  }, [isLoggedIn]);
 
   return (
     <NavigationContainer>
       {isLoggedIn ? (
-        <Stack.Navigator screenOptions={{headerShown: false}}>
-          <Stack.Screen name="FirstScreen" component={FirstScreen} />
-        </Stack.Navigator>
-      ) : (
         <DrawerNavigation />
+      ) : (
+        <Stack.Navigator
+          screenOptions={{headerShown: false}}
+          initialRouteName="Splash">
+          <Stack.Screen name="Login" component={Login} />
+          <Stack.Screen name="Splash" component={SplashScreen} />
+          <Stack.Screen name="Forget" component={Forget} />
+          <Stack.Screen name="SignIn" component={SignIn} />
+        </Stack.Navigator>
       )}
     </NavigationContainer>
   );

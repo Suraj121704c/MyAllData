@@ -1,8 +1,10 @@
 import React, {useEffect} from 'react';
-import {View, Text, Image} from 'react-native';
-import {BrandIcon, TBSLogo} from '../../../Assests/Utils/images';
+import {View, Image} from 'react-native';
+import {TBSLogo} from '../../../Assests/Utils/images';
+import {useSelector} from 'react-redux';
 
 const SplashScreen = ({navigation}) => {
+  const isLoggedIn = useSelector(state => state.auth.isLoggedIn);
   useEffect(() => {
     setTimeout(() => {
       navigation.navigate('Login');
@@ -17,7 +19,6 @@ const SplashScreen = ({navigation}) => {
         alignItems: 'center',
         backgroundColor: 'black',
       }}>
-      <Image source={BrandIcon} style={{height: 50, width: 60}} />
       <Image source={TBSLogo} style={{height: 100, width: 130}} />
     </View>
   );

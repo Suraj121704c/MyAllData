@@ -27,16 +27,14 @@ import {
   google,
   passImage,
 } from '../../../Assests/Utils/images';
-import {DrawerNavigation} from '../../../Assests/Utils/Navigations/SideBarNavigation';
-import { useDispatch } from 'react-redux';
-import { login } from '../../../Redux/Actions/AuthAction';
-import { showMessage } from 'react-native-flash-message';
+import {useDispatch} from 'react-redux';
+import {login} from '../../../Redux/Actions/AuthAction';
+import {showMessage} from 'react-native-flash-message';
 
 const Login = ({navigation}) => {
-  const [dimensions, setDimensions] = useState(Dimensions.get('window'));
   const [showPassword, setShowPassword] = useState(false);
-  const [username , setUsername] = useState('');
-  const [password , setPassword] = useState('');
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
 
   const dispatch = useDispatch();
 
@@ -46,7 +44,7 @@ const Login = ({navigation}) => {
 
   const handleLogin = () => {
     dispatch(login(username, password));
-  }
+  };
 
   return (
     <View style={styles.BigBox}>
@@ -57,12 +55,8 @@ const Login = ({navigation}) => {
           <View>
             <View
               style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-              <View>
-                <Button
-                  title="="
-                  onPress={() => navigation.openDrawer()}
-                  color={"orange"}
-                />
+              <View style={styles.BackImage}>
+                <Image source={backImage} />
               </View>
               <View>
                 <Image source={brandLogo} style={styles.HeadingTop} />
@@ -84,7 +78,7 @@ const Login = ({navigation}) => {
                 value={username}
                 placeholder="Email Address"
                 style={styles.EmailAdress}
-                onChangeText={(text) => setUsername(text)}
+                onChangeText={text => setUsername(text)}
               />
             </View>
             <View style={styles.BoxJI}>
@@ -94,9 +88,11 @@ const Login = ({navigation}) => {
                 style={styles.Password}
                 secureTextEntry={!showPassword}
                 textContentType="password"
-                onChangeText={(text) => setPassword(text)}
+                onChangeText={text => setPassword(text)}
               />
-              <Image source={passImage} style={{marginRight: wp(4)}} />
+              <TouchableOpacity onPress={togglePasswordVisibility}>
+                <Image source={passImage} style={{marginRight: wp(4)}} />
+              </TouchableOpacity>
             </View>
             <Text
               style={styles.ForgetText}

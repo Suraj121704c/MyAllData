@@ -2,12 +2,12 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import {LOGIN_SUCCESS, LOGOUT} from '../Type';
 import {showMessage} from 'react-native-flash-message';
 
-export const loginSuccess = token => ({
+const loginSuccess = token => ({
   type: LOGIN_SUCCESS,
   payload: token,
 });
 
-export const logout = () => ({
+const logout = () => ({
   type: LOGOUT,
 });
 
@@ -34,7 +34,7 @@ export const login = (username, password) => {
     } catch (error) {
       console.log('Login failed:', error.message);
       showMessage({
-        message: "Invalid username or password",
+        message: 'Invalid username or password',
         type: 'danger',
       });
     }
