@@ -2,6 +2,7 @@ import {Image, Text, View} from 'react-native';
 import FirstScreen from '../../../Screens/AfterLogin/FirstScreen';
 import {useEffect} from 'react';
 import {getInitialAuthState} from '../../../Redux/Reducers/AuthReducer';
+import SplashScreen from '../../../Screens/BeforeLogin/SplashScreen/splashScreen';
 
 const {createBottomTabNavigator} = require('@react-navigation/bottom-tabs');
 const {createDrawerNavigator} = require('@react-navigation/drawer');
@@ -29,11 +30,12 @@ const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
 
 const StackNavigation = () => (
-  <Stack.Navigator initialRouteName="Home" screenOptions={{headerShown: false}}>
+  <Stack.Navigator initialRouteName="Splash" screenOptions={{headerShown: false}}>
     <Stack.Screen name="Login" component={Login} />
     <Stack.Screen name="Forget" component={Forget} />
     <Stack.Screen name="SignIn" component={SignIn} />
     <Stack.Screen name="Settings" component={OnHome} />
+    <Stack.Screen name="Splash" component={SplashScreen}/>
     <Stack.Screen name="Logout" component={Logout} />
   </Stack.Navigator>
 );
