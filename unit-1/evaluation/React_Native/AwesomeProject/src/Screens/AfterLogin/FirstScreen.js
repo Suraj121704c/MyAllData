@@ -15,6 +15,8 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
+import Courosal from '../../Components/Slider2';
+import Courosal2 from '../../Components/Slider3';
 
 const FirstScreen = ({navigation}) => {
   const [value, setValue] = useState(0);
@@ -98,7 +100,13 @@ const FirstScreen = ({navigation}) => {
             <Text>SEE ALL</Text>
           </TouchableOpacity>
         </View>
-        <View></View>
+        <View>
+          <Courosal />
+        </View>
+
+        <View>
+          <Courosal2 />
+        </View>
       </View>
     </View>
   );
