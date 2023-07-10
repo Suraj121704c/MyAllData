@@ -86,12 +86,12 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   leftView: {
-    width: '40%',
+    width: '42%',
     alignItems: 'left',
     justifyContent: 'center',
   },
   rightView: {
-    width: '40%',
+    width: '42%',
     alignItems: 'left',
     justifyContent: 'center',
   },
