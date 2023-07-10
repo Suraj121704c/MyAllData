@@ -12,3 +12,5 @@ export const OrdersButton = require('../Images/card.png');
 export const LogoutButton = require('../Images/delete.png');
 export const UserButton = require('../Images/user.png');
 export const RegisterBackGround = require('../Images/Register-bg.png');
+export const BrandLogo = require("../Images/brandLogo.png");
+export const BrandIcon = require("../Images/brandIcon.png");
