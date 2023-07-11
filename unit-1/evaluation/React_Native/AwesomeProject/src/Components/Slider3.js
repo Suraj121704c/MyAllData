@@ -79,8 +79,7 @@ const styles = StyleSheet.create({
     marginTop: hp(3),
     height: hp(25),
     width: '100%',
-    justifyContent: 'center',
-    padding: 8,
+    justifyContent: 'center'
   },
   slide: {
     flexDirection: 'row',
@@ -89,12 +88,13 @@ const styles = StyleSheet.create({
     flex: 1,
     borderWidth: 0.2,
     borderColor: 'gray',
-    borderRadius: 10,
+    borderRadius : 10
   },
   leftView: {
     width: '48%',
     alignItems: 'center',
     justifyContent: 'center',
+    padding : 7
   },
   rightView: {
     width: '50%',

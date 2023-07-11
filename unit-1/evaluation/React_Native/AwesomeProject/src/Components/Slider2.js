@@ -86,10 +86,9 @@ const Courosal = () => {
 const styles = StyleSheet.create({
   container: {
     marginTop: hp(3),
-    height: hp(25),
+    height: hp(26),
     width: '100%',
     justifyContent: 'center',
-    padding: 8,
   },
   slide: {
     flexDirection: 'row',
@@ -104,7 +103,7 @@ const styles = StyleSheet.create({
     width: '48%',
     alignItems: 'flex-start',
     justifyContent: 'center',
-    padding : 5
+    padding : 10
   },
   rightView: {
     width: '50%',
