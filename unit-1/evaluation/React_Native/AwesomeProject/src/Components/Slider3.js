@@ -75,7 +75,7 @@ const Courosal2 = () => {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: hp(1),
+    marginTop: hp(3),
     height: hp(30),
     width: '100%',
     justifyContent: 'center',

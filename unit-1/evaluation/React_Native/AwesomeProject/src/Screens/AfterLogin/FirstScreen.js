@@ -3,12 +3,9 @@ import {
   View,
   Image,
   Text,
-  Button,
   TextInput,
   TouchableOpacity,
 } from 'react-native';
-import {logoutAction} from '../../Redux/Actions/AuthAction';
-import {useDispatch} from 'react-redux';
 import {BrandLogo, OrderImage, passImage} from '../../Assests/Utils/images';
 import Slider from '../../Components/Slider';
 import {
@@ -20,15 +17,9 @@ import {ScrollView} from 'react-native-gesture-handler';
 import Courosal from '../../Components/Slider2';
 
 const FirstScreen = ({navigation}) => {
-  const [value, setValue] = useState(0);
-  const dispatch = useDispatch();
-
-  const handleLogout = () => {
-    dispatch(logoutAction());
-  };
   return (
     <View style={{flex: 1, backgroundColor: 'black'}}>
-      <ScrollView style={{flexGrow : 1}} contentContainerStyle={{flexGrow : 1}}>
+      <ScrollView style={{flexGrow: 1}} contentContainerStyle={{flexGrow: 1}}>
         <View
           style={{
             flexDirection: 'row',
@@ -104,6 +95,28 @@ const FirstScreen = ({navigation}) => {
           </View>
           <View>
             <Courosal />
+          </View>
+          <View
+            style={{
+              flexDirection: 'row',
+              justifyContent: 'space-between',
+              marginLeft: wp(6),
+              marginRight: wp(6),
+              marginTop: hp(1),
+              alignItems: 'center',
+            }}>
+            <Text style={{fontSize: hp(2.3), fontWeight: 900}}>
+             What's New
+            </Text>
+            <TouchableOpacity
+              style={{
+                borderWidth: 1,
+                borderColor: 'black',
+                borderRadius: 5,
+                padding: 5,
+              }}>
+              <Text>SEE ALL</Text>
+            </TouchableOpacity>
           </View>
           <View>
             <Courosal2 />
