@@ -1,19 +1,19 @@
 import React, {useState} from 'react';
+import {View, Image, Text, TextInput, TouchableOpacity} from 'react-native';
 import {
-  View,
-  Image,
-  Text,
-  TextInput,
-  TouchableOpacity,
-} from 'react-native';
-import {BrandLogo, OrderImage, passImage} from '../../Assests/Utils/images';
+  Bottle1,
+  Bottle2,
+  BrandLogo,
+  OrderImage,
+  passImage,
+} from '../../Assests/Utils/images';
 import Slider from '../../Components/Slider';
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 import Courosal2 from '../../Components/Slider3';
-import {ScrollView} from 'react-native-gesture-handler';
+import {Directions, ScrollView} from 'react-native-gesture-handler';
 import Courosal from '../../Components/Slider2';
 
 const FirstScreen = ({navigation}) => {
@@ -105,9 +105,7 @@ const FirstScreen = ({navigation}) => {
               marginTop: hp(1),
               alignItems: 'center',
             }}>
-            <Text style={{fontSize: hp(2.3), fontWeight: 900}}>
-             What's New
-            </Text>
+            <Text style={{fontSize: hp(2.3), fontWeight: 900}}>What's New</Text>
             <TouchableOpacity
               style={{
                 borderWidth: 1,
@@ -120,6 +118,41 @@ const FirstScreen = ({navigation}) => {
           </View>
           <View>
             <Courosal2 />
+          </View>
+          <View
+            style={{
+              flexDirection: 'row',
+              justifyContent: 'space-between',
+              marginLeft: wp(6),
+              marginRight: wp(6),
+              alignItems: 'center',
+            }}>
+            <Text style={{fontSize: hp(2.3), fontWeight: 900}}>
+              Bear Categories
+            </Text>
+          </View>
+          <View
+            style={{
+              flexDirection: 'row',
+              justifyContent: 'space-evenly',
+              alignItems : "center",
+              marginTop : hp(2),
+              width : "95%",
+              marginLeft: wp(6),
+              marginBottom : hp(2)
+            }}>
+            <View style={{borderWidth : 1 , padding : wp(6), alignItems : "center"}}>
+              <Image source={Bottle1} />
+              <Text>Domestic</Text>
+            </View>
+            <View style={{borderWidth : 1 , padding : wp(6) , alignItems : "center"}}>
+              <Image source={Bottle2} />
+              <Text>Import</Text>
+            </View>
+            <View style={{borderWidth : 1 , padding : wp(6) , alignItems : "center"}}>
+              <Image source={Bottle1} />
+              <Text>Ontario</Text>
+            </View>
           </View>
         </View>
       </ScrollView>

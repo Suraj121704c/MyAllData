@@ -79,6 +79,7 @@ const styles = StyleSheet.create({
     height: hp(30),
     width: '100%',
     justifyContent: 'center',
+    padding : 10
   },
   slide: {
     flexDirection: 'row',
