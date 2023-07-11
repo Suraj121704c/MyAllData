@@ -61,7 +61,6 @@ const Login = ({navigation}) => {
               <View>
                 <Image source={brandLogo} style={styles.HeadingTop} />
               </View>
-              <View></View>
             </View>
             <View style={styles.BearDiv}>
               <Text style={styles.LoginText}>Login</Text>

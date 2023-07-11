@@ -1,13 +1,13 @@
 import React, {useState, useEffect} from 'react';
 import {
   View,
-  FlatList,
   Image,
   Dimensions,
   StyleSheet,
   Text,
   TouchableOpacity,
 } from 'react-native';
+import Carousel, {Pagination} from 'react-native-snap-carousel';
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
@@ -18,12 +18,21 @@ const Courosal2 = () => {
   const [screenWidth, setScreenWidth] = useState(
     Dimensions.get('window').width,
   );
+  const [activeIndex, setActiveIndex] = useState(0);
 
   const images = [
     {id: '1', source: Polll},
     {id: '2', source: MossHead},
     {id: '3', source: Polll},
   ];
+
+  useEffect(() => {
+    const handleScreenRotation = () => {
+      setScreenWidth(Dimensions.get('window').width);
+    };
+
+    Dimensions.addEventListener('change', handleScreenRotation);
+  }, []);
 
   const renderItem = ({item}) => (
     <View style={styles.slide}>
@@ -43,40 +52,32 @@ const Courosal2 = () => {
     </View>
   );
 
-  useEffect(() => {
-    const handleScreenRotation = () => {
-      setScreenWidth(Dimensions.get('window').width);
-    };
-
-    Dimensions.addEventListener('change', handleScreenRotation);
-
-    return () => {
-      Dimensions.removeEventListener('change', handleScreenRotation);
-    };
-  }, []);
-
   return (
     <View style={styles.container}>
-      <FlatList
+      <Carousel
         data={images}
         renderItem={renderItem}
-        keyExtractor={item => item.id}
-        horizontal
-        pagingEnabled
-        showsHorizontalScrollIndicator={false}
+        sliderWidth={screenWidth}
+        itemWidth={screenWidth * 0.9}
+        onSnapToItem={index => setActiveIndex(index)}
+      />
+      <Pagination
+        dotsLength={images.length}
+        activeDotIndex={activeIndex}
+        dotStyle={styles.paginationDot}
+        inactiveDotStyle={styles.paginationDotInactive}
+        inactiveDotOpacity={0.6}
+        inactiveDotScale={0.8}
       />
     </View>
   );
 };
 
-const {width} = Dimensions.get('window');
-const slideWidth = width;
-
 const styles = StyleSheet.create({
   container: {
-    marginTop: hp(5),
-    height: hp(20),
-    width: '90%',
+    marginTop: hp(1),
+    height: hp(30),
+    width: '100%',
     justifyContent: 'center',
   },
   slide: {
@@ -84,15 +85,18 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     flex: 1,
+    borderWidth : 0.2,
+    borderColor : "gray",
+    borderRadius : 10
   },
   leftView: {
-    width: '42%',
-    alignItems: 'left',
+    width: '48%',
+    alignItems: 'flex-start',
     justifyContent: 'center',
   },
   rightView: {
-    width: '42%',
-    alignItems: 'left',
+    width: '50%',
+    alignItems: 'flex-end',
     justifyContent: 'center',
   },
   image: {
@@ -103,33 +107,46 @@ const styles = StyleSheet.create({
   },
   title: {
     fontWeight: 'bold',
-    fontSize: 16,
-    marginBottom: 8,
+    fontSize: wp(4.0), // Adjust font size based on screen size
+    marginBottom: hp(1),
   },
   subtitle: {
-    fontSize: 12,
-    marginBottom: 8,
+    fontSize: wp(3.5), // Adjust font size based on screen size
+    marginBottom: hp(1),
   },
   price: {
     fontWeight: 'bold',
-    fontSize: 18,
+    fontSize: wp(4.5), // Adjust font size based on screen size
   },
   discount: {
     color: 'red',
   },
   button: {
     backgroundColor: 'orange',
-    width: '60%',
-    paddingVertical: 8,
-    paddingHorizontal: 16,
-    borderRadius: 4,
+    width: wp(20),
+    paddingVertical: hp(1.0),
+    borderRadius: wp(5),
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: 8,
+    marginTop: hp(1),
   },
   buttonText: {
     color: 'white',
     fontWeight: 'bold',
+  },
+  paginationDotInactive: {
+    width: 8,
+    height: 8,
+    borderRadius: 4,
+    marginHorizontal: 8,
+    backgroundColor: 'gray',
+  },
+  paginationDot: {
+    width: 8,
+    height: 8,
+    borderRadius: 4,
+    marginHorizontal: 8,
+    backgroundColor: 'orange',
   },
 });
 
