@@ -5,6 +5,7 @@ import {
   Bottle2,
   BrandLogo,
   OrderImage,
+  SastiBottle,
   passImage,
 } from '../../Assests/Utils/images';
 import Slider from '../../Components/Slider';
@@ -85,8 +86,8 @@ const FirstScreen = ({navigation}) => {
             </Text>
             <TouchableOpacity
               style={{
-                borderWidth: 1,
-                borderColor: 'black',
+                borderWidth: 2,
+                borderColor: 'orange',
                 borderRadius: 5,
                 padding: 5,
               }}>
@@ -103,13 +104,43 @@ const FirstScreen = ({navigation}) => {
               marginLeft: wp(6),
               marginRight: wp(6),
               marginTop: hp(1),
+              marginBottom: hp(1),
+              alignItems: 'center',
+              backgroundColor: '#FFF0F2',
+              padding: wp(5),
+              borderRadius: wp(3),
+            }}>
+            <View style={{flexDirection : "row"}}>
+              <Image source={SastiBottle}/>
+              <Text style={{fontSize: hp(2.3), fontWeight: 900 , marginLeft : wp(1)}}>
+                Start An Order
+              </Text>
+            </View>
+            <TouchableOpacity
+              style={{
+                borderWidth: 1,
+                borderColor: 'black',
+                borderRadius: 5,
+                padding: 5,
+                backgroundColor : "orange"
+              }}>
+              <Text style={{fontWeight: 'bold'}}>ORDER NOW</Text>
+            </TouchableOpacity>
+          </View>
+          <View
+            style={{
+              flexDirection: 'row',
+              justifyContent: 'space-between',
+              marginLeft: wp(6),
+              marginRight: wp(6),
+              marginTop: hp(1),
               alignItems: 'center',
             }}>
             <Text style={{fontSize: hp(2.3), fontWeight: 900}}>What's New</Text>
             <TouchableOpacity
               style={{
-                borderWidth: 1,
-                borderColor: 'black',
+                borderWidth: 2,
+                borderColor: 'orange',
                 borderRadius: 5,
                 padding: 5,
               }}>
@@ -135,23 +166,41 @@ const FirstScreen = ({navigation}) => {
             style={{
               flexDirection: 'row',
               justifyContent: 'space-evenly',
-              alignItems : "center",
-              marginTop : hp(2),
-              width : "95%",
+              alignItems: 'center',
+              marginTop: hp(2),
+              width: '95%',
               marginLeft: wp(6),
-              marginBottom : hp(2)
+              marginBottom: hp(4),
             }}>
-            <View style={{borderWidth : 1 , padding : wp(6), alignItems : "center"}}>
+            <View
+              style={{
+                borderWidth: 1,
+                padding: wp(5),
+                alignItems: 'center',
+                borderColor: 'gray',
+              }}>
               <Image source={Bottle1} />
-              <Text>Domestic</Text>
+              <Text style={{fontWeight: 'bold'}}>Domestic</Text>
             </View>
-            <View style={{borderWidth : 1 , padding : wp(6) , alignItems : "center"}}>
+            <View
+              style={{
+                borderWidth: 1,
+                padding: wp(5),
+                alignItems: 'center',
+                borderColor: 'gray',
+              }}>
               <Image source={Bottle2} />
-              <Text>Import</Text>
+              <Text style={{fontWeight: 'bold'}}>Import</Text>
             </View>
-            <View style={{borderWidth : 1 , padding : wp(6) , alignItems : "center"}}>
+            <View
+              style={{
+                borderWidth: 1,
+                padding: wp(5),
+                alignItems: 'center',
+                borderColor: 'gray',
+              }}>
               <Image source={Bottle1} />
-              <Text>Ontario</Text>
+              <Text style={{fontWeight: 'bold'}}>Ontario</Text>
             </View>
           </View>
         </View>

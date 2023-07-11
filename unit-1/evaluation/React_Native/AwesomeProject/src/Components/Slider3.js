@@ -6,13 +6,14 @@ import {
   StyleSheet,
   Text,
   TouchableOpacity,
+  ImageBackground,
 } from 'react-native';
 import Carousel, {Pagination} from 'react-native-snap-carousel';
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
-import {MossHead, Polll} from '../Assests/Utils/images';
+import {MossHead, Polll, ShakerLogo, Whislist} from '../Assests/Utils/images';
 
 const Courosal2 = () => {
   const [screenWidth, setScreenWidth] = useState(
@@ -23,7 +24,7 @@ const Courosal2 = () => {
   const images = [
     {id: '1', source: Polll},
     {id: '2', source: MossHead},
-    {id: '3', source: Polll},
+    {id: '3', source: ShakerLogo},
   ];
 
   useEffect(() => {
@@ -37,17 +38,17 @@ const Courosal2 = () => {
   const renderItem = ({item}) => (
     <View style={styles.slide}>
       <View style={styles.leftView}>
-        <Text style={styles.title}>MossHead Cucumber Lime Mojito Shaker</Text>
-        <Text style={styles.subtitle}>24 * Can 473 ml</Text>
-        <Text style={styles.price}>
-          $69 <Text style={styles.discount}>$48</Text>
-        </Text>
+        <Text>sdes poaufd sisfz sdfwsc</Text>
+        <Text style={styles.title}>poaufd siasta sdfwsc sdes onbad dscff</Text>
+
         <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>BUY NOW</Text>
         </TouchableOpacity>
       </View>
       <View style={styles.rightView}>
-        <Image source={item.source} style={styles.image} />
+        <ImageBackground source={item.source} style={styles.image}>
+          <Image source={Whislist} style={{marginTop: hp(1)}} />
+        </ImageBackground>
       </View>
     </View>
   );
@@ -76,23 +77,23 @@ const Courosal2 = () => {
 const styles = StyleSheet.create({
   container: {
     marginTop: hp(3),
-    height: hp(30),
+    height: hp(25),
     width: '100%',
     justifyContent: 'center',
-    padding : 10
+    padding: 8,
   },
   slide: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
     flex: 1,
-    borderWidth : 0.2,
-    borderColor : "gray",
-    borderRadius : 10
+    borderWidth: 0.2,
+    borderColor: 'gray',
+    borderRadius: 10,
   },
   leftView: {
     width: '48%',
-    alignItems: 'flex-start',
+    alignItems: 'center',
     justifyContent: 'center',
   },
   rightView: {
@@ -101,23 +102,25 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   image: {
-    width: wp(35),
-    height: hp(20),
+    width: wp(30),
+    height: hp(15),
     resizeMode: 'cover',
     borderRadius: wp(5),
   },
   title: {
     fontWeight: 'bold',
-    fontSize: wp(4.0), // Adjust font size based on screen size
-    marginBottom: hp(1),
-  },
-  subtitle: {
     fontSize: wp(3.5), // Adjust font size based on screen size
     marginBottom: hp(1),
+    marginTop : hp(1)
+  },
+  subtitle: {
+    fontSize: wp(3.2), // Adjust font size based on screen size
+    marginBottom: hp(0.5),
+    marginLeft: wp(1),
   },
   price: {
     fontWeight: 'bold',
-    fontSize: wp(4.5), // Adjust font size based on screen size
+    fontSize: wp(3.5), // Adjust font size based on screen size
   },
   discount: {
     color: 'red',
@@ -129,7 +132,7 @@ const styles = StyleSheet.create({
     borderRadius: wp(5),
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: hp(1),
+    marginTop: hp(0.4),
   },
   buttonText: {
     color: 'white',

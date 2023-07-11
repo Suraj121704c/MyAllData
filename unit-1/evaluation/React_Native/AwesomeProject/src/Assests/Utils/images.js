@@ -27,3 +27,5 @@ export const Bottle2 = require('../Images/bottle2.png');
 export const Bottle1 = require('../Images/bottle.png');
 export const SastiBottle = require('../Images/bottel.png');
 export const SastiBottle2 = require('../Images/Beers.png');
+export const SalePng = require('../Images/Badge.png');
+export const ShakerLogo = require("../Images/shakerLogo.png")

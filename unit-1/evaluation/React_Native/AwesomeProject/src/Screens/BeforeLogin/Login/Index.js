@@ -10,9 +10,7 @@ import {
   TextInput,
   TouchableOpacity,
   View,
-  Dimensions,
   ScrollView,
-  Button,
 } from 'react-native';
 
 // user-defining import
