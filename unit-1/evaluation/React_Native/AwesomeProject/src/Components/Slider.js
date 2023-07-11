@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   image: {
-    width: wp(93),
+    width: "93%",
     height: hp(20),
     resizeMode: 'cover',
     borderRadius: wp(5),
