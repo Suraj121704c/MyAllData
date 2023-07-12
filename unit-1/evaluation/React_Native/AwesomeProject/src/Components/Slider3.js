@@ -33,6 +33,10 @@ const Courosal2 = () => {
     };
 
     Dimensions.addEventListener('change', handleScreenRotation);
+
+    return () => {
+      Dimensions.removeEventListener('change', handleScreenRotation);
+    };
   }, []);
 
   const renderItem = ({item}) => (

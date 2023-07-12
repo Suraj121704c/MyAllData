@@ -42,7 +42,6 @@ export const SignIn = ({navigation}) => {
               <View>
                 <Image source={brandLogo} />
               </View>
-              <View></View>
             </View>
             <View style={{marginTop: 150, marginBottom: 15}}>
               <Text style={{fontSize: 20, fontWeight: 'bold', color: 'white'}}>
@@ -54,7 +53,6 @@ export const SignIn = ({navigation}) => {
             </View>
           </View>
         </ImageBackground>
-
         <View style={styles.CurverBox}>
           <View style={styles.EmailBoxFirst}>
             <View style={styles.BoxJI}>

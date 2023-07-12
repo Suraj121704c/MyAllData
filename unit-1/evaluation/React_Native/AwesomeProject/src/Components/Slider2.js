@@ -33,6 +33,10 @@ const Courosal = () => {
     };
 
     Dimensions.addEventListener('change', handleScreenRotation);
+
+    return () => {
+      Dimensions.removeEventListener('change', handleScreenRotation);
+    };
   }, []);
 
   const renderItem = ({item}) => (
@@ -55,7 +59,7 @@ const Courosal = () => {
         <ImageBackground source={item.source} style={styles.image}>
           <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
             <Image source={Whislist} style={{marginTop: hp(1)}} />
-            <Image source={SalePng} style={{marginTop: hp(1)}} />
+            <Image source={SalePng} style={{marginTop: hp(1) , marginRight : wp(1)}} />
           </View>
         </ImageBackground>
       </View>

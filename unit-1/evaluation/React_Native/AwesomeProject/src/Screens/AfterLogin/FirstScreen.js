@@ -14,7 +14,7 @@ import {
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 import Courosal2 from '../../Components/Slider3';
-import {Directions, ScrollView} from 'react-native-gesture-handler';
+import {ScrollView} from 'react-native-gesture-handler';
 import Courosal from '../../Components/Slider2';
 
 const FirstScreen = ({navigation}) => {
@@ -179,7 +179,7 @@ const FirstScreen = ({navigation}) => {
                 alignItems: 'center',
                 borderColor: 'gray',
               }}>
-              <Image source={Bottle1} />
+              <Image source={Bottle1} style={{height : hp(10), width : wp(6.5)}}/>
               <Text style={{fontWeight: 'bold'}}>Domestic</Text>
             </View>
             <View
@@ -189,7 +189,7 @@ const FirstScreen = ({navigation}) => {
                 alignItems: 'center',
                 borderColor: 'gray',
               }}>
-              <Image source={Bottle2} />
+              <Image source={Bottle2} style={{height : hp(10), width : wp(9)}}/>
               <Text style={{fontWeight: 'bold'}}>Import</Text>
             </View>
             <View
@@ -199,7 +199,7 @@ const FirstScreen = ({navigation}) => {
                 alignItems: 'center',
                 borderColor: 'gray',
               }}>
-              <Image source={Bottle1} />
+              <Image source={Bottle1} style={{height : hp(10), width : wp(6.5)}}/>
               <Text style={{fontWeight: 'bold'}}>Ontario</Text>
             </View>
           </View>
