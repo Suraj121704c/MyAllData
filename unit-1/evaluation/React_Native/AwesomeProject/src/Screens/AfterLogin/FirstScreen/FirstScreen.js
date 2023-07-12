@@ -1,21 +1,14 @@
 import React, {useState} from 'react';
 import {View, Image, Text, TextInput, TouchableOpacity} from 'react-native';
 import {
-  Bottle1,
-  Bottle2,
-  BrandLogo,
-  OrderImage,
-  SastiBottle,
-  passImage,
-} from '../../Assests/Utils/images';
-import Slider from '../../Components/Slider';
-import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
-import Courosal2 from '../../Components/Slider3';
 import {ScrollView} from 'react-native-gesture-handler';
-import Courosal from '../../Components/Slider2';
+import { Bottle1, Bottle2, BrandLogo, OrderImage, SastiBottle, passImage } from '../../../Assests/Utils/images';
+import Courosal from '../../../Components/Slider';
+import Courosal3 from '../../../Components/Slider3';
+import Courosal2 from '../../../Components/Slider2';
 
 const FirstScreen = ({navigation}) => {
   return (
@@ -70,7 +63,7 @@ const FirstScreen = ({navigation}) => {
             flex: 1,
           }}>
           <View>
-            <Slider />
+            <Courosal />
           </View>
           <View
             style={{
@@ -78,7 +71,6 @@ const FirstScreen = ({navigation}) => {
               justifyContent: 'space-between',
               marginLeft: wp(6),
               marginRight: wp(6),
-              marginTop: hp(1),
               alignItems: 'center',
             }}>
             <Text style={{fontSize: hp(2.3), fontWeight: 900}}>
@@ -95,7 +87,7 @@ const FirstScreen = ({navigation}) => {
             </TouchableOpacity>
           </View>
           <View>
-            <Courosal />
+            <Courosal2 />
           </View>
           <View
             style={{
@@ -103,26 +95,26 @@ const FirstScreen = ({navigation}) => {
               justifyContent: 'space-between',
               marginLeft: wp(6),
               marginRight: wp(6),
-              marginTop: hp(1),
               marginBottom: hp(1),
               alignItems: 'center',
               backgroundColor: '#FFF0F2',
               padding: wp(5),
               borderRadius: wp(3),
             }}>
-            <View style={{flexDirection : "row"}}>
-              <Image source={SastiBottle}/>
-              <Text style={{fontSize: hp(2.3), fontWeight: 900 , marginLeft : wp(1)}}>
+            <View style={{flexDirection: 'row'}}>
+              <Image source={SastiBottle} />
+              <Text
+                style={{fontSize: hp(2.3), fontWeight: 900, marginLeft: wp(1)}}>
                 Start An Order
               </Text>
             </View>
             <TouchableOpacity
               style={{
                 borderWidth: 1,
-                borderColor: 'black',
+                borderColor: 'orange',
                 borderRadius: 5,
                 padding: 5,
-                backgroundColor : "orange"
+                backgroundColor: 'orange',
               }}>
               <Text style={{fontWeight: 'bold'}}>ORDER NOW</Text>
             </TouchableOpacity>
@@ -133,7 +125,7 @@ const FirstScreen = ({navigation}) => {
               justifyContent: 'space-between',
               marginLeft: wp(6),
               marginRight: wp(6),
-              marginTop: hp(1),
+              marginTop: hp(3),
               alignItems: 'center',
             }}>
             <Text style={{fontSize: hp(2.3), fontWeight: 900}}>What's New</Text>
@@ -147,8 +139,14 @@ const FirstScreen = ({navigation}) => {
               <Text>SEE ALL</Text>
             </TouchableOpacity>
           </View>
-          <View>
-            <Courosal2 />
+          <View
+            style={{
+              flexDirection: 'row',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+              flex : 1
+            }}>
+            <Courosal3/>
           </View>
           <View
             style={{
@@ -179,7 +177,10 @@ const FirstScreen = ({navigation}) => {
                 alignItems: 'center',
                 borderColor: 'gray',
               }}>
-              <Image source={Bottle1} style={{height : hp(10), width : wp(6.5)}}/>
+              <Image
+                source={Bottle1}
+                style={{height: hp(7), width: wp(4.8)}}
+              />
               <Text style={{fontWeight: 'bold'}}>Domestic</Text>
             </View>
             <View
@@ -189,7 +190,7 @@ const FirstScreen = ({navigation}) => {
                 alignItems: 'center',
                 borderColor: 'gray',
               }}>
-              <Image source={Bottle2} style={{height : hp(10), width : wp(9)}}/>
+              <Image source={Bottle2} style={{height: hp(7), width: wp(5.9)}} />
               <Text style={{fontWeight: 'bold'}}>Import</Text>
             </View>
             <View
@@ -199,7 +200,10 @@ const FirstScreen = ({navigation}) => {
                 alignItems: 'center',
                 borderColor: 'gray',
               }}>
-              <Image source={Bottle1} style={{height : hp(10), width : wp(6.5)}}/>
+              <Image
+                source={Bottle1}
+                style={{height: hp(7), width: wp(4.8)}}
+              />
               <Text style={{fontWeight: 'bold'}}>Ontario</Text>
             </View>
           </View>

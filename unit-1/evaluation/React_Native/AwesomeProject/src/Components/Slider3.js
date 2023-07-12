@@ -15,7 +15,7 @@ import {
 } from 'react-native-responsive-screen';
 import {MossHead, Polll, ShakerLogo, Whislist} from '../Assests/Utils/images';
 
-const Courosal2 = () => {
+const Courosal3 = () => {
   const [screenWidth, setScreenWidth] = useState(
     Dimensions.get('window').width,
   );
@@ -42,8 +42,8 @@ const Courosal2 = () => {
   const renderItem = ({item}) => (
     <View style={styles.slide}>
       <View style={styles.leftView}>
-        <Text>sdes poaufd sisfz sdfwsc</Text>
-        <Text style={styles.title}>poaufd siasta sdfwsc sdes onbad dscff</Text>
+        <Text>sdes poaufd sisfz sdfwscpoaufd</Text>
+        <Text style={styles.title}>poaufd siasta sdfwsc sdes onbaddscff </Text>
 
         <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>BUY NOW</Text>
@@ -51,7 +51,10 @@ const Courosal2 = () => {
       </View>
       <View style={styles.rightView}>
         <ImageBackground source={item.source} style={styles.image}>
-          <Image source={Whislist} style={{marginTop: hp(1)}} />
+          <Image
+            source={Whislist}
+            style={{marginTop: hp(1), marginLeft: wp(1)}}
+          />
         </ImageBackground>
       </View>
     </View>
@@ -81,66 +84,69 @@ const Courosal2 = () => {
 const styles = StyleSheet.create({
   container: {
     marginTop: hp(3),
-    height: hp(25),
-    width: '100%',
-    justifyContent: 'center'
+    height: hp(26),
+    justifyContent: 'center',
+    marginLeft : wp(5)
   },
   slide: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    flex: 1,
-    borderWidth: 0.2,
+    width : "95%",
+    flex : 1,
     borderColor: 'gray',
-    borderRadius : 10
+    borderRadius: 10,
   },
   leftView: {
-    width: '48%',
-    alignItems: 'center',
+    width: '50%',
+    alignItems: 'flex-start',
+    flex : 1,
     justifyContent: 'center',
-    padding : 7
+    padding: 6,
   },
   rightView: {
-    width: '50%',
-    alignItems: 'flex-end',
+    width: '40%',
+    alignItems: 'center',
+    flex : 1,
     justifyContent: 'center',
   },
   image: {
-    width: wp(30),
-    height: hp(15),
+    width: wp(37),
+    height: hp(16),
     resizeMode: 'cover',
     borderRadius: wp(5),
   },
   title: {
     fontWeight: 'bold',
-    fontSize: wp(3.5), // Adjust font size based on screen size
+    fontSize: wp(4),
     marginBottom: hp(1),
-    marginTop : hp(1)
+    marginTop: hp(1),
   },
   subtitle: {
-    fontSize: wp(3.2), // Adjust font size based on screen size
+    fontSize: wp(3.5),
     marginBottom: hp(0.5),
     marginLeft: wp(1),
   },
   price: {
     fontWeight: 'bold',
-    fontSize: wp(3.5), // Adjust font size based on screen size
+    fontSize: wp(3.5),
   },
   discount: {
     color: 'red',
   },
   button: {
     backgroundColor: 'orange',
-    width: wp(20),
-    paddingVertical: hp(1.0),
-    borderRadius: wp(5),
+    width: wp(15),
+    paddingVertical: hp(0.8),
+    borderRadius: wp(2),
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: hp(0.4),
+    marginTop: hp(1),
   },
   buttonText: {
-    color: 'white',
+    color: 'black',
     fontWeight: 'bold',
+    fontSize : 10
   },
   paginationDotInactive: {
     width: 8,
@@ -158,4 +164,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Courosal2;
+export default Courosal3;

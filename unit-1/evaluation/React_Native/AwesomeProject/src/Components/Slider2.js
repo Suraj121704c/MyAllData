@@ -13,9 +13,16 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
-import {MossHead, Polll, SalePng, SastiBottle, ShakerLogo, Whislist} from '../Assests/Utils/images';
+import {
+  MossHead,
+  Polll,
+  SalePng,
+  SastiBottle,
+  ShakerLogo,
+  Whislist,
+} from '../Assests/Utils/images';
 
-const Courosal = () => {
+const Courosal2 = () => {
   const [screenWidth, setScreenWidth] = useState(
     Dimensions.get('window').width,
   );
@@ -43,8 +50,8 @@ const Courosal = () => {
     <View style={styles.slide}>
       <View style={styles.leftView}>
         <Text style={styles.title}>MossHead Cucumber Lime Mojito Shaker</Text>
-        <View style={{flexDirection : "row"}}>
-          <Image source={SastiBottle} style={{height : hp(2.8)}}/>
+        <View style={{flexDirection: 'row'}}>
+          <Image source={SastiBottle} style={{height: hp(2.8)}} />
           <Text style={styles.subtitle}>24 * Can 473 ml</Text>
         </View>
 
@@ -59,7 +66,10 @@ const Courosal = () => {
         <ImageBackground source={item.source} style={styles.image}>
           <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
             <Image source={Whislist} style={{marginTop: hp(1)}} />
-            <Image source={SalePng} style={{marginTop: hp(1) , marginRight : wp(1)}} />
+            <Image
+              source={SalePng}
+              style={{marginTop: hp(1), marginRight: wp(1)}}
+            />
           </View>
         </ImageBackground>
       </View>
@@ -89,66 +99,66 @@ const Courosal = () => {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: hp(3),
     height: hp(26),
-    width: '100%',
     justifyContent: 'center',
+    alignItems : "center",
+    marginTop : hp(3),
   },
   slide: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
     flex: 1,
-    borderWidth: 0.2,
-    borderColor: 'gray',
     borderRadius: 10,
+    marginLeft : wp(6)
   },
   leftView: {
-    width: '48%',
+    flex : 1,
     alignItems: 'flex-start',
     justifyContent: 'center',
-    padding : 10
+
   },
   rightView: {
-    width: '50%',
-    alignItems: 'flex-end',
+    flex : 1,
+    alignItems: 'center',
     justifyContent: 'center',
   },
   image: {
-    width: wp(30),
-    height: hp(15),
+    width: wp(37),
+    height: hp(16),
     resizeMode: 'cover',
     borderRadius: wp(5),
   },
   title: {
     fontWeight: 'bold',
-    fontSize: wp(3.5), // Adjust font size based on screen size
+    fontSize: wp(3.9), 
     marginBottom: hp(0.3),
   },
   subtitle: {
-    fontSize: wp(3.2), // Adjust font size based on screen size
+    fontSize: wp(3.5), 
     marginBottom: hp(0.5),
-    marginLeft : wp(1)
+    marginLeft: wp(1),
   },
   price: {
     fontWeight: 'bold',
-    fontSize: wp(3.5), // Adjust font size based on screen size
+    fontSize: wp(3.5), 
   },
   discount: {
     color: 'red',
   },
   button: {
     backgroundColor: 'orange',
-    width: wp(20),
-    paddingVertical: hp(1.0),
-    borderRadius: wp(5),
+    width: wp(15),
+    paddingVertical: hp(0.8),
+    borderRadius: wp(2),
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: hp(0.4),
+    marginTop: hp(1),
   },
   buttonText: {
-    color: 'white',
+    color: 'black',
     fontWeight: 'bold',
+    fontSize : 10
   },
   paginationDotInactive: {
     width: 8,
@@ -166,4 +176,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Courosal;
+export default Courosal2;

@@ -1,7 +1,5 @@
 import {Image, Text, View} from 'react-native';
-import FirstScreen from '../../../Screens/AfterLogin/FirstScreen';
 import {useEffect} from 'react';
-import {getInitialAuthState} from '../../../Redux/Reducers/AuthReducer';
 import SplashScreen from '../../../Screens/BeforeLogin/SplashScreen/splashScreen';
 
 const {createBottomTabNavigator} = require('@react-navigation/bottom-tabs');
@@ -28,6 +26,7 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
+import FirstScreen from '../../../Screens/AfterLogin/FirstScreen/FirstScreen';
 const Drawer = createDrawerNavigator();
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -49,9 +48,10 @@ const TabNaviagtion = () => (
     initialRouteName="FirstScreen"
     screenOptions={{
       tabBarStyle: {
-        borderTopLeftRadius : wp(10),
+        borderTopLeftRadius : wp(5),
         backgroundColor: 'black',
-        borderTopRightRadius : wp(10),
+        borderColor : "black",
+        borderTopRightRadius : wp(5),
       },
       headerShown: false,
     }}>

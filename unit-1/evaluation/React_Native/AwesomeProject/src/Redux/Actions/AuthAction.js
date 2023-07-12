@@ -14,7 +14,7 @@ const logout = () => ({
 export const login = (username, password) => {
   return async dispatch => {
     try {
-      if (username === 'suraj@gmail.com' && password === '123') {
+      if (username === 'suraj@gmail.com' && password === 'suraj') {
         console.log('Login successful');
         const token = '1234suraj';
         await AsyncStorage.setItem('token', token);

@@ -33,7 +33,6 @@ const Login = ({navigation}) => {
   const [showPassword, setShowPassword] = useState(false);
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-
   const dispatch = useDispatch();
 
   const togglePasswordVisibility = () => {

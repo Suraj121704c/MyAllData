@@ -1,23 +1,28 @@
-import React, { useState, useEffect } from 'react';
-import { View, Image, Dimensions, StyleSheet, Text } from 'react-native';
-import Carousel, { Pagination } from 'react-native-snap-carousel';
-import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
-import { Slider1, Slider2, Slider3 } from '../Assests/Utils/images';
+import React, {useState, useEffect} from 'react';
+import {View, Image, Dimensions, StyleSheet, Text} from 'react-native';
+import Carousel, {Pagination} from 'react-native-snap-carousel';
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from 'react-native-responsive-screen';
+import {Slider1, Slider2, Slider3} from '../Assests/Utils/images';
 
-const CarouselItem = ({ item }) => (
+const CarouselItem = ({item}) => (
   <View style={styles.slide}>
     <Image source={item.source} style={styles.image} />
   </View>
 );
 
 const Courosal = () => {
-  const [screenWidth, setScreenWidth] = useState(Dimensions.get('window').width);
+  const [screenWidth, setScreenWidth] = useState(
+    Dimensions.get('window').width,
+  );
   const [activeIndex, setActiveIndex] = useState(0);
 
   const images = [
-    { id: '1', source: Slider2 },
-    { id: '2', source: Slider1 },
-    { id: '3', source: Slider3 },
+    {id: '1', source: Slider2},
+    {id: '2', source: Slider1},
+    {id: '3', source: Slider3},
   ];
 
   useEffect(() => {
@@ -26,9 +31,13 @@ const Courosal = () => {
     };
 
     Dimensions.addEventListener('change', handleScreenRotation);
+
+    return () => {
+      Dimensions.removeEventListener('change', handleScreenRotation);
+    };
   }, []);
 
-  const renderItem = ({ item }) => <CarouselItem item={item} />;
+  const renderItem = ({item}) => <CarouselItem item={item} />;
 
   return (
     <View style={styles.container}>
@@ -53,7 +62,7 @@ const Courosal = () => {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: hp(2),
+    marginTop: hp(3),
     height: hp(30),
     width: '100%',
     justifyContent: 'center',
@@ -65,7 +74,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   image: {
-    width: "93%",
+    width: '93%',
     height: hp(20),
     resizeMode: 'cover',
     borderRadius: wp(5),
