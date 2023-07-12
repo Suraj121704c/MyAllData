@@ -1,32 +1,25 @@
 import {Image, Text, View} from 'react-native';
 import {useEffect} from 'react';
-import SplashScreen from '../../../Screens/BeforeLogin/SplashScreen/splashScreen';
-
 const {createBottomTabNavigator} = require('@react-navigation/bottom-tabs');
 const {createDrawerNavigator} = require('@react-navigation/drawer');
 const {createNativeStackNavigator} = require('@react-navigation/native-stack');
-const {default: Login} = require('../../../Screens/BeforeLogin/Login/Index');
-const {Forget} = require('../../../Screens/BeforeLogin/Forget/Forget');
-const {SignIn} = require('../../../Screens/BeforeLogin/SignIn/SignIn');
-const {default: OnHome} = require('../../../Screens/Drawers/OnHome');
-const {Logout} = require('../../../Screens/AfterLogin/Logout');
-const {Orders} = require('../../../Screens/AfterLogin/Orders');
-const {Products} = require('../../../Screens/AfterLogin/Products');
-const {
-  HomeButton,
-  OrdersButton,
-  UserButton,
-  ProductButton,
-  LogoutButton,
-} = require('../images');
 const {SafeAreaView} = require('react-native-safe-area-context');
-const {useSelector, useDispatch} = require('react-redux');
+const {useSelector} = require('react-redux');
 const {NavigationContainer} = require('@react-navigation/native');
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
-import FirstScreen from '../../../Screens/AfterLogin/FirstScreen/FirstScreen';
+import SplashScreen from '../Screens/BeforeLogin/SplashScreen/splashScreen';
+import FirstScreen from '../Screens/AfterLogin/FirstScreen/FirstScreen';
+import Login from '../Screens/BeforeLogin/Login/Index';
+import OnHome from '../Screens/Drawers/OnHome';
+import { Logout } from '../Screens/AfterLogin/Logout';
+import { Orders } from '../Screens/AfterLogin/Orders';
+import { Products } from '../Screens/AfterLogin/Products';
+import { HomeButton, LogoutButton, OrdersButton, ProductButton, UserButton } from '../Assests/Utils/images';
+import { Forget } from '../Screens/BeforeLogin/Forget/Forget';
+import { SignIn } from '../Screens/BeforeLogin/SignIn/SignIn';
 const Drawer = createDrawerNavigator();
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();

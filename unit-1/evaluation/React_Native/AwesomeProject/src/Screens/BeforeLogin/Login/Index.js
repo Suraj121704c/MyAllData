@@ -18,7 +18,6 @@ import {styles} from './Styles';
 import {
   LoginBackground,
   apple,
-  backGround,
   backImage,
   brandLogo,
   facebook,

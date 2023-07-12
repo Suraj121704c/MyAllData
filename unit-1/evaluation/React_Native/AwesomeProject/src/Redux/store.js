@@ -1,7 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { authReducer } from "./Reducers/AuthReducer";
 const { default: thunk } = require("redux-thunk");
-import { applyMiddleware } from "redux";
+
+// User Define Import File 
+import { authReducer } from "./Reducers/AuthReducer";
 
 export const store = configureStore({
     reducer : {
