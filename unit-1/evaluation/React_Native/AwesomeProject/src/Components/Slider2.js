@@ -41,9 +41,9 @@ const Courosal2 = () => {
 
     Dimensions.addEventListener('change', handleScreenRotation);
 
-    return () => {
-      Dimensions.removeEventListener('change', handleScreenRotation);
-    };
+    // return () => {
+    //   Dimensions.removeEventListener('change', handleScreenRotation);
+    // };
   }, []);
 
   const renderItem = ({item}) => (
@@ -68,7 +68,7 @@ const Courosal2 = () => {
             <Image source={Whislist} style={{marginTop: hp(1)}} />
             <Image
               source={SalePng}
-              style={{marginTop: hp(1), marginRight: wp(1)}}
+              style={{marginTop: hp(1), marginRight: wp(2)}}
             />
           </View>
         </ImageBackground>
@@ -133,11 +133,13 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: wp(3.9), 
     marginBottom: hp(0.3),
+    color : "black"
   },
   subtitle: {
     fontSize: wp(3.5), 
     marginBottom: hp(0.5),
     marginLeft: wp(1),
+    color : "black"
   },
   price: {
     fontWeight: 'bold',
